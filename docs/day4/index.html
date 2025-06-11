@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>index – Reproducible data analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Reproducible data analysis</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../appendix.html"> 
+<span class="menu-text">Appendix</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#day-4-data-loading-and-tidying-with-tidyverse" id="toc-day-4-data-loading-and-tidying-with-tidyverse" class="nav-link active" data-scroll-target="#day-4-data-loading-and-tidying-with-tidyverse">Day 4: Data loading and tidying with tidyverse</a>
+  <ul class="collapse">
+  <li><a href="#refresher-vectors" id="toc-refresher-vectors" class="nav-link" data-scroll-target="#refresher-vectors">Refresher: vectors</a></li>
+  <li><a href="#about-dataframes" id="toc-about-dataframes" class="nav-link" data-scroll-target="#about-dataframes">About dataframes</a></li>
+  <li><a href="#about-data-tidying-wrangling" id="toc-about-data-tidying-wrangling" class="nav-link" data-scroll-target="#about-data-tidying-wrangling">About data tidying (“wrangling”)</a></li>
+  <li><a href="#set-up-project" id="toc-set-up-project" class="nav-link" data-scroll-target="#set-up-project">Set up project</a></li>
+  <li><a href="#set-up-project-1" id="toc-set-up-project-1" class="nav-link" data-scroll-target="#set-up-project-1">Set up project</a></li>
+  <li><a href="#about-r-packages" id="toc-about-r-packages" class="nav-link" data-scroll-target="#about-r-packages">About R Packages</a></li>
+  <li><a href="#install-tidyverse" id="toc-install-tidyverse" class="nav-link" data-scroll-target="#install-tidyverse">Install <code>tidyverse</code></a></li>
+  <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading packages</a></li>
+  <li><a href="#load-tidyverse" id="toc-load-tidyverse" class="nav-link" data-scroll-target="#load-tidyverse">Load <code>tidyverse</code></a></li>
+  <li><a href="#load-tidyverse-1" id="toc-load-tidyverse-1" class="nav-link" data-scroll-target="#load-tidyverse-1">Load <code>tidyverse</code></a></li>
+  <li><a href="#load-data" id="toc-load-data" class="nav-link" data-scroll-target="#load-data">Load data</a></li>
+  <li><a href="#print-out-the-data" id="toc-print-out-the-data" class="nav-link" data-scroll-target="#print-out-the-data">Print out the data</a></li>
+  <li><a href="#print-out-the-data-1" id="toc-print-out-the-data-1" class="nav-link" data-scroll-target="#print-out-the-data-1">Print out the data</a></li>
+  <li><a href="#what-is-this-dataset-about" id="toc-what-is-this-dataset-about" class="nav-link" data-scroll-target="#what-is-this-dataset-about">What is this dataset about?</a></li>
+  <li><a href="#gapminder" id="toc-gapminder" class="nav-link" data-scroll-target="#gapminder">Gapminder</a></li>
+  <li><a href="#sort-data-with-arrange" id="toc-sort-data-with-arrange" class="nav-link" data-scroll-target="#sort-data-with-arrange">Sort data with <code>arrange()</code></a></li>
+  <li><a href="#sort-data-with-arrange-1" id="toc-sort-data-with-arrange-1" class="nav-link" data-scroll-target="#sort-data-with-arrange-1">Sort data with <code>arrange()</code></a></li>
+  <li><a href="#sort-data-with-arrange-2" id="toc-sort-data-with-arrange-2" class="nav-link" data-scroll-target="#sort-data-with-arrange-2">Sort data with <code>arrange()</code></a></li>
+  <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
+  <li><a href="#narrow-down-columns-with-select" id="toc-narrow-down-columns-with-select" class="nav-link" data-scroll-target="#narrow-down-columns-with-select">Narrow down columns with <code>select()</code></a></li>
+  <li><a href="#saving-your-output" id="toc-saving-your-output" class="nav-link" data-scroll-target="#saving-your-output">Saving your output</a></li>
+  <li><a href="#saving-your-output-1" id="toc-saving-your-output-1" class="nav-link" data-scroll-target="#saving-your-output-1">Saving your output</a></li>
+  <li><a href="#challenge-1" id="toc-challenge-1" class="nav-link" data-scroll-target="#challenge-1">Challenge</a></li>
+  <li><a href="#about-pipes" id="toc-about-pipes" class="nav-link" data-scroll-target="#about-pipes">About pipes</a></li>
+  <li><a href="#about-pipes-1" id="toc-about-pipes-1" class="nav-link" data-scroll-target="#about-pipes-1">About pipes</a></li>
+  <li><a href="#about-pipes-2" id="toc-about-pipes-2" class="nav-link" data-scroll-target="#about-pipes-2">About pipes</a></li>
+  <li><a href="#about-pipes-3" id="toc-about-pipes-3" class="nav-link" data-scroll-target="#about-pipes-3">About pipes</a></li>
+  <li><a href="#about-pipes-4" id="toc-about-pipes-4" class="nav-link" data-scroll-target="#about-pipes-4">About pipes</a></li>
+  <li><a href="#about-pipes-5" id="toc-about-pipes-5" class="nav-link" data-scroll-target="#about-pipes-5">About pipes</a></li>
+  <li><a href="#subset-rows-with-filter" id="toc-subset-rows-with-filter" class="nav-link" data-scroll-target="#subset-rows-with-filter">Subset rows with <code>filter()</code></a></li>
+  <li><a href="#challenge-2" id="toc-challenge-2" class="nav-link" data-scroll-target="#challenge-2">Challenge</a></li>
+  <li><a href="#modify-data-with-mutate" id="toc-modify-data-with-mutate" class="nav-link" data-scroll-target="#modify-data-with-mutate">Modify data with <code>mutate()</code></a></li>
+  <li><a href="#modify-data-with-mutate-1" id="toc-modify-data-with-mutate-1" class="nav-link" data-scroll-target="#modify-data-with-mutate-1">Modify data with <code>mutate()</code></a></li>
+  <li><a href="#challenge-3" id="toc-challenge-3" class="nav-link" data-scroll-target="#challenge-3">Challenge</a></li>
+  <li><a href="#calculate-summary-statistics-with-summarize" id="toc-calculate-summary-statistics-with-summarize" class="nav-link" data-scroll-target="#calculate-summary-statistics-with-summarize">Calculate summary statistics with <code>summarize()</code></a></li>
+  <li><a href="#calculate-summary-statistics-with-summarize-1" id="toc-calculate-summary-statistics-with-summarize-1" class="nav-link" data-scroll-target="#calculate-summary-statistics-with-summarize-1">Calculate summary statistics with <code>summarize()</code></a></li>
+  <li><a href="#use-group_by-to-do-calculations-per-group" id="toc-use-group_by-to-do-calculations-per-group" class="nav-link" data-scroll-target="#use-group_by-to-do-calculations-per-group">Use <code>group_by()</code> to do calculations per group</a></li>
+  <li><a href="#use-group_by-to-do-calculations-per-group-1" id="toc-use-group_by-to-do-calculations-per-group-1" class="nav-link" data-scroll-target="#use-group_by-to-do-calculations-per-group-1">Use <code>group_by()</code> to do calculations per group</a></li>
+  <li><a href="#difference-between-mutate-and-summarize" id="toc-difference-between-mutate-and-summarize" class="nav-link" data-scroll-target="#difference-between-mutate-and-summarize">Difference between <code>mutate()</code> and <code>summarize()</code></a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+<section id="day-4-data-loading-and-tidying-with-tidyverse" class="level1">
+<h1>Day 4: Data loading and tidying with tidyverse</h1>
+<section id="refresher-vectors" class="level2">
+<h2 class="anchored" data-anchor-id="refresher-vectors">Refresher: vectors</h2>
+<ul>
+<li>Recall that a <strong>vector</strong> is a <strong>series of values</strong> that are all the same <strong>type</strong></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A numeric vector:</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A character vector:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"banana"</span>, <span class="st">"orange"</span>, <span class="st">"apple"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "banana" "orange" "apple" </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A logical vector:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE  TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="about-dataframes" class="level2">
+<h2 class="anchored" data-anchor-id="about-dataframes">About dataframes</h2>
+<ul>
+<li>A <strong>dataframe</strong> is a <strong>collection of vectors</strong>
+<ul>
+<li>basically like a <strong>spreadsheet</strong> in Excel</li>
+</ul></li>
+</ul>
+<p><img src="../images/dataframe.png" alt="Image of a data frame" height="320"></p>
+<p>. . .</p>
+<ul>
+<li>Today we will learn to <strong>load</strong> and <strong>tidy</strong> (or “wrangle”) dataframes</li>
+</ul>
+</section>
+<section id="about-data-tidying-wrangling" class="level2">
+<h2 class="anchored" data-anchor-id="about-data-tidying-wrangling">About data tidying (“wrangling”)</h2>
+<ul>
+<li><p>Data often come to us in a form that is not suitable for analysis</p></li>
+<li><p>Data tidying (or “wrangling”) is the process of <strong>re-formatting the data so it can be analyzed</strong></p></li>
+</ul>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://media.istockphoto.com/id/172342607/photo/cattle-drive.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=Fz--vTqe2gMWKxbHvgdLCgfUveH_Y3-k0js5H1m9Snc=" class="img-fluid figure-img"></p>
+<figcaption>Getty Images</figcaption>
+</figure>
+</div>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://datasciencecampus.github.io/DSCA_data_wrangling_with_r/slides/images/data_cowboy.png" class="img-fluid figure-img" alt="data wrangling monsters"></p>
+<figcaption>Image by Allison Horst</figcaption>
+</figure>
+</div>
+</section>
+<section id="set-up-project" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-project">Set up project</h2>
+<ul>
+<li>Create a new project called <code>gapminder-analysis</code> in the <code>data-analysis-course</code> folder on your Desktop
+<ul>
+<li>We will use the “gapminder” dataset for the rest of the course</li>
+</ul></li>
+<li>Inside that project, create a folder called <code>data_raw</code> to store raw data
+<ul>
+<li>You should <strong>never edit raw data directly</strong> (treat it as read-only)</li>
+</ul></li>
+<li>Also create a file to write today’s code. You could call it <code>data-tidying-practice.R</code></li>
+</ul>
+</section>
+<section id="set-up-project-1" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-project-1">Set up project</h2>
+<ul>
+<li>Download the <code>gapminder.csv</code> file from this link, and put it in <code>data_raw</code>
+<ul>
+<li><a href="https://www.dropbox.com/s/fdirlsnxlzy53qq/gapminder.csv?dl=0" class="uri">https://www.dropbox.com/s/fdirlsnxlzy53qq/gapminder.csv?dl=0</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="about-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="about-r-packages">About R Packages</h2>
+<ul>
+<li><p>The functions we have used so far are included in R (called <strong>“Base R”</strong>)</p></li>
+<li><p>But sometimes we need to do something that is not available in Base R</p></li>
+<li><p><strong>Packages</strong> are collections of code that <strong>extend the functionality</strong> of R</p>
+<ul>
+<li>There are nearly 200,000 packages currently available!</li>
+</ul></li>
+</ul>
+</section>
+<section id="install-tidyverse" class="level2">
+<h2 class="anchored" data-anchor-id="install-tidyverse">Install <code>tidyverse</code></h2>
+<ul>
+<li><p>Today we will use the <code>tidyverse</code> set of packages for <strong>working with data</strong></p></li>
+<li><p>Install <code>tidyverse</code> using <code>install.packages()</code>:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="loading-packages" class="level2">
+<h2 class="anchored" data-anchor-id="loading-packages">Loading packages</h2>
+<ul>
+<li><p>The <code>install.packages()</code> function <strong>downloads</strong> the package to your computer</p>
+<ul>
+<li>You only need to do this once per package (or when you want to update the package)</li>
+</ul></li>
+<li><p>But R isn’t able to use the package yet</p></li>
+<li><p>The <code>library()</code> function tells R to <strong>load</strong> a package so that we can use it</p></li>
+</ul>
+</section>
+<section id="load-tidyverse" class="level2">
+<h2 class="anchored" data-anchor-id="load-tidyverse">Load <code>tidyverse</code></h2>
+<ul>
+<li>Let’s load the <code>tidyverse</code> package with <code>library()</code>
+<ul>
+<li>Note that you don’t need to use quotation marks for the package name</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+</section>
+<section id="load-tidyverse-1" class="level2">
+<h2 class="anchored" data-anchor-id="load-tidyverse-1">Load <code>tidyverse</code></h2>
+<ul>
+<li><code>tidyverse</code> actually includes <strong>multiple</strong> packages (<code>dplyr</code>, <code>tidyr</code>, <code>readr</code>, etc.)
+<ul>
+<li>These are all packages that are useful for <strong>loading</strong> and <strong>cleaning</strong> data</li>
+</ul></li>
+</ul>
+</section>
+<section id="load-data" class="level2">
+<h2 class="anchored" data-anchor-id="load-data">Load data</h2>
+<ul>
+<li>Use the <code>read_csv()</code> function to load a spreadsheet as a dataframe
+<ul>
+<li>There are other functions for other file formats like <code>.xls</code>, <code>.xlsx</code>, <code>.tsv</code>, etc.</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 1704 Columns: 6
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (2): country, continent
+dbl (4): year, lifeExp, pop, gdpPercap
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data_raw/gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="print-out-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="print-out-the-data">Print out the data</h2>
+<ul>
+<li>Inspect the data just like any other object (variable) in R: type the name of the object into the console</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>gapminder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 6
+  country     continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.
+2 Afghanistan Asia       1957    30.3  9240934      821.
+3 Afghanistan Asia       1962    32.0 10267083      853.
+4 Afghanistan Asia       1967    34.0 11537966      836.
+5 Afghanistan Asia       1972    36.1 13079460      740.
+6 Afghanistan Asia       1977    38.4 14880372      786.
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="print-out-the-data-1" class="level2">
+<h2 class="anchored" data-anchor-id="print-out-the-data-1">Print out the data</h2>
+<ul>
+<li>Notice that R tells us the number of <strong>rows</strong> and <strong>columns</strong>, as well as the <strong>data type</strong> of each column
+<ul>
+<li>The tidyverse package refers to dataframes as “tibbles”</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-this-dataset-about" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-this-dataset-about">What is this dataset about?</h2>
+<ul>
+<li><p>What do you think this dataset is about?</p></li>
+<li><p>What do you think the columns mean?</p></li>
+</ul>
+</section>
+<section id="gapminder" class="level2">
+<h2 class="anchored" data-anchor-id="gapminder">Gapminder</h2>
+<ul>
+<li><p>This is a dataset of economic statistics from various countries over time, from <a href="https://gapminder.org" class="uri">https://gapminder.org</a></p></li>
+<li><p>The meaning of some columns is obvious (<code>country</code>, <code>continent</code>, <code>year</code>), but not others</p>
+<ul>
+<li><code>pop</code>: Population</li>
+<li><code>lifeExp</code>: Life expectancy (寿命)</li>
+<li><code>gdpPercap</code>: GDP per capita (一人当たりの国内総生産)</li>
+</ul></li>
+</ul>
+</section>
+<section id="sort-data-with-arrange" class="level2">
+<h2 class="anchored" data-anchor-id="sort-data-with-arrange">Sort data with <code>arrange()</code></h2>
+<ul>
+<li>First provide the <strong>name of the dataframe</strong>, then the <strong>column</strong> to sort by</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(gapminder, lifeExp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 6
+  country      continent  year lifeExp     pop gdpPercap
+  &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
+1 Rwanda       Africa     1992    23.6 7290203      737.
+2 Afghanistan  Asia       1952    28.8 8425333      779.
+3 Gambia       Africa     1952    30    284320      485.
+4 Angola       Africa     1952    30.0 4232095     3521.
+5 Sierra Leone Africa     1952    30.3 2143249      880.
+6 Afghanistan  Asia       1957    30.3 9240934      821.
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="sort-data-with-arrange-1" class="level2">
+<h2 class="anchored" data-anchor-id="sort-data-with-arrange-1">Sort data with <code>arrange()</code></h2>
+<ul>
+<li>The default setting is to sort from <strong>small</strong> to <strong>large</strong>
+<ul>
+<li>To sort in the reverse (<strong>descending</strong>) direction, use <code>desc()</code></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(gapminder, <span class="fu">desc</span>(lifeExp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 6
+  country          continent  year lifeExp       pop gdpPercap
+  &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 Japan            Asia       2007    82.6 127467972    31656.
+2 Hong Kong, China Asia       2007    82.2   6980412    39725.
+3 Japan            Asia       2002    82   127065841    28605.
+4 Iceland          Europe     2007    81.8    301931    36181.
+5 Switzerland      Europe     2007    81.7   7554661    37506.
+6 Hong Kong, China Asia       2002    81.5   6762476    30209.
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="sort-data-with-arrange-2" class="level2">
+<h2 class="anchored" data-anchor-id="sort-data-with-arrange-2">Sort data with <code>arrange()</code></h2>
+<ul>
+<li>You can sort on <strong>multiple</strong> columns
+<ul>
+<li>Ties will be sorted by the next column</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(gapminder, continent, lifeExp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 6
+  country      continent  year lifeExp     pop gdpPercap
+  &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
+1 Rwanda       Africa     1992    23.6 7290203      737.
+2 Gambia       Africa     1952    30    284320      485.
+3 Angola       Africa     1952    30.0 4232095     3521.
+4 Sierra Leone Africa     1952    30.3 2143249      880.
+5 Mozambique   Africa     1952    31.3 6446316      469.
+6 Sierra Leone Africa     1957    31.6 2295678     1004.
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="challenge" class="level2">
+<h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
+<ul>
+<li><p>Sort the data by <strong>year</strong>, first going from smallest to biggest, then from biggest to smallest.</p></li>
+<li><p>What is the <strong>earliest</strong> year in the data?</p></li>
+<li><p>What is the <strong>latest</strong> year in the data?</p></li>
+</ul>
+</section>
+<section id="narrow-down-columns-with-select" class="level2">
+<h2 class="anchored" data-anchor-id="narrow-down-columns-with-select">Narrow down columns with <code>select()</code></h2>
+<ul>
+<li>First provide the <strong>name of the dataframe</strong>, then the <strong>columns</strong> to select</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(gapminder, year, country, gdpPercap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 3
+   year country     gdpPercap
+  &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
+1  1952 Afghanistan      779.
+2  1957 Afghanistan      821.
+3  1962 Afghanistan      853.
+4  1967 Afghanistan      836.
+5  1972 Afghanistan      740.
+6  1977 Afghanistan      786.
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="saving-your-output" class="level2">
+<h2 class="anchored" data-anchor-id="saving-your-output">Saving your output</h2>
+<ul>
+<li>Notice that although we have used several functions, <code>gapminder</code> is still the same:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>gapminder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 6
+  country     continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.
+2 Afghanistan Asia       1957    30.3  9240934      821.
+3 Afghanistan Asia       1962    32.0 10267083      853.
+4 Afghanistan Asia       1967    34.0 11537966      836.
+5 Afghanistan Asia       1972    36.1 13079460      740.
+6 Afghanistan Asia       1977    38.4 14880372      786.
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="saving-your-output-1" class="level2">
+<h2 class="anchored" data-anchor-id="saving-your-output-1">Saving your output</h2>
+<ul>
+<li><p>This is because we have not <strong>saved</strong> any of the output</p></li>
+<li><p>To do that, you need to create a new object with <code>&lt;-</code></p>
+<ul>
+<li>You can call the object whatever you want, but use a name that is easy to remember</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>gapminder_gdp <span class="ot">&lt;-</span> <span class="fu">select</span>(gapminder, year, country, gdpPercap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="challenge-1" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-1">Challenge</h2>
+<ul>
+<li><strong>Select</strong> only year, country, and population, then <strong>sort</strong> the data by population</li>
+</ul>
+</section>
+<section id="about-pipes" class="level2">
+<h2 class="anchored" data-anchor-id="about-pipes">About pipes</h2>
+<ul>
+<li><p>During the last challenge, you needed to save the output of the <code>select()</code> function, then use it as input into the <code>arrange()</code> function</p></li>
+<li><p>There is a simpler way to do this, called the “pipe”</p></li>
+<li><p>The pipe is written like this: <code>%&gt;%</code></p>
+<ul>
+<li>Newer versions of R also let you write it like this: <code>|&gt;</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="about-pipes-1" class="level2">
+<h2 class="anchored" data-anchor-id="about-pipes-1">About pipes</h2>
+<ul>
+<li><p>The pipe takes the output from one function and passes it to the input of the next function</p></li>
+<li><p>You can think of it as saying “and then”</p>
+<ul>
+<li>Do this <strong>and then</strong> do this, <strong>and then</strong> do this…</li>
+<li>Do this <strong><code>%&gt;%</code></strong> do this, <strong><code>%&gt;%</code></strong> do this…</li>
+</ul></li>
+</ul>
+</section>
+<section id="about-pipes-2" class="level2">
+<h2 class="anchored" data-anchor-id="about-pipes-2">About pipes</h2>
+<ul>
+<li>We can even use the pipe just with one function:
+<ul>
+<li>Read this as “start with <code>gapminder</code> <strong>and then</strong> select only year, country, and population”</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">select</span>(year, country, pop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 3
+   year country          pop
+  &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;
+1  1952 Afghanistan  8425333
+2  1957 Afghanistan  9240934
+3  1962 Afghanistan 10267083
+4  1967 Afghanistan 11537966
+5  1972 Afghanistan 13079460
+6  1977 Afghanistan 14880372
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="about-pipes-3" class="level2">
+<h2 class="anchored" data-anchor-id="about-pipes-3">About pipes</h2>
+<ul>
+<li>This becomes very useful when we want to do <strong>multiple steps</strong>
+<ul>
+<li>Read this as “start with <code>gapminder</code>, <strong>and then</strong> select only year, country, and population, <strong>and then</strong> arrange by year”</li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">select</span>(year, country, pop) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 3
+   year country         pop
+  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;
+1  1952 Afghanistan 8425333
+2  1952 Albania     1282697
+3  1952 Algeria     9279525
+4  1952 Angola      4232095
+# ℹ 1,700 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="about-pipes-4" class="level2">
+<h2 class="anchored" data-anchor-id="about-pipes-4">About pipes</h2>
+<ul>
+<li>We can make it easier to read by putting each step on its own line</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(year, country, pop) <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 3
+   year country          pop
+  &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;
+1  1952 Afghanistan  8425333
+2  1952 Albania      1282697
+3  1952 Algeria      9279525
+4  1952 Angola       4232095
+5  1952 Argentina   17876956
+6  1952 Australia    8691212
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="about-pipes-5" class="level2">
+<h2 class="anchored" data-anchor-id="about-pipes-5">About pipes</h2>
+<ul>
+<li><p>This way, <strong>you don’t have to save each intermediate step</strong></p></li>
+<li><p>This is a very useful way to manipulate data</p></li>
+<li><p>I will now use the pipe (<code>%&gt;%</code>) for the rest of the lesson</p></li>
+</ul>
+</section>
+<section id="subset-rows-with-filter" class="level2">
+<h2 class="anchored" data-anchor-id="subset-rows-with-filter">Subset rows with <code>filter()</code></h2>
+<ul>
+<li><p>Use the <code>filter()</code> function to only keep rows that <strong>meet a certain condition</strong></p></li>
+<li><p>For example, let’s only keep the data in Europe:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">"Europe"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 360 × 6
+  country continent  year lifeExp     pop gdpPercap
+  &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
+1 Albania Europe     1952    55.2 1282697     1601.
+2 Albania Europe     1957    59.3 1476505     1942.
+3 Albania Europe     1962    64.8 1728137     2313.
+4 Albania Europe     1967    66.2 1984060     2760.
+5 Albania Europe     1972    67.7 2263554     3313.
+6 Albania Europe     1977    68.9 2509048     3533.
+# ℹ 354 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="challenge-2" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-2">Challenge</h2>
+<p>Using the pipe (<code>%&gt;%</code>) and the functions we have learned so far, filter the data to Asia, then select only the country, year, and population columns.</p>
+</section>
+<section id="modify-data-with-mutate" class="level2">
+<h2 class="anchored" data-anchor-id="modify-data-with-mutate">Modify data with <code>mutate()</code></h2>
+<ul>
+<li>For example, we could change the units of population to millions of people:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">pop =</span> pop<span class="sc">/</span><span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 6
+  country     continent  year lifeExp   pop gdpPercap
+  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8.43      779.
+2 Afghanistan Asia       1957    30.3  9.24      821.
+3 Afghanistan Asia       1962    32.0 10.3       853.
+4 Afghanistan Asia       1967    34.0 11.5       836.
+5 Afghanistan Asia       1972    36.1 13.1       740.
+6 Afghanistan Asia       1977    38.4 14.9       786.
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="modify-data-with-mutate-1" class="level2">
+<h2 class="anchored" data-anchor-id="modify-data-with-mutate-1">Modify data with <code>mutate()</code></h2>
+<ul>
+<li>If we provide a new column name, that column will be added</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">pop_mil =</span> pop<span class="sc">/</span><span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 7
+  country     continent  year lifeExp      pop gdpPercap pop_mil
+  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.    8.43
+2 Afghanistan Asia       1957    30.3  9240934      821.    9.24
+3 Afghanistan Asia       1962    32.0 10267083      853.   10.3 
+4 Afghanistan Asia       1967    34.0 11537966      836.   11.5 
+5 Afghanistan Asia       1972    36.1 13079460      740.   13.1 
+6 Afghanistan Asia       1977    38.4 14880372      786.   14.9 
+# ℹ 1,698 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="challenge-3" class="level2">
+<h2 class="anchored" data-anchor-id="challenge-3">Challenge</h2>
+<ul>
+<li><p>The <code>gdpPercap</code> column stands for Gross Domestic Product (GDP) per capita (per person)</p></li>
+<li><p>Calculate the <strong>total</strong> GDP using <code>mutate()</code></p>
+<ul>
+<li>hint: You need to use both the <code>pop</code> and <code>gdpPercap</code> columns</li>
+</ul></li>
+</ul>
+</section>
+<section id="calculate-summary-statistics-with-summarize" class="level2">
+<h2 class="anchored" data-anchor-id="calculate-summary-statistics-with-summarize">Calculate summary statistics with <code>summarize()</code></h2>
+<ul>
+<li>For example, let’s calculate the overall mean population:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">mean_pop =</span> <span class="fu">mean</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+   mean_pop
+      &lt;dbl&gt;
+1 29601212.</code></pre>
+</div>
+</div>
+</section>
+<section id="calculate-summary-statistics-with-summarize-1" class="level2">
+<h2 class="anchored" data-anchor-id="calculate-summary-statistics-with-summarize-1">Calculate summary statistics with <code>summarize()</code></h2>
+<ul>
+<li>Another example: the total population over all the data:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">total_pop =</span> <span class="fu">sum</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+    total_pop
+        &lt;dbl&gt;
+1 50440465801</code></pre>
+</div>
+</div>
+</section>
+<section id="use-group_by-to-do-calculations-per-group" class="level2">
+<h2 class="anchored" data-anchor-id="use-group_by-to-do-calculations-per-group">Use <code>group_by()</code> to do calculations per group</h2>
+<ul>
+<li><p>However, it is often more useful to calculate such summary statistics for <strong>particular groups</strong></p></li>
+<li><p>To do this, first specify the groups with <code>group_by()</code>:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(continent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 6
+# Groups:   continent [5]
+  country     continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.
+2 Afghanistan Asia       1957    30.3  9240934      821.
+3 Afghanistan Asia       1962    32.0 10267083      853.
+4 Afghanistan Asia       1967    34.0 11537966      836.
+# ℹ 1,700 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="use-group_by-to-do-calculations-per-group-1" class="level2">
+<h2 class="anchored" data-anchor-id="use-group_by-to-do-calculations-per-group-1">Use <code>group_by()</code> to do calculations per group</h2>
+<ul>
+<li>Next, use <code>summarize()</code> to calculate the summary statistic:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(continent) <span class="sc">%&gt;%</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_pop =</span> <span class="fu">mean</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  continent  mean_pop
+  &lt;chr&gt;         &lt;dbl&gt;
+1 Africa     9916003.
+2 Americas  24504795.
+3 Asia      77038722.
+4 Europe    17169765.
+5 Oceania    8874672.</code></pre>
+</div>
+</div>
+</section>
+<section id="difference-between-mutate-and-summarize" class="level2">
+<h2 class="anchored" data-anchor-id="difference-between-mutate-and-summarize">Difference between <code>mutate()</code> and <code>summarize()</code></h2>
+<ul>
+<li><p><code>mutate()</code> calculates a new column (or over-writes an existing one) and <strong>keeps the number of rows the same</strong></p></li>
+<li><p><code>summarize()</code> calculates a new column and <strong>decreases the number of rows</strong></p></li>
+</ul>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<ul>
+<li>Sort data with <code>arrange()</code></li>
+<li>Narrow down columns with <code>select()</code></li>
+<li>Filter rows with <code>filter()</code></li>
+<li>Modify data with <code>mutate()</code></li>
+<li>Summarize data with <code>summarize()</code></li>
+<li>Group data with <code>group_by()</code></li>
+<li>Use the pipe (<code>%&gt;%</code>) to chain steps together</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

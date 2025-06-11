@@ -1,0 +1,94 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+    theme: ../theme_medium.scss
+execute: 
+  echo: true
+---
+
+# Day 8: Quarto, Part II
+
+## Recap from Day 7
+
+- Quarto is a system for generating **reports** from **code**
+
+- By using Quarto, we can ensure our results are **reproducible** and derived directly from the data (and code)
+
+## Due dates
+
+- The report (`report.qmd`) is due **2024-07-24 11:59PM**
+  - Push your final commit on GitHub by the deadline
+  - Submit **the Word document** on Moodle
+
+- The **evaluation form** is due **2024-07-31 11:59PM**
+  - Submit Excel sheet on Moodle
+
+## Grading
+
+- Please see the **rubric** in the final report instructions to understand how the paper will be graded
+
+- You will also **evaluate** each other's final report using the rubric
+  - Download the Excel file from Moodle, fill it out, and submit it on Moodle
+  - I will post anonymized versions of each report and code to Moodle for you to evaluate
+
+## How to fill out the evaluation form
+
+- Read each report
+
+- Assign a score according to the rubric (1 - 4 points per category)
+
+- Submit the evaluation form (Excel sheet) via Moodle
+
+# Some tips for your report
+
+## Change the size of a figure
+
+- You can adjust the **size** of the figure with chunk options `fig.height` and `fig.width` (units in inches)
+
+- For example:
+
+```
+#| fig.height: 6
+#| fig.width: 6
+```
+
+## Change the font size
+
+- You can adjust the **overall font size** of the figure like this:
+
+```{r}
+#| eval: false
+ggplot(gapminder, aes(x = pop, y = lifeExp)) +
+  geom_point() +
+  theme_gray(base_size = 16)
+```
+
+## Change the font size
+
+- You can adjust the **overall font size** of the figure like this:
+
+```{r}
+#| eval: false
+#| code-line-numbers: "3"
+ggplot(gapminder, aes(x = pop, y = lifeExp)) +
+  geom_point() +
+  theme_gray(base_size = 16)
+```
+
+::: {.incremental}
+
+- There are other themes available too, but `theme_gray()` should be fine for the final paper
+
+:::
+
+## Add a pagebreak
+
+- You can add a pagebreak to your document like this:
+
+ <code>&lbrace;&lbrace;</code>`< pagebreak >`<code>&rbrace;&rbrace;</code>
+
+## Final report
+
+- The rest of the class time is to work on your final report. I will answer any questions you may have about the report.

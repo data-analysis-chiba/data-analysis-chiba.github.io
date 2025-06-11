@@ -1,0 +1,175 @@
+---
+format:
+  revealjs:
+    incremental: false
+    css: ../styles.css
+execute: 
+  echo: true
+---
+
+# Day 2: Git and GitHub
+
+## What is Git?
+
+- Git is **version control software**
+
+- You can think of it kind of like the "track comments" function in MS Word or Google Docs, but for code (plain text)
+
+## Why use Git?
+
+- To share code
+  - Important for **reproducibility**. Other people can't reproduce your analysis if they can't access your code
+
+- To have a history of all the things your tried in your analysis
+  - You can go back and see what you have changed. Especially important **when something breaks**.
+
+- To organize how you develop your code
+  - You will make comments about all your changes to your code ("commits"), so this forces you to think about **how** you are writing your code
+
+## What is GitHub?
+
+- An online tool for managing projects that use Git
+
+- Acts like a cloud backup tool for your code
+
+- Makes it easy to share code with others
+
+## Setup
+
+- You need to install git on your computer **and** set up an account on <https://github.com>
+
+## Instructions to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+
+- [Mac](https://git-scm.com/download/mac)
+  - May need to install [Homebrew](https://brew.sh/) first
+
+- [Windows](https://git-scm.com/download/win)
+
+- [Linux](https://git-scm.com/download/linux)
+
+## Setup GitHub account
+
+- Navigate to <https://github.com/> and follow the prompts
+
+## Setup GitHub authentication: PAT
+
+A PAT is a "Personal Access Token". It is like an extra-secure password.
+
+There is another method for authentication called SSH, but it's a bit more complicated to set up. If you want to use SSH, see these [instructions](../appendix.html#setup-github-authentication-ssh).
+
+## Create PAT on GitHub
+
+- Go to <https://github.com/settings/tokens>
+
+Or, from R, first install `usethis` with `install.packages("usethis")`, then do
+
+```
+usethis::create_github_token()
+```
+
+- Look over the scopes (permissions); “repo”, “user”, and “workflow” are recommended. Recommended scopes will be pre-selected if you used `create_github_token()`.
+
+- Click “Generate token”.
+
+## Save your PAT
+
+- Copy the generated PAT to your clipboard. DON'T CLOSE THE BROWSER WINDOW YET.
+
+- Install gitcreds in R with `install.packages("gitcreds")`
+
+- Next, run `gitcreds::gitcreds_set()`.
+
+- Enter the PAT that you copied from GitHub. Now you can close the browser window.
+
+Done!
+
+## A few more notes about PAT
+
+- Your PAT will expire (after 30 days by default).
+
+- You then need to re-create a new one on GitHub and enter it again with `gitcreds::gitcreds_set()`.
+
+- Using an expiration date is recommended for security
+
+## Troubleshooting
+
+If you get an error like `Could not find system git`, try [the following](https://github.com/SBOHVM/RPiR/discussions/444#discussioncomment-1795047):
+
+Go to `Tools -> Global Options`, choose the `git/svn` tab , then you need to browse for the git executable - presumably in `C:\Program Files\Git\bin\git.exe`
+
+## Introduce yourself to git
+
+You need to let git know your GitHub username and email address:
+
+``` bash
+git config --global user.name "your_github_username"
+git config --global user.email "your_email_adress"
+git config --global --list
+```
+
+## Change some default settings
+
+- Git can allow you to have multiple versions of your code at the same time.
+
+- These are called "branches".
+
+- Tell git to use the name "main" for the main branch:
+
+```bash
+git config --global init.defaultBranch main
+```
+
+## About repos
+
+- A 'repo' (short for repository) is a folder where you store all the code and other files needed for a project.
+
+**git tracks the content of a repo**
+
+## Remote and local repos
+
+- A **local** repo is just the project on your own computer
+
+- A **remote** repo is a copy of the repo online (on GitHub)
+  - Somewhat confusingly, the remote repo is typically referred to by the name `origin`
+
+## Cloning
+
+Sometimes, you want to download a repo that doesn't exist on your computer yet.
+
+- **Cloning** is copying an online repo to your computer
+
+## Pushing and pulling
+
+Once you have the repos set up, you need to keep them in sync.
+
+- You **push** changes from your local repo to the remote
+
+- You **pull** changes from the remote repo to your local one
+
+## Commits
+
+- A **commit** is a single change made to a repo that you have stored in git's history.
+
+There are two steps to making a commit.
+
+## Staging and committing
+
+A file that has been changed is not automatically added to git's history.
+
+- You need to **stage** the file (or part of the file) that you want to add to a particular commit
+
+- Next, you type a short message describing the change, the **commit message**
+
+- Finally, you **commit** the change to log it in git's history
+
+## The `.gitignore` file
+
+If there are any files you don't want git to track, you can ignore them by listing them in a special file called `.gitignore`.
+
+It is usually a good idea to ignore **raw data files** and **output files**. We only want to track code (in other words, the analysis itself)
+
+## How this works in practice
+
+We will go through a typical git workflow together in class using RStudio.
+
+This is explained in the ["Intro to Git" markdown file](https://github.com/data-analysis-chiba-2024/day02-git/blob/main/day02_intro_to_git.md), which you will copy to your computer when you clone the [Day 2 repo](https://github.com/data-analysis-chiba-2024/day02-git/).
