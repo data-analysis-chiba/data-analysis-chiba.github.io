@@ -886,22 +886,4 @@ ggsave(plot = gapminder_asia_plot, file = "gapminder_asia.pdf")
 
 ## Due dates
 
-- The report (`report.qmd`) is due **2024-07-24 11:59PM**
-
-# Extra credit
-
-## Attend the `targets` workshop on July 17
-
-- The `targets` R package helps you define **workflows** to run your analysis
-
-- This is good for **reproducibilty** because you only need to run one R command to reproduce the entire analysis
-
-## Workshop details
-
-- July 17 1:30 PM ~ 4:30 PM
-
-- Nishi Chiba Campus Library (Academic Link Center) "Kiwami" seminar room
-
-- Materials
-  - [Video in Japanese](https://togotv.dbcls.jp/en/20220331.html)
-  - [Lesson in English](https://carpentries-incubator.github.io/targets-workshop/)
+- The report (`report.qmd`) is due **2025-07-30 11:59PM**

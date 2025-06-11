@@ -2,7 +2,7 @@
 
 Materials for course "Reproducible Data Analysis" at Chiba University
 
-2nd term, 2024  
+2nd term  
 Thursdays 3rd period  
 Room G8203
 
@@ -10,11 +10,11 @@ Instructor: Assoc. Prof. [Joel H. Nitta](https://www.joelnitta.com)
 
 ## Course website
 
-<https://data-analysis-chiba-2024.github.io/>
+<https://data-analysis-chiba.github.io/>
 
 ## Syllabus
 
-<https://syllabus.gs.chiba-u.jp/2024/101101101076000/Z011531301/en_US>
+<https://syllabus.gs.chiba-u.jp/2025/101101101076000/Z011531301/en_US>
 
 ## Publishing
 

@@ -151,30 +151,29 @@ By the end of the course, you will be able to:
 
 ## Final project
 
-- You will need to analyze a dataset of your own choosing for your final project, due 2024-07-24 11:59 PM
+- You will need to analyze a dataset of your own choosing for your final project, due 2025-07-30 11:59 PM
 
-- The last homework assignment is due 2024-07-10 11:59 PM, so you have at least 2 weeks to work on the final project
+- The last homework assignment is due 2025-07-16 11:59 PM, so you have 2 weeks to work on the final project
 
 ## Schedule
 
-- Day 1 (2024-06-06): Introduction: Why code? Why reproducibility?
+- Day 1 (2025-06-12): Introduction: Why code? Why reproducibility?
 
-- Day 2 (2024-06-13): Git and GitHub
+- Day 2 (2025-06-19): Git and GitHub
 
-- Day 3 (2024-06-20): Basic usage of R and RStudio
+- Day 3 (2025-06-26): Basic usage of R and RStudio
 
-- Day 4 (Media Day): Data loading and tidying with tidyverse
+- Day 4 (2025-07-03): Data loading and tidying with tidyverse
 
 ## Schedule (cont'd)
 
-- Day 5 (Media Day): Data tidying, part II
+- Day 5 (Media Day): Joining data
 
-- Day 6 (2024-07-08): Data visualization with ggplot2
-  - **NOTE** different date/time than usual: 6th period (17:50~19:20)
+- Day 6 (2025-07-10): Data visualization with ggplot2
 
-- Day 7 (2024-07-11): Writing documents with Quarto
+- Day 7 (2025-07-17): Writing documents with Quarto
 
-- Day 8 (2024-07-18): Quarto, part II
+- Day 8 (2025-07-24): Quarto, part II
 
 ## Grades
 
@@ -185,15 +184,9 @@ By the end of the course, you will be able to:
 
 Only the **top three** homework assignments will be used for grading (so you get one free exception if you forget to turn it in etc.)
 
-## Extra Credit
-
-- I will teach a [workshop](https://carpentries-incubator.github.io/targets-workshop/) on using the ["targets" R package](https://docs.ropensci.org/targets/) for data analysis on 2024-07-17 (exact time and location TBA).
-
-- Anybody who participates in the workshop will receive extra credit
-
 ## Course website and slides
 
-- All slides (and other info) available at<br><https://data-analysis-chiba-2024.github.io/>
+- All slides (and other info) available at<br><https://data-analysis-chiba.github.io/>
 
 ## Moodle
 
