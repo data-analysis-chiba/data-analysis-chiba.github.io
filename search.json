@@ -1852,7 +1852,7 @@
     "href": "day1/index.html#recommended-reading",
     "title": "Reproducible data analysis",
     "section": "Recommended Reading",
-    "text": "Recommended Reading\n\nR for Data Science. https://r4ds.had.co.nz/\n\nAvailable in Japanese from Amazon or O’Reilly\n\nHappy Git with R. https://happygitwithr.com/\nIntroduction to Reproducible Publications with RStudio https://ucsbcarpentry.github.io/Reproducible-Publications-with-RStudio-Quarto/index.html"
+    "text": "Recommended Reading\n\nR for Data Science (2nd ed.). https://r4ds.hadley.nz/\n\nAvailable in Japanese from Amazon or O’Reilly\n\nHappy Git with R. https://happygitwithr.com/\nIntroduction to Reproducible Publications with RStudio https://ucsbcarpentry.github.io/Reproducible-Publications-with-RStudio-Quarto/index.html"
   },
   {
     "objectID": "day1/index.html#homework-assignments",
