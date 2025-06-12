@@ -200,41 +200,41 @@ By appointment: contact me at <joelnitta@chiba.u-jp>
 
 ## Questions?
 
-## ChatGPT {.incremental}
+## AI {.incremental}
 
-- Who has used ChatGPT before?
+- Who has used AI (for example, ChatGPT) before?
   - <https://chat.openai.com/>
 
-- You may use ChatGPT for your homework and final project
+- You may use AI for your homework and final project
 
 - But first you need to know **how to use it**
 
-## ChatGPT {.incremental}
+## AI {.incremental}
 
-- ChatGPT **makes statistical predictions** about words based on training data (it does not "think")
+- AI **makes statistical predictions** about words based on training data (it does not "think")
 
-- ChatGPT is designed to produce sentences that **sound** as natural as possible
+- AI is designed to produce sentences that **sound** as natural as possible
 
-- ChatGPT may **lie to you** or make up facts (called "hallucination"; this is especially common when it lacks adequate training data)
+- AI may **lie to you** or make up facts (called "hallucination"; this is especially common when it lacks adequate training data)
 
-## ChatGPT policies (DOs) {.incremental}
+## AI policies (DOs) {.incremental}
 
-- *Do* try by yourself first (without ChatGPT)
+- *Do* try by yourself first (without AI)
 
 - *Do* ask it **detailed**, **specific** questions (prompts)
   -  <https://www.promptingguide.ai/> ([日本語](https://www.promptingguide.ai/jp))
 
-- *Do* **double-check** the results: does ChatGPT's code produce the expected result?
+- *Do* **double-check** the results: does the AI's code produce the expected result?
 
-- *Do* make sure you **understand** the code that ChatGPT provides
+- *Do* make sure you **understand** the code that the AI provides
 
-## ChatGPT policies (DON'Ts) {.incremental}
+## AI policies (DON'Ts) {.incremental}
 
-- *Don't* copy-paste directly from ChatGPT for your report.
-  - Typing the code yourself will help you remember it and understand what you are doing. Copy-pasting text for a paper is plagiarism.
+- *Don't* copy-paste directly from AI for your report.
+  - Typing the code yourself will help you remember it and understand what you are doing. **Copy-pasting text for a paper is plagiarism.**
 
-- *Don't* submit an answer from ChatGPT without trying/checking it yourself first
-  - ChatGPT could very well be wrong!
+- *Don't* submit an answer from AI without trying/checking it yourself first
+  - The AI could very well be wrong!
 
 ## Setting up RStudio
 
