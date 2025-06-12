@@ -3,7 +3,7 @@ format:
   revealjs:
     incremental: false
     css: ../styles.css
-    theme: ../theme.scss
+    theme: ../theme_medium.scss
 execute: 
   echo: true
 ---
