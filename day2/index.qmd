@@ -41,7 +41,8 @@ execute:
 ## Instructions to [install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 - [Mac](https://git-scm.com/download/mac)
-  - May need to install [Homebrew](https://brew.sh/) first
+  - First check if git is already installed by running `git` in the terminal
+  - If you do need to install git, install [Homebrew](https://brew.sh/) first
 
 - [Windows](https://git-scm.com/download/win)
 
