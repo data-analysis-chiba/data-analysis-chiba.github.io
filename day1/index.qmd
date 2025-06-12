@@ -141,7 +141,7 @@ By the end of the course, you will be able to:
 
 - Happy Git with R. <https://happygitwithr.com/>
 
-- Introduction to Reproducible Publications with RStudio <https://ucsbcarpentry.github.io/Reproducible-Publications-with-RStudio-Quarto/index.html>
+- Introduction to Reproducible Publications with RStudio <https://carpentries-incubator.github.io/reproducible-publications-quarto/>
 
 ## Homework assignments
 
