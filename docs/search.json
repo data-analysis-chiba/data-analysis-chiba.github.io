@@ -676,7 +676,7 @@
     "href": "day2/index.html#instructions-to-install-git",
     "title": "Reproducible data analysis",
     "section": "Instructions to install git",
-    "text": "Instructions to install git\n\nMac\n\nMay need to install Homebrew first\n\nWindows\nLinux"
+    "text": "Instructions to install git\n\nMac\n\nFirst check if git is already installed by running git in the terminal\nIf you do need to install git, install Homebrew first\n\nWindows\nLinux"
   },
   {
     "objectID": "day2/index.html#setup-github-account",

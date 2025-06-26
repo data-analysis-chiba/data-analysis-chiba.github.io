@@ -10,6 +10,25 @@ execute:
 
 # Day 3: Basic usage of R and RStudio
 
+## Recordings
+
+- I will record lectures starting from today and post them on Moodle
+
+- This does not mean you can skip class. **The best way to learn is to come to class and ask questions!**
+
+## What to do if the Git pane doesn't work
+
+![](../images/git_empty.png)
+
+## What to do if the Git pane doesn't work
+
+- Finish editing the homework assignment
+
+- In the terminal, do the following commands:
+  - `git add FILNAME` (for example, `git add day03_homework.R`)
+  - `git commit -m "Finish homework"`
+  - `git push`
+
 ## Why use a programming language?
 
 - Programming makes your analysis **reproducible**, because you have an **exact, written record** of what you have done
@@ -524,8 +543,6 @@ ages[ages > 20]
 - Make sure to **run the code**. Your R code should not have any errors!
 
 - Commit your changes as you work on your homework, and push them to the remote
-
-- Submit the URL for the remote as your answer on Moodle
 
 ---
 
