@@ -1071,6 +1071,27 @@
     "text": "Summary\n\nSort data with arrange()\nNarrow down columns with select()\nFilter rows with filter()\nModify data with mutate()\nSummarize data with summarize()\nGroup data with group_by()\nUse the pipe (%&gt;%) to chain steps together"
   },
   {
+    "objectID": "day3/index.html#recordings",
+    "href": "day3/index.html#recordings",
+    "title": "Reproducible data analysis",
+    "section": "Recordings",
+    "text": "Recordings\n\nI will record lectures starting from today and post them on Moodle\nThis does not mean you can skip class. The best way to learn is to come to class and ask questions!"
+  },
+  {
+    "objectID": "day3/index.html#what-to-do-if-the-git-pane-doesnt-work",
+    "href": "day3/index.html#what-to-do-if-the-git-pane-doesnt-work",
+    "title": "Reproducible data analysis",
+    "section": "What to do if the Git pane doesn’t work",
+    "text": "What to do if the Git pane doesn’t work"
+  },
+  {
+    "objectID": "day3/index.html#what-to-do-if-the-git-pane-doesnt-work-1",
+    "href": "day3/index.html#what-to-do-if-the-git-pane-doesnt-work-1",
+    "title": "Reproducible data analysis",
+    "section": "What to do if the Git pane doesn’t work",
+    "text": "What to do if the Git pane doesn’t work\n\nFinish editing the homework assignment\nIn the terminal, do the following commands:\n\ngit add FILENAME (for example, git add day03_homework.R)\ngit commit -m \"Finish homework\"\ngit push"
+  },
+  {
     "objectID": "day3/index.html#why-use-a-programming-language",
     "href": "day3/index.html#why-use-a-programming-language",
     "title": "Reproducible data analysis",
@@ -1432,7 +1453,7 @@
     "href": "day3/index.html#homework-1",
     "title": "Reproducible data analysis",
     "section": "Homework",
-    "text": "Homework\n\nEdit the day03_homework.R file to answer the questions.\nMake sure to run the code. Your R code should not have any errors!\nCommit your changes as you work on your homework, and push them to the remote\nSubmit the URL for the remote as your answer on Moodle"
+    "text": "Homework\n\nEdit the day03_homework.R file to answer the questions.\nMake sure to run the code. Your R code should not have any errors!\nCommit your changes as you work on your homework, and push them to the remote"
   },
   {
     "objectID": "day3/index.html#homework-and-chatgpt",

@@ -197,6 +197,29 @@
 <h1>Day 3: Basic usage of R and RStudio</h1>
 
 </section>
+<section id="recordings" class="slide level2">
+<h2>Recordings</h2>
+<ul>
+<li><p>I will record lectures starting from today and post them on Moodle</p></li>
+<li><p>This does not mean you can skip class. <strong>The best way to learn is to come to class and ask questions!</strong></p></li>
+</ul>
+</section>
+<section id="what-to-do-if-the-git-pane-doesnt-work" class="slide level2">
+<h2>What to do if the Git pane doesn’t work</h2>
+
+<img data-src="../images/git_empty.png" class="r-stretch"></section>
+<section id="what-to-do-if-the-git-pane-doesnt-work-1" class="slide level2">
+<h2>What to do if the Git pane doesn’t work</h2>
+<ul>
+<li><p>Finish editing the homework assignment</p></li>
+<li><p>In the terminal, do the following commands:</p>
+<ul>
+<li><code>git add FILENAME</code> (for example, <code>git add day03_homework.R</code>)</li>
+<li><code>git commit -m "Finish homework"</code></li>
+<li><code>git push</code></li>
+</ul></li>
+</ul>
+</section>
 <section id="why-use-a-programming-language" class="slide level2">
 <h2>Why use a programming language?</h2>
 <ul>
@@ -840,7 +863,6 @@
 <li><p>Edit the <code>day03_homework.R</code> file to answer the questions.</p></li>
 <li><p>Make sure to <strong>run the code</strong>. Your R code should not have any errors!</p></li>
 <li><p>Commit your changes as you work on your homework, and push them to the remote</p></li>
-<li><p>Submit the URL for the remote as your answer on Moodle</p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -1198,7 +1220,7 @@
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/data-analysis-chiba\.github\.io\/");
+          var filterRegex = new RegExp('/' + window.location.host + '/');
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

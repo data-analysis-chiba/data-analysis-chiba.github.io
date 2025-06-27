@@ -25,7 +25,7 @@ execute:
 - Finish editing the homework assignment
 
 - In the terminal, do the following commands:
-  - `git add FILNAME` (for example, `git add day03_homework.R`)
+  - `git add FILENAME` (for example, `git add day03_homework.R`)
   - `git commit -m "Finish homework"`
   - `git push`
 
