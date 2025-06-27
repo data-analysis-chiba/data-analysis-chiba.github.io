@@ -1089,7 +1089,7 @@
     "href": "day3/index.html#what-to-do-if-the-git-pane-doesnt-work-1",
     "title": "Reproducible data analysis",
     "section": "What to do if the Git pane doesn’t work",
-    "text": "What to do if the Git pane doesn’t work\n\nFinish editing the homework assignment\nIn the terminal, do the following commands:\n\ngit add FILNAME (for example, git add day03_homework.R)\ngit commit -m \"Finish homework\"\ngit push"
+    "text": "What to do if the Git pane doesn’t work\n\nFinish editing the homework assignment\nIn the terminal, do the following commands:\n\ngit add FILENAME (for example, git add day03_homework.R)\ngit commit -m \"Finish homework\"\ngit push"
   },
   {
     "objectID": "day3/index.html#why-use-a-programming-language",
