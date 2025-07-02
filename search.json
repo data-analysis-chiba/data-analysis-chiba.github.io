@@ -1715,6 +1715,13 @@
     "text": "Important Deadlines\n\n2025-06-25 11:59PM: Day 2 homework due\n2025-07-02 11:59PM: Day 3 homework due\n2025-07-09 11:59PM: Day 4 homework due\n2025-07-16 11:59PM: Day 5 homework due\n2025-07-30 11:59PM: Final paper due"
   },
   {
+    "objectID": "index.html#extra-practice",
+    "href": "index.html#extra-practice",
+    "title": "Reproducible Data Analysis",
+    "section": "Extra Practice",
+    "text": "Extra Practice\nThe following are interactive tutorials in Japanese that you can run in your web browser. They were designed for the 情報処理演習 course. Note that although the tutorials are used as homework in the 情報処理演習 course, they are NOT required assignments for this course. I only provide them here so you can use them for extra practice if you want. Please note that bandwidth is limited to run the tutorials, so they may not always be available.\n以下のリンクは元々は「情報処理演習」のために作成された、webブラウザの中で実行できるRコードのチュートリアルです。\n注意：以下のチュートリアルは「情報処理演習」の宿題に使われていますが、本授業の宿題ではありません。 復習のためだけに掲載されています。\nなお、使用量に限りがありますので、同時に数人以上使われている場合は接続できない可能性があります。\n\n0. チュートリアルについて\n1. R入門\n2. ベクトルについて\n3. データをファイルから読み込む\n4. データの整理（1）\n5. データの整理（2）\n6. データの可視化（1）\n7. データの可視化（2）"
+  },
+  {
     "objectID": "index.html#office-hours",
     "href": "index.html#office-hours",
     "title": "Reproducible Data Analysis",

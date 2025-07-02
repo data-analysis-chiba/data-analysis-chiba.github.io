@@ -583,7 +583,7 @@
 <section class="slide level2">
 
 <div class="cell medium">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>flights2 <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>flights2 <span class="ot">&lt;-</span> flights <span class="sc">|&gt;</span></span>
 <span id="cb21-2"><a></a>  <span class="fu">select</span>(year, time_hour, origin, dest, tailnum, carrier)</span>
 <span id="cb21-3"><a></a></span>
 <span id="cb21-4"><a></a>flights2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -829,7 +829,7 @@
 
 <p>Use a semi-join to filter the airports dataset to show just the airports where the flights originated from (there are three airports in NYC):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>airports <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>airports <span class="sc">|&gt;</span></span>
 <span id="cb36-2"><a></a>  <span class="fu">semi_join</span>(flights2, <span class="fu">join_by</span>(faa <span class="sc">==</span> origin))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell medium">
@@ -854,8 +854,8 @@
 
 <p>Find rows that are missing from <code>airports</code> by looking for flights that don’t have a matching destination airport:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>flights2 <span class="sc">|&gt;</span> </span>
-<span id="cb38-2"><a></a>  <span class="fu">anti_join</span>(airports, <span class="fu">join_by</span>(dest <span class="sc">==</span> faa)) <span class="sc">|&gt;</span> </span>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>flights2 <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">anti_join</span>(airports, <span class="fu">join_by</span>(dest <span class="sc">==</span> faa)) <span class="sc">|&gt;</span></span>
 <span id="cb38-3"><a></a>  <span class="fu">distinct</span>(dest)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell medium">
