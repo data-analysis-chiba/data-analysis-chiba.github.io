@@ -61,21 +61,14 @@ The following are interactive tutorials in Japanese that you can run in your web
 
 なお、使用量に限りがありますので、同時に数人以上使われている場合は接続できない可能性があります。
 
-- [0. チュートリアルについて](https://joelnitta.shinyapps.io/00-learnr/)
-
-- [1. R入門](https://joelnitta.shinyapps.io/01-intro/)
-
-- [2. ベクトルについて](https://joelnitta.shinyapps.io/02-vectors)
-
-- [3. データをファイルから読み込む](https://joelnitta.shinyapps.io/03-load/)
-
-- [4. データの整理（1）](https://joelnitta.shinyapps.io/04-tidy-1/)
-
-- [5. データの整理（2）](https://joelnitta.shinyapps.io/05-tidy-2/)
-
-- [6. データの可視化（1）](https://joelnitta.shinyapps.io/06-plot-1/)
-
-- [7. データの可視化（2）](https://joelnitta.shinyapps.io/07-plot-2/)
+1. [チュートリアルについて](https://joelnitta.shinyapps.io/00-learnr/)
+2. [R入門](https://joelnitta.shinyapps.io/01-intro/)
+3. [ベクトルについて](https://joelnitta.shinyapps.io/02-vectors)
+4. [データをファイルから読み込む](https://joelnitta.shinyapps.io/03-load/)
+5. [データの整理（1）](https://joelnitta.shinyapps.io/04-tidy-1/)
+6. [データの整理（2）](https://joelnitta.shinyapps.io/05-tidy-2/)
+7. [データの可視化（1）](https://joelnitta.shinyapps.io/06-plot-1/)
+8. [データの可視化（2）](https://joelnitta.shinyapps.io/07-plot-2/)
 
 ## Office Hours
 
