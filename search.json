@@ -956,70 +956,70 @@
     "href": "day4/index.html#about-pipes",
     "title": "Reproducible data analysis",
     "section": "About pipes",
-    "text": "About pipes\n\nDuring the last challenge, you needed to save the output of the select() function, then use it as input into the arrange() function\nThere is a simpler way to do this, called the “pipe”\nThe pipe is written like this: %&gt;%\n\nNewer versions of R also let you write it like this: |&gt;"
+    "text": "About pipes\n\nDuring the last challenge, you needed to save the output of the select() function, then use it as input into the arrange() function\nThere is a simpler way to do this, called the “pipe”\nThe pipe is written like this: |&gt;\n\nSome packages also write it like this: %&gt;%"
   },
   {
     "objectID": "day4/index.html#about-pipes-1",
     "href": "day4/index.html#about-pipes-1",
     "title": "Reproducible data analysis",
     "section": "About pipes",
-    "text": "About pipes\n\nThe pipe takes the output from one function and passes it to the input of the next function\nYou can think of it as saying “and then”\n\nDo this and then do this, and then do this…\nDo this %&gt;% do this, %&gt;% do this…"
+    "text": "About pipes\n\nThe pipe takes the output from one function and passes it to the input of the next function\nYou can think of it as saying “and then”\n\nDo this and then do this, and then do this…\nDo this |&gt; do this, |&gt; do this…"
   },
   {
     "objectID": "day4/index.html#about-pipes-2",
     "href": "day4/index.html#about-pipes-2",
     "title": "Reproducible data analysis",
     "section": "About pipes",
-    "text": "About pipes\n\nWe can even use the pipe just with one function:\n\nRead this as “start with gapminder and then select only year, country, and population”\n\n\n\ngapminder %&gt;% select(year, country, pop)\n\n# A tibble: 1,704 × 3\n   year country          pop\n  &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;\n1  1952 Afghanistan  8425333\n2  1957 Afghanistan  9240934\n3  1962 Afghanistan 10267083\n4  1967 Afghanistan 11537966\n5  1972 Afghanistan 13079460\n6  1977 Afghanistan 14880372\n# ℹ 1,698 more rows"
+    "text": "About pipes\n\nWe can even use the pipe just with one function:\n\nRead this as “start with gapminder and then select only year, country, and population”\n\n\n\ngapminder |&gt; select(year, country, pop)\n\n# A tibble: 1,704 × 3\n   year country          pop\n  &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;\n1  1952 Afghanistan  8425333\n2  1957 Afghanistan  9240934\n3  1962 Afghanistan 10267083\n4  1967 Afghanistan 11537966\n5  1972 Afghanistan 13079460\n6  1977 Afghanistan 14880372\n# ℹ 1,698 more rows"
   },
   {
     "objectID": "day4/index.html#about-pipes-3",
     "href": "day4/index.html#about-pipes-3",
     "title": "Reproducible data analysis",
     "section": "About pipes",
-    "text": "About pipes\n\nThis becomes very useful when we want to do multiple steps\n\nRead this as “start with gapminder, and then select only year, country, and population, and then arrange by year”\n\n\n\ngapminder %&gt;% select(year, country, pop) %&gt;% arrange(year)\n\n\n\n# A tibble: 1,704 × 3\n   year country         pop\n  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;\n1  1952 Afghanistan 8425333\n2  1952 Albania     1282697\n3  1952 Algeria     9279525\n4  1952 Angola      4232095\n# ℹ 1,700 more rows"
+    "text": "About pipes\n\nThis becomes very useful when we want to do multiple steps\n\nRead this as “start with gapminder, and then select only year, country, and population, and then arrange by year”\n\n\n\ngapminder |&gt; select(year, country, pop) |&gt; arrange(year)\n\n\n\n# A tibble: 1,704 × 3\n   year country         pop\n  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;\n1  1952 Afghanistan 8425333\n2  1952 Albania     1282697\n3  1952 Algeria     9279525\n4  1952 Angola      4232095\n# ℹ 1,700 more rows"
   },
   {
     "objectID": "day4/index.html#about-pipes-4",
     "href": "day4/index.html#about-pipes-4",
     "title": "Reproducible data analysis",
     "section": "About pipes",
-    "text": "About pipes\n\nWe can make it easier to read by putting each step on its own line\n\n\ngapminder %&gt;%\n  select(year, country, pop) %&gt;%\n  arrange(year)\n\n# A tibble: 1,704 × 3\n   year country          pop\n  &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;\n1  1952 Afghanistan  8425333\n2  1952 Albania      1282697\n3  1952 Algeria      9279525\n4  1952 Angola       4232095\n5  1952 Argentina   17876956\n6  1952 Australia    8691212\n# ℹ 1,698 more rows"
+    "text": "About pipes\n\nWe can make it easier to read by putting each step on its own line\n\n\ngapminder |&gt;\n  select(year, country, pop) |&gt;\n  arrange(year)\n\n# A tibble: 1,704 × 3\n   year country          pop\n  &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;\n1  1952 Afghanistan  8425333\n2  1952 Albania      1282697\n3  1952 Algeria      9279525\n4  1952 Angola       4232095\n5  1952 Argentina   17876956\n6  1952 Australia    8691212\n# ℹ 1,698 more rows"
   },
   {
     "objectID": "day4/index.html#about-pipes-5",
     "href": "day4/index.html#about-pipes-5",
     "title": "Reproducible data analysis",
     "section": "About pipes",
-    "text": "About pipes\n\nThis way, you don’t have to save each intermediate step\nThis is a very useful way to manipulate data\nI will now use the pipe (%&gt;%) for the rest of the lesson"
+    "text": "About pipes\n\nThis way, you don’t have to save each intermediate step\nThis is a very useful way to manipulate data\nI will now use the pipe (|&gt;) for the rest of the lesson"
   },
   {
     "objectID": "day4/index.html#subset-rows-with-filter",
     "href": "day4/index.html#subset-rows-with-filter",
     "title": "Reproducible data analysis",
     "section": "Subset rows with filter()",
-    "text": "Subset rows with filter()\n\nUse the filter() function to only keep rows that meet a certain condition\nFor example, let’s only keep the data in Europe:\n\n\ngapminder %&gt;% filter(continent == \"Europe\")\n\n# A tibble: 360 × 6\n  country continent  year lifeExp     pop gdpPercap\n  &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n1 Albania Europe     1952    55.2 1282697     1601.\n2 Albania Europe     1957    59.3 1476505     1942.\n3 Albania Europe     1962    64.8 1728137     2313.\n4 Albania Europe     1967    66.2 1984060     2760.\n5 Albania Europe     1972    67.7 2263554     3313.\n6 Albania Europe     1977    68.9 2509048     3533.\n# ℹ 354 more rows"
+    "text": "Subset rows with filter()\n\nUse the filter() function to only keep rows that meet a certain condition\nFor example, let’s only keep the data in Europe:\n\n\ngapminder |&gt; filter(continent == \"Europe\")\n\n# A tibble: 360 × 6\n  country continent  year lifeExp     pop gdpPercap\n  &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n1 Albania Europe     1952    55.2 1282697     1601.\n2 Albania Europe     1957    59.3 1476505     1942.\n3 Albania Europe     1962    64.8 1728137     2313.\n4 Albania Europe     1967    66.2 1984060     2760.\n5 Albania Europe     1972    67.7 2263554     3313.\n6 Albania Europe     1977    68.9 2509048     3533.\n# ℹ 354 more rows"
   },
   {
     "objectID": "day4/index.html#challenge-2",
     "href": "day4/index.html#challenge-2",
     "title": "Reproducible data analysis",
     "section": "Challenge",
-    "text": "Challenge\nUsing the pipe (%&gt;%) and the functions we have learned so far, filter the data to Asia, then select only the country, year, and population columns."
+    "text": "Challenge\nUsing the pipe (|&gt;) and the functions we have learned so far, filter the data to Asia, then select only the country, year, and population columns."
   },
   {
     "objectID": "day4/index.html#modify-data-with-mutate",
     "href": "day4/index.html#modify-data-with-mutate",
     "title": "Reproducible data analysis",
     "section": "Modify data with mutate()",
-    "text": "Modify data with mutate()\n\nFor example, we could change the units of population to millions of people:\n\n\ngapminder %&gt;% mutate(pop = pop/1000000)\n\n# A tibble: 1,704 × 6\n  country     continent  year lifeExp   pop gdpPercap\n  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8.43      779.\n2 Afghanistan Asia       1957    30.3  9.24      821.\n3 Afghanistan Asia       1962    32.0 10.3       853.\n4 Afghanistan Asia       1967    34.0 11.5       836.\n5 Afghanistan Asia       1972    36.1 13.1       740.\n6 Afghanistan Asia       1977    38.4 14.9       786.\n# ℹ 1,698 more rows"
+    "text": "Modify data with mutate()\n\nFor example, we could change the units of population to millions of people:\n\n\ngapminder |&gt; mutate(pop = pop / 1000000)\n\n# A tibble: 1,704 × 6\n  country     continent  year lifeExp   pop gdpPercap\n  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8.43      779.\n2 Afghanistan Asia       1957    30.3  9.24      821.\n3 Afghanistan Asia       1962    32.0 10.3       853.\n4 Afghanistan Asia       1967    34.0 11.5       836.\n5 Afghanistan Asia       1972    36.1 13.1       740.\n6 Afghanistan Asia       1977    38.4 14.9       786.\n# ℹ 1,698 more rows"
   },
   {
     "objectID": "day4/index.html#modify-data-with-mutate-1",
     "href": "day4/index.html#modify-data-with-mutate-1",
     "title": "Reproducible data analysis",
     "section": "Modify data with mutate()",
-    "text": "Modify data with mutate()\n\nIf we provide a new column name, that column will be added\n\n\ngapminder %&gt;% mutate(pop_mil = pop/1000000)\n\n# A tibble: 1,704 × 7\n  country     continent  year lifeExp      pop gdpPercap pop_mil\n  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.    8.43\n2 Afghanistan Asia       1957    30.3  9240934      821.    9.24\n3 Afghanistan Asia       1962    32.0 10267083      853.   10.3 \n4 Afghanistan Asia       1967    34.0 11537966      836.   11.5 \n5 Afghanistan Asia       1972    36.1 13079460      740.   13.1 \n6 Afghanistan Asia       1977    38.4 14880372      786.   14.9 \n# ℹ 1,698 more rows"
+    "text": "Modify data with mutate()\n\nIf we provide a new column name, that column will be added\n\n\ngapminder |&gt; mutate(pop_mil = pop / 1000000)\n\n# A tibble: 1,704 × 7\n  country     continent  year lifeExp      pop gdpPercap pop_mil\n  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.    8.43\n2 Afghanistan Asia       1957    30.3  9240934      821.    9.24\n3 Afghanistan Asia       1962    32.0 10267083      853.   10.3 \n4 Afghanistan Asia       1967    34.0 11537966      836.   11.5 \n5 Afghanistan Asia       1972    36.1 13079460      740.   13.1 \n6 Afghanistan Asia       1977    38.4 14880372      786.   14.9 \n# ℹ 1,698 more rows"
   },
   {
     "objectID": "day4/index.html#challenge-3",
@@ -1033,28 +1033,28 @@
     "href": "day4/index.html#calculate-summary-statistics-with-summarize",
     "title": "Reproducible data analysis",
     "section": "Calculate summary statistics with summarize()",
-    "text": "Calculate summary statistics with summarize()\n\nFor example, let’s calculate the overall mean population:\n\n\ngapminder %&gt;% summarize(mean_pop = mean(pop))\n\n# A tibble: 1 × 1\n   mean_pop\n      &lt;dbl&gt;\n1 29601212."
+    "text": "Calculate summary statistics with summarize()\n\nFor example, let’s calculate the overall mean population:\n\n\ngapminder |&gt; summarize(mean_pop = mean(pop))\n\n# A tibble: 1 × 1\n   mean_pop\n      &lt;dbl&gt;\n1 29601212."
   },
   {
     "objectID": "day4/index.html#calculate-summary-statistics-with-summarize-1",
     "href": "day4/index.html#calculate-summary-statistics-with-summarize-1",
     "title": "Reproducible data analysis",
     "section": "Calculate summary statistics with summarize()",
-    "text": "Calculate summary statistics with summarize()\n\nAnother example: the total population over all the data:\n\n\ngapminder %&gt;% summarize(total_pop = sum(pop))\n\n# A tibble: 1 × 1\n    total_pop\n        &lt;dbl&gt;\n1 50440465801"
+    "text": "Calculate summary statistics with summarize()\n\nAnother example: the total population over all the data:\n\n\ngapminder |&gt; summarize(total_pop = sum(pop))\n\n# A tibble: 1 × 1\n    total_pop\n        &lt;dbl&gt;\n1 50440465801"
   },
   {
     "objectID": "day4/index.html#use-group_by-to-do-calculations-per-group",
     "href": "day4/index.html#use-group_by-to-do-calculations-per-group",
     "title": "Reproducible data analysis",
     "section": "Use group_by() to do calculations per group",
-    "text": "Use group_by() to do calculations per group\n\nHowever, it is often more useful to calculate such summary statistics for particular groups\nTo do this, first specify the groups with group_by():\n\n\ngapminder %&gt;% group_by(continent)\n\n\n\n# A tibble: 1,704 × 6\n# Groups:   continent [5]\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n# ℹ 1,700 more rows"
+    "text": "Use group_by() to do calculations per group\n\nHowever, it is often more useful to calculate such summary statistics for particular groups\nTo do this, first specify the groups with group_by():\n\n\ngapminder |&gt; group_by(continent)\n\n\n\n# A tibble: 1,704 × 6\n# Groups:   continent [5]\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n# ℹ 1,700 more rows"
   },
   {
     "objectID": "day4/index.html#use-group_by-to-do-calculations-per-group-1",
     "href": "day4/index.html#use-group_by-to-do-calculations-per-group-1",
     "title": "Reproducible data analysis",
     "section": "Use group_by() to do calculations per group",
-    "text": "Use group_by() to do calculations per group\n\nNext, use summarize() to calculate the summary statistic:\n\n\ngapminder %&gt;%\n  group_by(continent) %&gt;%\n  summarize(mean_pop = mean(pop))\n\n# A tibble: 5 × 2\n  continent  mean_pop\n  &lt;chr&gt;         &lt;dbl&gt;\n1 Africa     9916003.\n2 Americas  24504795.\n3 Asia      77038722.\n4 Europe    17169765.\n5 Oceania    8874672."
+    "text": "Use group_by() to do calculations per group\n\nNext, use summarize() to calculate the summary statistic:\n\n\ngapminder |&gt;\n  group_by(continent) |&gt;\n  summarize(mean_pop = mean(pop))\n\n# A tibble: 5 × 2\n  continent  mean_pop\n  &lt;chr&gt;         &lt;dbl&gt;\n1 Africa     9916003.\n2 Americas  24504795.\n3 Asia      77038722.\n4 Europe    17169765.\n5 Oceania    8874672."
   },
   {
     "objectID": "day4/index.html#difference-between-mutate-and-summarize",
@@ -1068,7 +1068,7 @@
     "href": "day4/index.html#summary",
     "title": "Reproducible data analysis",
     "section": "Summary",
-    "text": "Summary\n\nSort data with arrange()\nNarrow down columns with select()\nFilter rows with filter()\nModify data with mutate()\nSummarize data with summarize()\nGroup data with group_by()\nUse the pipe (%&gt;%) to chain steps together"
+    "text": "Summary\n\nSort data with arrange()\nNarrow down columns with select()\nFilter rows with filter()\nModify data with mutate()\nSummarize data with summarize()\nGroup data with group_by()\nUse the pipe (|&gt;) to chain steps together"
   },
   {
     "objectID": "day3/index.html#recordings",

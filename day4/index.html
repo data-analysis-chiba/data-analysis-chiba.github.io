@@ -530,9 +530,9 @@
 <ul>
 <li><p>During the last challenge, you needed to save the output of the <code>select()</code> function, then use it as input into the <code>arrange()</code> function</p></li>
 <li><p>There is a simpler way to do this, called the “pipe”</p></li>
-<li><p>The pipe is written like this: <code>%&gt;%</code></p>
+<li><p>The pipe is written like this: <code>|&gt;</code></p>
 <ul>
-<li>Newer versions of R also let you write it like this: <code>|&gt;</code></li>
+<li>Some packages also write it like this: <code>%&gt;%</code></li>
 </ul></li>
 </ul>
 </section>
@@ -543,7 +543,7 @@
 <li><p>You can think of it as saying “and then”</p>
 <ul>
 <li>Do this <strong>and then</strong> do this, <strong>and then</strong> do this…</li>
-<li>Do this <strong><code>%&gt;%</code></strong> do this, <strong><code>%&gt;%</code></strong> do this…</li>
+<li>Do this <strong><code>|&gt;</code></strong> do this, <strong><code>|&gt;</code></strong> do this…</li>
 </ul></li>
 </ul>
 </section>
@@ -556,7 +556,7 @@
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">select</span>(year, country, pop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">select</span>(year, country, pop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,704 × 3
    year country          pop
@@ -580,7 +580,7 @@
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">select</span>(year, country, pop) <span class="sc">%&gt;%</span> <span class="fu">arrange</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">select</span>(year, country, pop) <span class="sc">|&gt;</span> <span class="fu">arrange</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -601,8 +601,8 @@
 <li>We can make it easier to read by putting each step on its own line</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb27-2"><a></a>  <span class="fu">select</span>(year, country, pop) <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">select</span>(year, country, pop) <span class="sc">|&gt;</span></span>
 <span id="cb27-3"><a></a>  <span class="fu">arrange</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,704 × 3
@@ -623,7 +623,7 @@
 <ul>
 <li><p>This way, <strong>you don’t have to save each intermediate step</strong></p></li>
 <li><p>This is a very useful way to manipulate data</p></li>
-<li><p>I will now use the pipe (<code>%&gt;%</code>) for the rest of the lesson</p></li>
+<li><p>I will now use the pipe (<code>|&gt;</code>) for the rest of the lesson</p></li>
 </ul>
 </section>
 <section id="subset-rows-with-filter" class="slide level2">
@@ -633,7 +633,7 @@
 <li><p>For example, let’s only keep the data in Europe:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">"Europe"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">filter</span>(continent <span class="sc">==</span> <span class="st">"Europe"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 360 × 6
   country continent  year lifeExp     pop gdpPercap
@@ -650,7 +650,7 @@
 </section>
 <section id="challenge-2" class="slide level2">
 <h2>Challenge</h2>
-<p>Using the pipe (<code>%&gt;%</code>) and the functions we have learned so far, filter the data to Asia, then select only the country, year, and population columns.</p>
+<p>Using the pipe (<code>|&gt;</code>) and the functions we have learned so far, filter the data to Asia, then select only the country, year, and population columns.</p>
 </section>
 <section id="modify-data-with-mutate" class="slide level2">
 <h2>Modify data with <code>mutate()</code></h2>
@@ -658,7 +658,7 @@
 <li>For example, we could change the units of population to millions of people:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">pop =</span> pop<span class="sc">/</span><span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">pop =</span> pop <span class="sc">/</span> <span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,704 × 6
   country     continent  year lifeExp   pop gdpPercap
@@ -679,7 +679,7 @@
 <li>If we provide a new column name, that column will be added</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">pop_mil =</span> pop<span class="sc">/</span><span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">pop_mil =</span> pop <span class="sc">/</span> <span class="dv">1000000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,704 × 7
   country     continent  year lifeExp      pop gdpPercap pop_mil
@@ -710,7 +710,7 @@
 <li>For example, let’s calculate the overall mean population:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">mean_pop =</span> <span class="fu">mean</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="at">mean_pop =</span> <span class="fu">mean</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
    mean_pop
@@ -725,7 +725,7 @@
 <li>Another example: the total population over all the data:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">summarize</span>(<span class="at">total_pop =</span> <span class="fu">sum</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="at">total_pop =</span> <span class="fu">sum</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
     total_pop
@@ -741,7 +741,7 @@
 <li><p>To do this, first specify the groups with <code>group_by()</code>:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>gapminder <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(continent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>gapminder <span class="sc">|&gt;</span> <span class="fu">group_by</span>(continent)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -763,8 +763,8 @@
 <li>Next, use <code>summarize()</code> to calculate the summary statistic:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>gapminder <span class="sc">%&gt;%</span></span>
-<span id="cb41-2"><a></a>  <span class="fu">group_by</span>(continent) <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>gapminder <span class="sc">|&gt;</span></span>
+<span id="cb41-2"><a></a>  <span class="fu">group_by</span>(continent) <span class="sc">|&gt;</span></span>
 <span id="cb41-3"><a></a>  <span class="fu">summarize</span>(<span class="at">mean_pop =</span> <span class="fu">mean</span>(pop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 2
@@ -794,7 +794,7 @@
 <li>Modify data with <code>mutate()</code></li>
 <li>Summarize data with <code>summarize()</code></li>
 <li>Group data with <code>group_by()</code></li>
-<li>Use the pipe (<code>%&gt;%</code>) to chain steps together</li>
+<li>Use the pipe (<code>|&gt;</code>) to chain steps together</li>
 </ul>
 
 
