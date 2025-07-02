@@ -51,6 +51,32 @@ toc: false
 
 - 2025-07-30 11:59PM: Final paper due
 
+## Extra Practice
+
+The following are interactive tutorials in Japanese that you can run in your web browser. They were designed for the [情報処理演習 course](https://joelnitta.github.io/joho-shori/). Note that although the tutorials are used as homework in the 情報処理演習 course, **they are NOT required assignments for this course**. I only provide them here so you can use them for extra practice if you want. Please note that bandwidth is limited to run the tutorials, so they may not always be available.
+
+以下のリンクは元々は[「情報処理演習」](https://joelnitta.github.io/joho-shori/)のために作成された、webブラウザの中で実行できるRコードのチュートリアルです。
+
+注意：以下のチュートリアルは「情報処理演習」の宿題に使われていますが、**本授業の宿題ではありません。** 復習のためだけに掲載されています。
+
+なお、使用量に限りがありますので、同時に数人以上使われている場合は接続できない可能性があります。
+
+- [0. チュートリアルについて](https://joelnitta.shinyapps.io/00-learnr/)
+
+- [1. R入門](https://joelnitta.shinyapps.io/01-intro/)
+
+- [2. ベクトルについて](https://joelnitta.shinyapps.io/02-vectors)
+
+- [3. データをファイルから読み込む](https://joelnitta.shinyapps.io/03-load/)
+
+- [4. データの整理（1）](https://joelnitta.shinyapps.io/04-tidy-1/)
+
+- [5. データの整理（2）](https://joelnitta.shinyapps.io/05-tidy-2/)
+
+- [6. データの可視化（1）](https://joelnitta.shinyapps.io/06-plot-1/)
+
+- [7. データの可視化（2）](https://joelnitta.shinyapps.io/07-plot-2/)
+
 ## Office Hours
 
 By appointment, please send an email to <joelnitta@chiba-u.jp>
