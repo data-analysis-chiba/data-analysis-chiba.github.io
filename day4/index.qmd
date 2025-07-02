@@ -226,8 +226,8 @@ gapminder_gdp <- select(gapminder, year, country, gdpPercap)
 
 - There is a simpler way to do this, called the "pipe"
 
-- The pipe is written like this: `%>%`
-  - Newer versions of R also let you write it like this: `|>`
+- The pipe is written like this: `|>`
+  - Some packages also write it like this: `%>%`
 
 ## About pipes
 
@@ -235,7 +235,7 @@ gapminder_gdp <- select(gapminder, year, country, gdpPercap)
 
 - You can think of it as saying "and then"
   - Do this **and then** do this, **and then** do this...
-  - Do this **`%>%`** do this, **`%>%`** do this...
+  - Do this **`|>`** do this, **`|>`** do this...
 
 ## About pipes
 
@@ -243,7 +243,7 @@ gapminder_gdp <- select(gapminder, year, country, gdpPercap)
   - Read this as "start with `gapminder` **and then** select only year, country, and population"
 
 ```{r}
-gapminder %>% select(year, country, pop)
+gapminder |> select(year, country, pop)
 ```
 
 ## About pipes
@@ -253,12 +253,12 @@ gapminder %>% select(year, country, pop)
 
 ```{r}
 #| eval: false
-gapminder %>% select(year, country, pop) %>% arrange(year)
+gapminder |> select(year, country, pop) |> arrange(year)
 ```
 
 ```{r}
 #| echo: false
-gapminder %>% select(year, country, pop) %>% arrange(year) %>% print(n = 4)
+gapminder |> select(year, country, pop) |> arrange(year) |> print(n = 4)
 ```
 
 ## About pipes
@@ -266,8 +266,8 @@ gapminder %>% select(year, country, pop) %>% arrange(year) %>% print(n = 4)
 - We can make it easier to read by putting each step on its own line
 
 ```{r}
-gapminder %>%
-  select(year, country, pop) %>%
+gapminder |>
+  select(year, country, pop) |>
   arrange(year)
 ```
 
@@ -277,7 +277,7 @@ gapminder %>%
 
 - This is a very useful way to manipulate data
 
-- I will now use the pipe (`%>%`) for the rest of the lesson
+- I will now use the pipe (`|>`) for the rest of the lesson
 
 ## Subset rows with `filter()`
 
@@ -286,19 +286,19 @@ gapminder %>%
 - For example, let's only keep the data in Europe:
 
 ```{r}
-gapminder %>% filter(continent == "Europe")
+gapminder |> filter(continent == "Europe")
 ```
 
 ## Challenge
 
-Using the pipe (`%>%`) and the functions we have learned so far, filter the data to Asia, then select only the country, year, and population columns.
+Using the pipe (`|>`) and the functions we have learned so far, filter the data to Asia, then select only the country, year, and population columns.
 
 ## Modify data with `mutate()`
 
 - For example, we could change the units of population to millions of people:
 
 ```{r}
-gapminder %>% mutate(pop = pop/1000000)
+gapminder |> mutate(pop = pop / 1000000)
 ```
 
 ## Modify data with `mutate()`
@@ -306,7 +306,7 @@ gapminder %>% mutate(pop = pop/1000000)
 - If we provide a new column name, that column will be added
 
 ```{r}
-gapminder %>% mutate(pop_mil = pop/1000000)
+gapminder |> mutate(pop_mil = pop / 1000000)
 ```
 
 ## Challenge
@@ -321,7 +321,7 @@ gapminder %>% mutate(pop_mil = pop/1000000)
 - For example, let's calculate the overall mean population:
 
 ```{r}
-gapminder %>% summarize(mean_pop = mean(pop))
+gapminder |> summarize(mean_pop = mean(pop))
 ```
 
 ## Calculate summary statistics with `summarize()`
@@ -329,7 +329,7 @@ gapminder %>% summarize(mean_pop = mean(pop))
 - Another example: the total population over all the data:
 
 ```{r}
-gapminder %>% summarize(total_pop = sum(pop))
+gapminder |> summarize(total_pop = sum(pop))
 ```
 
 ## Use `group_by()` to do calculations per group
@@ -340,12 +340,12 @@ gapminder %>% summarize(total_pop = sum(pop))
 
 ```{r}
 #| eval: false
-gapminder %>% group_by(continent)
+gapminder |> group_by(continent)
 ```
 
 ```{r}
 #| echo: false
-gapminder %>% group_by(continent) %>% print(n = 4)
+gapminder |> group_by(continent) |> print(n = 4)
 ```
 
 ## Use `group_by()` to do calculations per group
@@ -353,8 +353,8 @@ gapminder %>% group_by(continent) %>% print(n = 4)
 - Next, use `summarize()` to calculate the summary statistic:
 
 ```{r}
-gapminder %>%
-  group_by(continent) %>%
+gapminder |>
+  group_by(continent) |>
   summarize(mean_pop = mean(pop))
 ```
 
@@ -377,4 +377,4 @@ options(old)
 - Modify data with `mutate()`
 - Summarize data with `summarize()`
 - Group data with `group_by()`
-- Use the pipe (`%>%`) to chain steps together
+- Use the pipe (`|>`) to chain steps together
