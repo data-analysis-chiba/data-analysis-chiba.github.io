@@ -298,7 +298,7 @@ Variables making up a **primary key** are colored grey, and are connected to the
 
 ```{r}
 #| class: medium
-flights2 <- flights |> 
+flights2 <- flights |>
   select(year, time_hour, origin, dest, tailnum, carrier)
 
 flights2
@@ -473,14 +473,14 @@ Use a semi-join to filter the airports dataset to show just the airports where t
 
 ```{r}
 #| eval: false
-airports |> 
+airports |>
   semi_join(flights2, join_by(faa == origin))
 ```
 
 ```{r}
 #| echo: false
 #| class: medium
-airports |> 
+airports |>
   semi_join(flights2, join_by(faa == origin))
 ```
 
@@ -496,16 +496,16 @@ Find rows that are missing from `airports` by looking for flights that don’t h
 
 ```{r}
 #| eval: false
-flights2 |> 
-  anti_join(airports, join_by(dest == faa)) |> 
+flights2 |>
+  anti_join(airports, join_by(dest == faa)) |>
   distinct(dest)
 ```
 
 ```{r}
 #| echo: false
 #| class: medium
-flights2 |> 
-  anti_join(airports, join_by(dest == faa)) |> 
+flights2 |>
+  anti_join(airports, join_by(dest == faa)) |>
   distinct(dest)
 ```
 
