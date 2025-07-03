@@ -14,6 +14,18 @@ execute:
 old <- options(pillar.print_min = 6)
 ```
 
+## Announcements: About the website
+
+- I updated the [website](https://data-analysis-chiba.github.io/)
+  - [Materials (readings)](https://data-analysis-chiba.github.io/#materials) are now easier to access
+  - [Extra practice](https://data-analysis-chiba.github.io/#extra-practice) has been added
+
+## Announcements: About homework
+
+- I will demonstrate one more time how to access and submit the homework assignment
+
+- You can find the detailed explanation in the [Day 2 materials](../day2/day02_intro_to_git.qmd#part-3-create-clone-stage-commit-push-pull)
+
 ## Refresher: vectors
 
 - Recall that a **vector** is a **series of values** that are all the same **type**
@@ -253,12 +265,17 @@ gapminder |> select(year, country, pop)
 
 ```{r}
 #| eval: false
-gapminder |> select(year, country, pop) |> arrange(year)
+gapminder |>
+  select(year, country, pop) |>
+  arrange(year)
 ```
 
 ```{r}
 #| echo: false
-gapminder |> select(year, country, pop) |> arrange(year) |> print(n = 4)
+gapminder |>
+  select(year, country, pop) |>
+  arrange(year) |>
+  print(n = 4)
 ```
 
 ## About pipes
@@ -345,7 +362,9 @@ gapminder |> group_by(continent)
 
 ```{r}
 #| echo: false
-gapminder |> group_by(continent) |> print(n = 4)
+gapminder |>
+  group_by(continent) |>
+  print(n = 4)
 ```
 
 ## Use `group_by()` to do calculations per group
