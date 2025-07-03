@@ -658,6 +658,20 @@
     "text": "Attributions\nThese materials were modified by Joel H. Nitta from the Data Carpentry “Data Analysis and Visualization in R for Ecologists” lesson (https://datacarpentry.org/R-ecology-lesson) under the CC BY Attribution 4.0 International license."
   },
   {
+    "objectID": "day4/index.html#announcements-about-the-website",
+    "href": "day4/index.html#announcements-about-the-website",
+    "title": "Reproducible data analysis",
+    "section": "Announcements: About the website",
+    "text": "Announcements: About the website\n\nI updated the website\n\nMaterials (readings) are now easier to access\nExtra practice has been added"
+  },
+  {
+    "objectID": "day4/index.html#announcements-about-homework",
+    "href": "day4/index.html#announcements-about-homework",
+    "title": "Reproducible data analysis",
+    "section": "Announcements: About homework",
+    "text": "Announcements: About homework\n\nI will demonstrate one more time how to access and submit the homework assignment\nYou can find the detailed explanation in the Day 2 materials"
+  },
+  {
     "objectID": "day4/index.html#refresher-vectors",
     "href": "day4/index.html#refresher-vectors",
     "title": "Reproducible data analysis",
@@ -844,7 +858,7 @@
     "href": "day4/index.html#about-pipes-3",
     "title": "Reproducible data analysis",
     "section": "About pipes",
-    "text": "About pipes\n\nThis becomes very useful when we want to do multiple steps\n\nRead this as “start with gapminder, and then select only year, country, and population, and then arrange by year”\n\n\n\ngapminder |&gt; select(year, country, pop) |&gt; arrange(year)\n\n\n\n# A tibble: 1,704 × 3\n   year country         pop\n  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;\n1  1952 Afghanistan 8425333\n2  1952 Albania     1282697\n3  1952 Algeria     9279525\n4  1952 Angola      4232095\n# ℹ 1,700 more rows"
+    "text": "About pipes\n\nThis becomes very useful when we want to do multiple steps\n\nRead this as “start with gapminder, and then select only year, country, and population, and then arrange by year”\n\n\n\ngapminder |&gt;\n  select(year, country, pop) |&gt;\n  arrange(year)\n\n\n\n# A tibble: 1,704 × 3\n   year country         pop\n  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;\n1  1952 Afghanistan 8425333\n2  1952 Albania     1282697\n3  1952 Algeria     9279525\n4  1952 Angola      4232095\n# ℹ 1,700 more rows"
   },
   {
     "objectID": "day4/index.html#about-pipes-4",
