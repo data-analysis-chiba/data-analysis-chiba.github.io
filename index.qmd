@@ -3,6 +3,22 @@ title: "Reproducible Data Analysis"
 toc: false
 ---
 
+The ability to **analyze data using code** is increasingly in demand across academic disciplines from sciences to the humanities, as well as industry.
+
+Using code instead of point-and-click software means that analyses can be **reproducible**, which allows them to be **re-used** and **trusted**.
+
+In this course, students will learn how to use the **R programming language** among other tools for **reproducible data analysis**. Emphasis will be placed on practical usage and best practices to ensure reproducibility. No prior programming experience is required, but it will be helpful if students have a topic that they are interested in analyzing for the final report. All students are expected to have access to a modern computer (laptop) capable of installing and running [R](https://cran.rstudio.com/), [RStudio](https://posit.co/download/rstudio-desktop/), [Git](https://git-scm.com/), and [Quarto](https://quarto.org/).
+
+## Goals
+
+The goal of this course is to **learn how to conduct reproducible data analysis using R**.
+
+By the end of the course, students should be able to:
+
+  - Load, clean, and visualize data using R
+  - Track changes to code using Git and GitHub
+  - Write a reproducible report using Quarto
+
 ## Slides
 
 - [Day 1 (2025-06-12): Introduction: Why code? Why reproducibility?](day1/index.qmd)
@@ -54,6 +70,19 @@ For other lecture recordings, see Moodle.
 - 2025-07-16 11:59PM: [Day 5 homework](https://github.com/data-analysis-chiba/day05-join/blob/main/day05_homework.R) due
 
 - 2025-07-30 11:59PM: Final paper due
+
+## About homework sets
+
+All homework assignments (except Day 2) are submitted as R scripts.
+
+Your code must **run without errors**.
+
+The easiest way to check this is to restart RStudio by closing and opening it, then opening the R script and pressing the "Source" button.
+Your code should run without errors, and any expected objects such as `answer_1`, etc. should show up in the environment panel.
+
+The process for the final paper is similar, but instead of clicking "Source", click "Render".
+
+Please check this before submitting your assignments!
 
 ## Extra Practice
 
