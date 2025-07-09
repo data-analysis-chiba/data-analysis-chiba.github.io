@@ -410,7 +410,7 @@
     "href": "day5/index.html#filtering-joins",
     "title": "Reproducible data analysis",
     "section": "Filtering joins",
-    "text": "Filtering joins\n\nFiltering joins are different from mutating joins in that they do not add new data\nInstead, we only them to filter data"
+    "text": "Filtering joins\n\nFiltering joins are different from mutating joins in that they do not add new data\nInstead, we only use them to filter data"
   },
   {
     "objectID": "day5/index.html#semi_join",
@@ -704,7 +704,7 @@
     "href": "day4/index.html#set-up-project-1",
     "title": "Reproducible data analysis",
     "section": "Set up project",
-    "text": "Set up project\n\nDownload the gapminder.csv file from this link, and put it in data_raw\n\nhttps://www.dropbox.com/s/fdirlsnxlzy53qq/gapminder.csv?dl=0"
+    "text": "Set up project\n\nDownload the gapminder.csv file from Moodle and put it in data_raw\n\nIt is also available from here"
   },
   {
     "objectID": "day4/index.html#about-r-packages",
