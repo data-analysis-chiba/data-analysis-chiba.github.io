@@ -39,6 +39,8 @@ For other lecture recordings, see Moodle.
 
 - [Day 6: ggplot2](day6/day06_ggplot2.qmd)
 
+- [Day 7: Introduction to Reproducible Publications with Quarto (The Carpentries Lesson)](https://carpentries-incubator.github.io/reproducible-publications-quarto/)
+
 - [Final Report Example](https://github.com/data-analysis-chiba/gapminder-report/)
 
 ## Important Deadlines
