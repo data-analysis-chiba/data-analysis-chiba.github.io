@@ -165,14 +165,21 @@
     "href": "index.html",
     "title": "Reproducible Data Analysis",
     "section": "",
-    "text": "Day 1 (2025-06-12): Introduction: Why code? Why reproducibility?\nDay 2 (2025-06-19): Git and GitHub\nDay 3 (2025-06-26): Basic usage of R and RStudio\nDay 4 (2025-07-03): Data loading and tidying with tidyverse\nDay 5 (Media Day): Joining data\nDay 6 (2025-07-10): Data visualization with ggplot2\nDay 7 (2025-07-17): Writing documents with Quarto\nDay 8 (2025-07-24): Quarto, part II"
+    "text": "The ability to analyze data using code is increasingly in demand across academic disciplines from sciences to the humanities, as well as industry.\nUsing code instead of point-and-click software means that analyses can be reproducible, which allows them to be re-used and trusted.\nIn this course, students will learn how to use the R programming language among other tools for reproducible data analysis. Emphasis will be placed on practical usage and best practices to ensure reproducibility. No prior programming experience is required, but it will be helpful if students have a topic that they are interested in analyzing for the final report. All students are expected to have access to a modern computer (laptop) capable of installing and running R, RStudio, Git, and Quarto."
+  },
+  {
+    "objectID": "index.html#goals",
+    "href": "index.html#goals",
+    "title": "Reproducible Data Analysis",
+    "section": "Goals",
+    "text": "Goals\nThe goal of this course is to learn how to conduct reproducible data analysis using R.\nBy the end of the course, students should be able to:\n\nLoad, clean, and visualize data using R\nTrack changes to code using Git and GitHub\nWrite a reproducible report using Quarto"
   },
   {
     "objectID": "index.html#slides",
     "href": "index.html#slides",
     "title": "Reproducible Data Analysis",
-    "section": "",
-    "text": "Day 1 (2025-06-12): Introduction: Why code? Why reproducibility?\nDay 2 (2025-06-19): Git and GitHub\nDay 3 (2025-06-26): Basic usage of R and RStudio\nDay 4 (2025-07-03): Data loading and tidying with tidyverse\nDay 5 (Media Day): Joining data\nDay 6 (2025-07-10): Data visualization with ggplot2\nDay 7 (2025-07-17): Writing documents with Quarto\nDay 8 (2025-07-24): Quarto, part II"
+    "section": "Slides",
+    "text": "Slides\n\nDay 1 (2025-06-12): Introduction: Why code? Why reproducibility?\nDay 2 (2025-06-19): Git and GitHub\nDay 3 (2025-06-26): Basic usage of R and RStudio\nDay 4 (2025-07-03): Data loading and tidying with tidyverse\nDay 5 (Media Day): Joining data\nDay 6 (2025-07-10): Data visualization with ggplot2\nDay 7 (2025-07-17): Writing documents with Quarto\nDay 8 (2025-07-24): Quarto, part II"
   },
   {
     "objectID": "index.html#recordings",
@@ -194,6 +201,13 @@
     "title": "Reproducible Data Analysis",
     "section": "Important Deadlines",
     "text": "Important Deadlines\n\n2025-06-25 11:59PM: Day 2 homework due\n2025-07-02 11:59PM: Day 3 homework due\n2025-07-09 11:59PM: Day 4 homework due\n2025-07-16 11:59PM: Day 5 homework due\n2025-07-30 11:59PM: Final paper due"
+  },
+  {
+    "objectID": "index.html#about-homework-sets",
+    "href": "index.html#about-homework-sets",
+    "title": "Reproducible Data Analysis",
+    "section": "About homework sets",
+    "text": "About homework sets\nAll homework assignments (except Day 2) are submitted as R scripts.\nYour code must run without errors.\nThe easiest way to check this is to restart RStudio by closing and opening it, then opening the R script and pressing the “Source” button. Your code should run without errors, and any expected objects such as answer_1, etc. should show up in the environment panel.\nThe process for the final paper is similar, but instead of clicking “Source”, click “Render”.\nPlease check this before submitting your assignments!"
   },
   {
     "objectID": "index.html#extra-practice",
