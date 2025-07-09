@@ -461,7 +461,7 @@ We don't have time to cover them in detail, but please try them out!
 
 - Filtering joins are different from mutating joins in that they *do not add new data*
 
-- Instead, we only them to **filter data**
+- Instead, we only use them to **filter data**
 
 ## `semi_join()`
 

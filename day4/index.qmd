@@ -78,8 +78,8 @@ c(TRUE, FALSE, TRUE)
 
 ## Set up project
 
-- Download the `gapminder.csv` file from this link, and put it in `data_raw`
-  - <https://www.dropbox.com/s/fdirlsnxlzy53qq/gapminder.csv?dl=0>
+- Download the `gapminder.csv` file from Moodle and put it in `data_raw`
+  - It is also available from [here](https://www.dropbox.com/s/fdirlsnxlzy53qq/gapminder.csv?dl=0)
 
 ## About R Packages
 
