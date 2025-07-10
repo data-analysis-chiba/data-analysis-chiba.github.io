@@ -15,6 +15,33 @@ execute:
 old <- options(pillar.print_min = 6)
 ```
 
+## Reminder: How to check your project
+
+- By now, you have created many R projects (one per homework, at least)
+
+- Git works **inside a project**
+  - So if you aren't in the right project, you won't be able to commit, push, etc.
+
+- If you are unable to commit and push the homework, **check your project**
+
+---
+
+- This is what RStudio looks like with no project selected
+
+![](../images/project-none.png)
+
+-----
+
+- To choose another project, you can either double click the `.Rproj` file, **or**, you can use the project select menu (on the right side of RStudio)
+
+![](../images/project-select.png)
+
+---
+
+- Once you have successfully chosen your project, you will see the project name at the top of the window (and the project selection menu)
+
+![](../images/project-selected-circled.png)
+
 ## What is EDA?
 
 ::: {.incremental}
@@ -232,7 +259,9 @@ ggplot(
   data = gapminder,
   mapping = aes(
     x = gdpPercap,
-    y = lifeExp))
+    y = lifeExp
+  )
+)
 ```
 
 ## First plot
@@ -244,7 +273,9 @@ ggplot(
   data = gapminder,
   mapping = aes(
     x = gdpPercap,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_point()
 ```
 
@@ -279,7 +310,9 @@ ggplot(
   data = gapminder,
   mapping = aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_point()
 ```
 
@@ -292,7 +325,9 @@ ggplot(
   mapping = aes(
     x = year,
     y = lifeExp,
-    color = continent)) +
+    color = continent
+  )
+) +
   geom_point()
 ```
 
@@ -306,7 +341,9 @@ ggplot(
   mapping = aes(
     x = year,
     y = lifeExp,
-    color = continent)) +
+    color = continent
+  )
+) +
   geom_point()
 ```
 
@@ -334,10 +371,13 @@ ggplot(INPUT-DATA, aes(MAPPING)) +
 #| output-location: column
 ggplot(
   gapminder, # DATA
-  aes( # MAPPING
+  aes(
+    # MAPPING
     x = year,
     y = lifeExp,
-    color = continent)) +
+    color = continent
+  )
+) +
   geom_point() # GEOMETRY
 ```
 
@@ -357,10 +397,13 @@ ggplot(
 #| output-location: column
 ggplot(
   gapminder, # DATA
-  aes( # MAPPING
+  aes(
+    # MAPPING
     x = year,
     y = lifeExp,
-    color = continent)) +
+    color = continent
+  )
+) +
   geom_line() # GEOMETRY
 ```
 
@@ -387,7 +430,9 @@ ggplot(
   aes(
     x = year,
     y = lifeExp,
-    color = continent)) +
+    color = continent
+  )
+) +
   geom_line()
 ```
 
@@ -401,7 +446,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line()
 ```
 
@@ -416,7 +463,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line()
 ```
 
@@ -440,7 +489,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line()
 ```
 
@@ -454,7 +505,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line() +
   geom_point()
 ```
@@ -470,7 +523,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line() +
   geom_point()
 ```
@@ -863,6 +918,8 @@ ggsave(plot = gapminder_asia_plot, file = "gapminder_asia.pdf")
 - The final project is to **analyze a dataset**, including **at least two graphs**
   - Use **Quarto** to write the report (we will learn how to do this in the next two classes)
 
+- You will also evaluate one **other** student's report, including running their code (**replicating it**)
+
 ## Dataset
 
 - You will choose a dataset from the [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday) project to analyze
@@ -877,13 +934,15 @@ ggsave(plot = gapminder_asia_plot, file = "gapminder_asia.pdf")
 
 ## Preparing your report
 
-- You will use quarto to prepare your report
-  - We will learn more about quarto next week, so you don't need to worry about it for now.
+- You will use Quarto to prepare your report
+  - We will learn more about Quarto next week, so you don't need to worry about it for now.
   
-- Start looking at the datasets so you can **choose one to analyze**.
+- **Start looking at the datasets** so you can choose one to analyze.
 
-- Start analyzing the dataset and practice visualizing the data
+- **Start analyzing the dataset** and practice visualizing the data
 
 ## Due dates
 
-- The report (`report.qmd`) is due **2025-07-30 11:59PM**
+- Your own report is due **2025-07-30 11:59PM**
+- Your evaluation of another other report is due **2025-08-06 11:59PM**
+  - Assignment of other reports and the evaluation sheet will be posted on Moodle
