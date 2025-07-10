@@ -1,0 +1,116 @@
+---
+title: "Loading data from TidyTuesday"
+format: html
+---
+
+[TidyTuesday](https://github.com/rfordatascience/tidytuesday) is a GitHub repo that provides one dataset per week to practice learning data science skills.
+
+For the final project, you will choose one dataset from TidyTuesday and use it to make at least two plots.
+
+This will show you **how to find and load a dataset from TidyTuesday**.
+
+## Choose a dataset
+
+In your browser, navigate to <https://github.com/rfordatascience/tidytuesday>
+
+![TidyTuesday repo](../images/tidytues-top.png)
+
+Scroll down until you reach the section labeled ["DataSets"](https://github.com/rfordatascience/tidytuesday#datasets).
+
+!["DataSets" section](../images/tidytues-datasets.png)
+
+Once you find a dataset that sounds interesting, click on its link in the "Data" column.
+
+For example, I think "The History of Himalayan Mountaineering Expeditions" dataset sounds interesting, so I'll [click on that](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md).
+
+!["DataSets" section](../images/tidytues-datasets-himalaya.png)
+
+This will take us to the README file (a file that explains basic info about a piece of software, dataset, or analysis) for the "History of Himalayan Mountaineering Expeditions" dataset.
+
+The [first few paragraphs](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md#the-history-of-himalayan-mountaineering-expeditions) give you an overview of the dataset.
+
+![README file of the Himalayan Mountaineering Expeditions dataset](../images/tidytues-datasets-himalaya.png)
+
+## Load the data
+
+The section called of the README file called "[The Data](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md#the-data)" tells you **how to load the data into R**.
+
+!["The Data" section shows how to load the dataset](../images/tidytues-himalaya-data.png)
+
+**This is very important**, because you need to load the data to analyze it.
+
+Note that there are usually **two** options given for loading the data.
+
+You only need to use one of them; [option 2](#option-2) is probably easier.
+
+### Option 1
+
+The first option involves installing the "tidytuesdayR" package, which you can do with the command `install.packages("tidytuesdayR")`.
+
+Once you've installed the package, you can use it to load the data by specifying the date the data were published on TidyTuesday.
+
+```{r}
+library(tidytuesdayR)
+
+tuesdata <- tt_load("2025-01-21")
+```
+
+Note that the TidyTuesday webpage shows `tidytuesdayR::tt_load("2025-01-21")`, but this does the same thing as running `library(tidytuesdayR)` followed by `tt_load("2025-01-21")`.
+
+Also, when you use Option 1, the data are loaded as a list, so we need to extract each dataframe from the list. For the himalaya data, there are two dataframes. It shows us how to extract them from the list using the `$` symbol:
+
+```{r}
+exped_tidy <- tuesdata$exped_tidy
+peaks_tidy <- tuesdata$peaks_tidy
+```
+
+### Option 2
+
+The second option is simpler. You can use the `read_csv()` function to load the data directly without installing another package.
+
+```{r}
+#| message: false
+library(tidyverse)
+
+exped_tidy <- read_csv(
+  "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-01-21/exped_tidy.csv"
+)
+peaks_tidy <- read_csv(
+  "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-01-21/peaks_tidy.csv"
+)
+```
+
+## Take a look at the data
+
+Now that you've loaded the data, have a look at it:
+
+```{r}
+exped_tidy
+```
+
+```{r}
+peaks_tidy
+```
+
+Note that since there are **two dataframes** in this dataset, you may need to [join them](../day5/index.qmd) in order to conduct the data analysis.
+
+## Check the Data Dictionary
+
+Every dataset in TidyTuesday includes a "Data Dictionary" that explains what each column in the data means.
+Scroll down the README file a bit further to [find it](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md#data-dictionary).
+This is very important for understanding and analyzing your data.
+
+![Data Dictionary for the Himalayan Mountaineering Expeditions dataset](../images/tidytues-himalaya-dict.png)
+
+## Start exploring the data!
+
+For example, let's count the names of the mountain peaks included in the `peaks_tidy` data:
+
+```{r}
+peaks_tidy |>
+  count(PKNAME)
+```
+
+Once you get a feel for the columns in the dataset, try [making some plots](../day6/index.qmd).
+
+Your goal is to create a plot that tells the story hidden in the data. Good luck!
