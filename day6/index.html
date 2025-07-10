@@ -197,6 +197,38 @@
 <h1>Day 6: Data visualization with ggplot2</h1>
 
 </section>
+<section id="reminder-how-to-check-your-project" class="slide level2">
+<h2>Reminder: How to check your project</h2>
+<ul>
+<li><p>By now, you have created many R projects (one per homework, at least)</p></li>
+<li><p>Git works <strong>inside a project</strong></p>
+<ul>
+<li>So if you aren’t in the right project, you won’t be able to commit, push, etc.</li>
+</ul></li>
+<li><p>If you are unable to commit and push the homework, <strong>check your project</strong></p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>This is what RStudio looks like with no project selected</li>
+</ul>
+
+<img data-src="../images/project-none.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li>To choose another project, you can either double click the <code>.Rproj</code> file, <strong>or</strong>, you can use the project select menu (on the right side of RStudio)</li>
+</ul>
+
+<img data-src="../images/project-select.png" class="r-stretch"></section>
+<section class="slide level2">
+
+<ul>
+<li>Once you have successfully chosen your project, you will see the project name at the top of the window (and the project selection menu)</li>
+</ul>
+
+<img data-src="../images/project-selected-circled.png" class="r-stretch"></section>
 <section id="what-is-eda" class="slide level2">
 <h2>What is EDA?</h2>
 <div>
@@ -396,7 +428,9 @@
 <span id="cb4-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb4-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb4-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
-<span id="cb4-5"><a></a>    <span class="at">y =</span> lifeExp))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a></a>    <span class="at">y =</span> lifeExp</span>
+<span id="cb4-6"><a></a>  )</span>
+<span id="cb4-7"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -415,8 +449,10 @@
 <span id="cb5-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb5-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb5-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
-<span id="cb5-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb5-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a></a>    <span class="at">y =</span> lifeExp</span>
+<span id="cb5-6"><a></a>  )</span>
+<span id="cb5-7"><a></a>) <span class="sc">+</span></span>
+<span id="cb5-8"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -459,8 +495,10 @@
 <span id="cb6-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb6-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb6-4"><a></a>    <span class="at">x =</span> year,</span>
-<span id="cb6-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb6-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-5"><a></a>    <span class="at">y =</span> lifeExp</span>
+<span id="cb6-6"><a></a>  )</span>
+<span id="cb6-7"><a></a>) <span class="sc">+</span></span>
+<span id="cb6-8"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -480,8 +518,10 @@
 <span id="cb7-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb7-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb7-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
-<span id="cb7-6"><a></a>    <span class="at">color =</span> continent)) <span class="sc">+</span></span>
-<span id="cb7-7"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-6"><a></a>    <span class="at">color =</span> continent</span>
+<span id="cb7-7"><a></a>  )</span>
+<span id="cb7-8"><a></a>) <span class="sc">+</span></span>
+<span id="cb7-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -501,8 +541,10 @@
 <span id="cb8-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb8-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb8-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
-<span id="cb8-6"><a></a>    <span class="at">color =</span> continent)) <span class="sc">+</span></span>
-<span id="cb8-7"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-6"><a></a>    <span class="at">color =</span> continent</span>
+<span id="cb8-7"><a></a>  )</span>
+<span id="cb8-8"><a></a>) <span class="sc">+</span></span>
+<span id="cb8-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -535,11 +577,14 @@
 <div class="column">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb11-2"><a></a>  gapminder, <span class="co"># DATA</span></span>
-<span id="cb11-3"><a></a>  <span class="fu">aes</span>( <span class="co"># MAPPING</span></span>
-<span id="cb11-4"><a></a>    <span class="at">x =</span> year,</span>
-<span id="cb11-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
-<span id="cb11-6"><a></a>    <span class="at">color =</span> continent)) <span class="sc">+</span></span>
-<span id="cb11-7"><a></a>  <span class="fu">geom_point</span>() <span class="co"># GEOMETRY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb11-4"><a></a>    <span class="co"># MAPPING</span></span>
+<span id="cb11-5"><a></a>    <span class="at">x =</span> year,</span>
+<span id="cb11-6"><a></a>    <span class="at">y =</span> lifeExp,</span>
+<span id="cb11-7"><a></a>    <span class="at">color =</span> continent</span>
+<span id="cb11-8"><a></a>  )</span>
+<span id="cb11-9"><a></a>) <span class="sc">+</span></span>
+<span id="cb11-10"><a></a>  <span class="fu">geom_point</span>() <span class="co"># GEOMETRY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -565,11 +610,14 @@
 <div class="column">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb12-2"><a></a>  gapminder, <span class="co"># DATA</span></span>
-<span id="cb12-3"><a></a>  <span class="fu">aes</span>( <span class="co"># MAPPING</span></span>
-<span id="cb12-4"><a></a>    <span class="at">x =</span> year,</span>
-<span id="cb12-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
-<span id="cb12-6"><a></a>    <span class="at">color =</span> continent)) <span class="sc">+</span></span>
-<span id="cb12-7"><a></a>  <span class="fu">geom_line</span>() <span class="co"># GEOMETRY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-3"><a></a>  <span class="fu">aes</span>(</span>
+<span id="cb12-4"><a></a>    <span class="co"># MAPPING</span></span>
+<span id="cb12-5"><a></a>    <span class="at">x =</span> year,</span>
+<span id="cb12-6"><a></a>    <span class="at">y =</span> lifeExp,</span>
+<span id="cb12-7"><a></a>    <span class="at">color =</span> continent</span>
+<span id="cb12-8"><a></a>  )</span>
+<span id="cb12-9"><a></a>) <span class="sc">+</span></span>
+<span id="cb12-10"><a></a>  <span class="fu">geom_line</span>() <span class="co"># GEOMETRY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -602,8 +650,10 @@
 <span id="cb13-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb13-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb13-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
-<span id="cb13-6"><a></a>    <span class="at">color =</span> continent)) <span class="sc">+</span></span>
-<span id="cb13-7"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-6"><a></a>    <span class="at">color =</span> continent</span>
+<span id="cb13-7"><a></a>  )</span>
+<span id="cb13-8"><a></a>) <span class="sc">+</span></span>
+<span id="cb13-9"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -624,8 +674,10 @@
 <span id="cb14-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb14-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
 <span id="cb14-6"><a></a>    <span class="at">color =</span> continent,</span>
-<span id="cb14-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb14-8"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-7"><a></a>    <span class="at">group =</span> country</span>
+<span id="cb14-8"><a></a>  )</span>
+<span id="cb14-9"><a></a>) <span class="sc">+</span></span>
+<span id="cb14-10"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -646,8 +698,10 @@
 <span id="cb15-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb15-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
 <span id="cb15-6"><a></a>    <span class="at">color =</span> continent,</span>
-<span id="cb15-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb15-8"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-7"><a></a>    <span class="at">group =</span> country</span>
+<span id="cb15-8"><a></a>  )</span>
+<span id="cb15-9"><a></a>) <span class="sc">+</span></span>
+<span id="cb15-10"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -677,8 +731,10 @@
 <span id="cb16-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb16-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
 <span id="cb16-6"><a></a>    <span class="at">color =</span> continent,</span>
-<span id="cb16-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb16-8"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-7"><a></a>    <span class="at">group =</span> country</span>
+<span id="cb16-8"><a></a>  )</span>
+<span id="cb16-9"><a></a>) <span class="sc">+</span></span>
+<span id="cb16-10"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -699,9 +755,11 @@
 <span id="cb17-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb17-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
 <span id="cb17-6"><a></a>    <span class="at">color =</span> continent,</span>
-<span id="cb17-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb17-8"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb17-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-7"><a></a>    <span class="at">group =</span> country</span>
+<span id="cb17-8"><a></a>  )</span>
+<span id="cb17-9"><a></a>) <span class="sc">+</span></span>
+<span id="cb17-10"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb17-11"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -722,9 +780,11 @@
 <span id="cb18-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb18-5"><a></a>    <span class="at">y =</span> lifeExp,</span>
 <span id="cb18-6"><a></a>    <span class="at">color =</span> continent,</span>
-<span id="cb18-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
-<span id="cb18-8"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb18-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-7"><a></a>    <span class="at">group =</span> country</span>
+<span id="cb18-8"><a></a>  )</span>
+<span id="cb18-9"><a></a>) <span class="sc">+</span></span>
+<span id="cb18-10"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb18-11"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1219,6 +1279,7 @@
 <ul>
 <li>Use <strong>Quarto</strong> to write the report (we will learn how to do this in the next two classes)</li>
 </ul></li>
+<li>You will also evaluate one <strong>other</strong> student’s report, including running their code (<strong>replicating it</strong>)</li>
 </ul>
 </section>
 <section id="dataset" class="slide level2">
@@ -1241,18 +1302,22 @@
 <section id="preparing-your-report" class="slide level2">
 <h2>Preparing your report</h2>
 <ul>
-<li><p>You will use quarto to prepare your report</p>
+<li><p>You will use Quarto to prepare your report</p>
 <ul>
-<li>We will learn more about quarto next week, so you don’t need to worry about it for now.</li>
+<li>We will learn more about Quarto next week, so you don’t need to worry about it for now.</li>
 </ul></li>
-<li><p>Start looking at the datasets so you can <strong>choose one to analyze</strong>.</p></li>
-<li><p>Start analyzing the dataset and practice visualizing the data</p></li>
+<li><p><strong>Start looking at the datasets</strong> so you can choose one to analyze.</p></li>
+<li><p><strong>Start analyzing the dataset</strong> and practice visualizing the data</p></li>
 </ul>
 </section>
 <section id="due-dates" class="slide level2">
 <h2>Due dates</h2>
 <ul>
-<li>The report (<code>report.qmd</code>) is due <strong>2025-07-30 11:59PM</strong></li>
+<li>Your own report is due <strong>2025-07-30 11:59PM</strong></li>
+<li>Your evaluation of another other report is due <strong>2025-08-06 11:59PM</strong>
+<ul>
+<li>Assignment of other reports and the evaluation sheet will be posted on Moodle</li>
+</ul></li>
 </ul>
 
 

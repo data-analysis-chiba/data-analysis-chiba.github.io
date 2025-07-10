@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-07-10">
 
-<title>Appendix – Reproducible data analysis</title>
+<title>rubric – Reproducible data analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,17 +68,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Reproducible data analysis</span>
     </a>
   </div>
@@ -90,11 +89,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./appendix.html" aria-current="page"> 
+    <a class="nav-link" href="../appendix.html"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -108,106 +107,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Appendix</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">July 10, 2025</p>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
-  </div>
-  
-    
-  </div>
-  
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-</header>
 
 
-<section id="setup-github-authentication-ssh" class="level2">
-<h2 class="anchored" data-anchor-id="setup-github-authentication-ssh">Setup GitHub authentication: SSH</h2>
-<ul>
-<li>What is SSH?
-<ul>
-<li><strong>S</strong>ecure <strong>Sh</strong>ell Protocol</li>
-<li>Authentication method that uses <strong>public</strong> and <strong>private</strong> keys (like a padlock and key)</li>
-<li><strong>public</strong> key goes on GitHub</li>
-<li><strong>private</strong> key stays on your computer</li>
-</ul></li>
-</ul>
-<p>(more detailed instructions available on the Software Carpentry <a href="https://swcarpentry.github.io/git-novice/07-github.html#ssh-background-and-setup">website</a>)</p>
-<section id="check-for-existing-keys" class="level3">
-<h3 class="anchored" data-anchor-id="check-for-existing-keys">Check for existing keys</h3>
-<ul>
-<li>Enter this in your terminal (it lists files in a folder):</li>
-</ul>
-<pre><code>ls -al ~/.ssh</code></pre>
-<ul>
-<li>If any of these files show up, you already have keys available that you can use to log into GitHub</li>
-</ul>
-<pre><code>id_rsa.pub
-id_ecdsa.pub
-id_ed25519.pub</code></pre>
-</section>
-<section id="create-keys" class="level3">
-<h3 class="anchored" data-anchor-id="create-keys">Create keys</h3>
-<ul>
-<li><p>If no such keys are already present, we need to create a private/public key pair.</p></li>
-<li><p>Use this command (the <code>-t</code> option specifies which type of algorithm to use and <code>-C</code> attaches a comment to the key):</p></li>
-</ul>
-<pre><code>ssh-keygen -t ed25519 -C "you@youremail.com"</code></pre>
-<p>(use your own email address)</p>
-<ul>
-<li><p>It will ask where you want you want to save the key. Use the default location.</p></li>
-<li><p>Add a passphrase if you want (more secure, but you will have to enter it frequently).</p></li>
-<li><p>Then, you should see something like this:</p></li>
-</ul>
-<pre><code>Your identification has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519
-Your public key has been saved in /c/Users/Vlad Dracula/.ssh/id_ed25519.pub</code></pre>
-<p>This tells you the location of your <strong>private</strong> and <strong>public</strong> keys</p>
-</section>
-<section id="copy-contents-of-public-key" class="level3">
-<h3 class="anchored" data-anchor-id="copy-contents-of-public-key">Copy contents of public key</h3>
-<ul>
-<li>First, get the content of the public key:</li>
-</ul>
-<pre><code>cat ~/.ssh/id_ed25519.pub</code></pre>
-<p>It should include a long string of letters and numbers.</p>
-<p>Copy that exact line with command + c (mac) or control + c (Windows)</p>
-</section>
-<section id="add-public-key-to-github" class="level3">
-<h3 class="anchored" data-anchor-id="add-public-key-to-github">Add public key to GitHub</h3>
-<ul>
-<li>Go to <a href="https://github.com" class="uri">https://github.com</a>, click on your profile icon in the top right corner to see the drop-down menu</li>
-<li>Click “Settings,” then “SSH and GPG keys”</li>
-<li>Click the “New SSH key” button on the right side</li>
-<li>Enter a name that you will remember (for example, “Joel’s Laptop”), paste your SSH key into the field, and click “Add SSH key”</li>
-</ul>
-</section>
-<section id="check-that-it-worked" class="level3">
-<h3 class="anchored" data-anchor-id="check-that-it-worked">Check that it worked</h3>
-<ul>
-<li>Run this command to check that it worked</li>
-</ul>
-<pre><code>ssh -T git@github.com</code></pre>
-<p>Now, you can use git commands without providing a password every time</p>
+<p>Were you able to reproduce the code?</p>
+<p>5: Yes, the code ran without any errors 4: Yes, but only after making a very minor change myself, such as putting a file in a different folder 3: Yes, but only after making 2-3 changes to the code 2: Yes, but only after making &gt;3 changes to the code 1: No, even after trying to change it myself</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
