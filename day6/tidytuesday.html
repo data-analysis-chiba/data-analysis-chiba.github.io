@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reproducible Data Analysis – Reproducible data analysis</title>
+<title>Loading data from TidyTuesday – Reproducible data analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,17 +102,17 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Reproducible data analysis</span>
     </a>
   </div>
@@ -89,11 +123,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./appendix.html"> 
+    <a class="nav-link" href="../appendix.html"> 
 <span class="menu-text">Appendix</span></a>
   </li>  
 </ul>
@@ -107,13 +141,29 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#choose-a-dataset" id="toc-choose-a-dataset" class="nav-link active" data-scroll-target="#choose-a-dataset">Choose a dataset</a></li>
+  <li><a href="#load-the-data" id="toc-load-the-data" class="nav-link" data-scroll-target="#load-the-data">Load the data</a>
+  <ul class="collapse">
+  <li><a href="#option-1" id="toc-option-1" class="nav-link" data-scroll-target="#option-1">Option 1</a></li>
+  <li><a href="#option-2" id="toc-option-2" class="nav-link" data-scroll-target="#option-2">Option 2</a></li>
+  </ul></li>
+  <li><a href="#take-a-look-at-the-data" id="toc-take-a-look-at-the-data" class="nav-link" data-scroll-target="#take-a-look-at-the-data">Take a look at the data</a></li>
+  <li><a href="#check-the-data-dictionary" id="toc-check-the-data-dictionary" class="nav-link" data-scroll-target="#check-the-data-dictionary">Check the Data Dictionary</a></li>
+  <li><a href="#start-exploring-the-data" id="toc-start-exploring-the-data" class="nav-link" data-scroll-target="#start-exploring-the-data">Start exploring the data!</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reproducible Data Analysis</h1>
+<h1 class="title">Loading data from TidyTuesday</h1>
 </div>
 
 
@@ -130,94 +180,184 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The ability to <strong>analyze data using code</strong> is increasingly in demand across academic disciplines from sciences to the humanities, as well as industry.</p>
-<p>Using code instead of point-and-click software means that analyses can be <strong>reproducible</strong>, which allows them to be <strong>re-used</strong> and <strong>trusted</strong>.</p>
-<p>In this course, students will learn how to use the <strong>R programming language</strong> among other tools for <strong>reproducible data analysis</strong>. Emphasis will be placed on practical usage and best practices to ensure reproducibility. No prior programming experience is required, but it will be helpful if students have a topic that they are interested in analyzing for the final report. All students are expected to have access to a modern computer (laptop) capable of installing and running <a href="https://cran.rstudio.com/">R</a>, <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>, <a href="https://git-scm.com/">Git</a>, and <a href="https://quarto.org/">Quarto</a>.</p>
-<section id="goals" class="level2">
-<h2 class="anchored" data-anchor-id="goals">Goals</h2>
-<p>The goal of this course is to <strong>learn how to conduct reproducible data analysis using R</strong>.</p>
-<p>By the end of the course, students should be able to:</p>
-<ul>
-<li>Load, clean, and visualize data using R</li>
-<li>Track changes to code using Git and GitHub</li>
-<li>Write a reproducible report using Quarto</li>
-</ul>
+<p><a href="https://github.com/rfordatascience/tidytuesday">TidyTuesday</a> is a GitHub repo that provides one dataset per week to practice learning data science skills.</p>
+<p>For the final project, you will choose one dataset from TidyTuesday and use it to make at least two plots.</p>
+<p>This will show you <strong>how to find and load a dataset from TidyTuesday</strong>.</p>
+<section id="choose-a-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="choose-a-dataset">Choose a dataset</h2>
+<p>In your browser, navigate to <a href="https://github.com/rfordatascience/tidytuesday" class="uri">https://github.com/rfordatascience/tidytuesday</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tidytues-top.png" class="img-fluid figure-img"></p>
+<figcaption>TidyTuesday repo</figcaption>
+</figure>
+</div>
+<p>Scroll down until you reach the section labeled <a href="https://github.com/rfordatascience/tidytuesday#datasets">“DataSets”</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tidytues-datasets.png" class="img-fluid figure-img"></p>
+<figcaption>“DataSets” section</figcaption>
+</figure>
+</div>
+<p>Once you find a dataset that sounds interesting, click on its link in the “Data” column.</p>
+<p>For example, I think “The History of Himalayan Mountaineering Expeditions” dataset sounds interesting, so I’ll <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md">click on that</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tidytues-datasets-himalaya.png" class="img-fluid figure-img"></p>
+<figcaption>“DataSets” section</figcaption>
+</figure>
+</div>
+<p>This will take us to the README file (a file that explains basic info about a piece of software, dataset, or analysis) for the “History of Himalayan Mountaineering Expeditions” dataset.</p>
+<p>The <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md#the-history-of-himalayan-mountaineering-expeditions">first few paragraphs</a> give you an overview of the dataset.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tidytues-datasets-himalaya.png" class="img-fluid figure-img"></p>
+<figcaption>README file of the Himalayan Mountaineering Expeditions dataset</figcaption>
+</figure>
+</div>
 </section>
-<section id="slides" class="level2">
-<h2 class="anchored" data-anchor-id="slides">Slides</h2>
-<ul>
-<li><p><a href="./day1/index.html">Day 1 (2025-06-12): Introduction: Why code? Why reproducibility?</a></p></li>
-<li><p><a href="./day2/index.html">Day 2 (2025-06-19): Git and GitHub</a></p></li>
-<li><p><a href="./day3/index.html">Day 3 (2025-06-26): Basic usage of R and RStudio</a></p></li>
-<li><p><a href="./day4/index.html">Day 4 (2025-07-03): Data loading and tidying with tidyverse</a></p></li>
-<li><p><a href="./day5/index.html">Day 5 (Media Day): Joining data</a></p></li>
-<li><p><a href="./day6/index.html">Day 6 (2025-07-10): Data visualization with ggplot2</a></p></li>
-<li><p><a href="./day7/index.html">Day 7 (2025-07-17): Writing documents with Quarto</a></p></li>
-<li><p><a href="./day8/index.html">Day 8 (2025-07-24): Quarto, part II</a></p></li>
-</ul>
+<section id="load-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="load-the-data">Load the data</h2>
+<p>The section called of the README file called “<a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md#the-data">The Data</a>” tells you <strong>how to load the data into R</strong>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tidytues-himalaya-data.png" class="img-fluid figure-img"></p>
+<figcaption>“The Data” section shows how to load the dataset</figcaption>
+</figure>
+</div>
+<p><strong>This is very important</strong>, because you need to load the data to analyze it.</p>
+<p>Note that there are usually <strong>two</strong> options given for loading the data.</p>
+<p>You only need to use one of them; <a href="#option-2">option 2</a> is probably easier.</p>
+<section id="option-1" class="level3">
+<h3 class="anchored" data-anchor-id="option-1">Option 1</h3>
+<p>The first option involves installing the “tidytuesdayR” package, which you can do with the command <code>install.packages("tidytuesdayR")</code>.</p>
+<p>Once you’ve installed the package, you can use it to load the data by specifying the date the data were published on TidyTuesday.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytuesdayR)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>tuesdata <span class="ot">&lt;-</span> <span class="fu">tt_load</span>(<span class="st">"2025-01-21"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>---- Compiling #TidyTuesday Information for 2025-01-21 ----
+--- There are 2 files available ---
+
+
+── Downloading files ───────────────────────────────────────────────────────────
+
+  1 of 2: "exped_tidy.csv"
+  2 of 2: "peaks_tidy.csv"</code></pre>
+</div>
+</div>
+<p>Note that the TidyTuesday webpage shows <code>tidytuesdayR::tt_load("2025-01-21")</code>, but this does the same thing as running <code>library(tidytuesdayR)</code> followed by <code>tt_load("2025-01-21")</code>.</p>
+<p>Also, when you use Option 1, the data are loaded as a list, so we need to extract each dataframe from the list. For the himalaya data, there are two dataframes. It shows us how to extract them from the list using the <code>$</code> symbol:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>exped_tidy <span class="ot">&lt;-</span> tuesdata<span class="sc">$</span>exped_tidy</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>peaks_tidy <span class="ot">&lt;-</span> tuesdata<span class="sc">$</span>peaks_tidy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="recordings" class="level2">
-<h2 class="anchored" data-anchor-id="recordings">Recordings</h2>
-<ul>
-<li><a href="https://youtu.be/NOfTnoEtCYk">Day 5: Joining data</a></li>
-</ul>
-<p>For other lecture recordings, see Moodle.</p>
+<section id="option-2" class="level3">
+<h3 class="anchored" data-anchor-id="option-2">Option 2</h3>
+<p>The second option is simpler. You can use the <code>read_csv()</code> function to load the data directly without installing another package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>exped_tidy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-01-21/exped_tidy.csv"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>peaks_tidy <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-01-21/peaks_tidy.csv"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials</h2>
-<ul>
-<li><p><a href="./day2/day02_intro_to_git.html">Day 2: Git and GitHub</a></p></li>
-<li><p><a href="./day3/day03_intro_to_r.html">Day 3: R and RStudio</a></p></li>
-<li><p><a href="./day4/day04_tidy.html">Day 4: Data loading and tidying</a></p></li>
-<li><p><a href="https://r4ds.hadley.nz/joins">Day 5: Joining data (R for Data Science)</a></p></li>
-<li><p><a href="./day6/day06_ggplot2.html">Day 6: ggplot2</a></p></li>
-<li><p><a href="https://carpentries-incubator.github.io/reproducible-publications-quarto/">Day 7: Introduction to Reproducible Publications with Quarto (The Carpentries Lesson)</a></p></li>
-<li><p><a href="./day6/tidytuesday.html">How to load data from TidyTuesday</a></p></li>
-<li><p><a href="https://github.com/data-analysis-chiba/gapminder-report/">Final Report Example</a></p></li>
-</ul>
 </section>
-<section id="important-deadlines" class="level2">
-<h2 class="anchored" data-anchor-id="important-deadlines">Important Deadlines</h2>
-<ul>
-<li><p>2025-06-25 11:59PM: <a href="https://github.com/data-analysis-chiba/day02-git/blob/main/git_facts.md">Day 2 homework</a> due</p></li>
-<li><p>2025-07-02 11:59PM: <a href="https://github.com/data-analysis-chiba/day03-r/blob/main/day03_homework.R">Day 3 homework</a> due</p></li>
-<li><p>2025-07-09 11:59PM: <a href="https://github.com/data-analysis-chiba/day04-tidy/blob/main/day04_homework.R">Day 4 homework</a> due</p></li>
-<li><p>2025-07-16 11:59PM: <a href="https://github.com/data-analysis-chiba/day05-join/blob/main/day05_homework.R">Day 5 homework</a> due</p></li>
-<li><p>2025-07-30 11:59PM: Final paper due</p></li>
-</ul>
+<section id="take-a-look-at-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="take-a-look-at-the-data">Take a look at the data</h2>
+<p>Now that you’ve loaded the data, have a look at it:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>exped_tidy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 882 × 69
+   EXPID     PEAKID  YEAR SEASON SEASON_FACTOR  HOST HOST_FACTOR ROUTE1   ROUTE2
+   &lt;chr&gt;     &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt; 
+ 1 EVER20101 EVER    2020      1 Spring            2 China       N Col-N… &lt;NA&gt;  
+ 2 EVER20102 EVER    2020      1 Spring            2 China       N Col-N… &lt;NA&gt;  
+ 3 EVER20103 EVER    2020      1 Spring            2 China       N Col-N… &lt;NA&gt;  
+ 4 AMAD20301 AMAD    2020      3 Autumn            1 Nepal       SW Ridge &lt;NA&gt;  
+ 5 AMAD20302 AMAD    2020      3 Autumn            1 Nepal       SW Ridge &lt;NA&gt;  
+ 6 AMAD20303 AMAD    2020      3 Autumn            1 Nepal       SW Ridge &lt;NA&gt;  
+ 7 AMAD20304 AMAD    2020      3 Autumn            1 Nepal       SW Ridge &lt;NA&gt;  
+ 8 AMAD20305 AMAD    2020      3 Autumn            1 Nepal       SW Ridge &lt;NA&gt;  
+ 9 AMAD20306 AMAD    2020      3 Autumn            1 Nepal       SW Ridge &lt;NA&gt;  
+10 AMAD20307 AMAD    2020      3 Autumn            1 Nepal       SW Ridge &lt;NA&gt;  
+# ℹ 872 more rows
+# ℹ 60 more variables: ROUTE3 &lt;lgl&gt;, ROUTE4 &lt;lgl&gt;, NATION &lt;chr&gt;, LEADERS &lt;chr&gt;,
+#   SPONSOR &lt;chr&gt;, SUCCESS1 &lt;lgl&gt;, SUCCESS2 &lt;lgl&gt;, SUCCESS3 &lt;lgl&gt;,
+#   SUCCESS4 &lt;lgl&gt;, ASCENT1 &lt;chr&gt;, ASCENT2 &lt;chr&gt;, ASCENT3 &lt;lgl&gt;, ASCENT4 &lt;lgl&gt;,
+#   CLAIMED &lt;lgl&gt;, DISPUTED &lt;lgl&gt;, COUNTRIES &lt;chr&gt;, APPROACH &lt;chr&gt;,
+#   BCDATE &lt;date&gt;, SMTDATE &lt;date&gt;, SMTTIME &lt;chr&gt;, SMTDAYS &lt;dbl&gt;, TOTDAYS &lt;dbl&gt;,
+#   TERMDATE &lt;date&gt;, TERMREASON &lt;dbl&gt;, TERMREASON_FACTOR &lt;chr&gt;, …</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>peaks_tidy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 480 × 29
+   PEAKID PKNAME      PKNAME2 LOCATION HEIGHTM HEIGHTF HIMAL HIMAL_FACTOR REGION
+   &lt;chr&gt;  &lt;chr&gt;       &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;
+ 1 AMAD   Ama Dablam  Amai D… Khumbu …    6814   22356    12 Khumbu            2
+ 2 AMPG   Amphu Gyab… Amphu … Khumbu …    5630   18471    12 Khumbu            2
+ 3 ANN1   Annapurna I &lt;NA&gt;    Annapur…    8091   26545     1 Annapurna         5
+ 4 ANN2   Annapurna … &lt;NA&gt;    Annapur…    7937   26040     1 Annapurna         5
+ 5 ANN3   Annapurna … &lt;NA&gt;    Annapur…    7555   24787     1 Annapurna         5
+ 6 ANN4   Annapurna … &lt;NA&gt;    Annapur…    7525   24688     1 Annapurna         5
+ 7 ANNE   Annapurna … &lt;NA&gt;    Annapur…    8026   26332     1 Annapurna         5
+ 8 ANNM   Annapurna … &lt;NA&gt;    Annapur…    8051   26414     1 Annapurna         5
+ 9 ANNS   Annapurna … Annapu… Annapur…    7219   23684     1 Annapurna         5
+10 APIM   Api Main    &lt;NA&gt;    Api Him…    7132   23399     2 Api/Byas Ri…      7
+# ℹ 470 more rows
+# ℹ 20 more variables: REGION_FACTOR &lt;chr&gt;, OPEN &lt;lgl&gt;, UNLISTED &lt;lgl&gt;,
+#   TREKKING &lt;lgl&gt;, TREKYEAR &lt;dbl&gt;, RESTRICT &lt;chr&gt;, PHOST &lt;dbl&gt;,
+#   PHOST_FACTOR &lt;chr&gt;, PSTATUS &lt;dbl&gt;, PSTATUS_FACTOR &lt;chr&gt;, PEAKMEMO &lt;dbl&gt;,
+#   PYEAR &lt;dbl&gt;, PSEASON &lt;dbl&gt;, PEXPID &lt;chr&gt;, PSMTDATE &lt;chr&gt;, PCOUNTRY &lt;chr&gt;,
+#   PSUMMITERS &lt;chr&gt;, PSMTNOTE &lt;chr&gt;, REFERMEMO &lt;dbl&gt;, PHOTOMEMO &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Note that since there are <strong>two dataframes</strong> in this dataset, you may need to <a href="../day5/index.html">join them</a> in order to conduct the data analysis.</p>
 </section>
-<section id="about-homework-sets" class="level2">
-<h2 class="anchored" data-anchor-id="about-homework-sets">About homework sets</h2>
-<p>All homework assignments (except Day 2) are submitted as R scripts.</p>
-<p>Your code must <strong>run without errors</strong>.</p>
-<p>The easiest way to check this is to restart RStudio by closing and opening it, then opening the R script and pressing the “Source” button. Your code should run without errors, and any expected objects such as <code>answer_1</code>, etc. should show up in the environment panel.</p>
-<p>The process for the final paper is similar, but instead of clicking “Source”, click “Render”.</p>
-<p>Please check this before submitting your assignments!</p>
+<section id="check-the-data-dictionary" class="level2">
+<h2 class="anchored" data-anchor-id="check-the-data-dictionary">Check the Data Dictionary</h2>
+<p>Every dataset in TidyTuesday includes a “Data Dictionary” that explains what each column in the data means. Scroll down the README file a bit further to <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md#data-dictionary">find it</a>. This is very important for understanding and analyzing your data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/tidytues-himalaya-dict.png" class="img-fluid figure-img"></p>
+<figcaption>Data Dictionary for the Himalayan Mountaineering Expeditions dataset</figcaption>
+</figure>
+</div>
 </section>
-<section id="extra-practice" class="level2">
-<h2 class="anchored" data-anchor-id="extra-practice">Extra Practice</h2>
-<p>The following are interactive tutorials in Japanese that you can run in your web browser. They were designed for the <a href="https://joelnitta.github.io/joho-shori/">情報処理演習 course</a>. Note that although the tutorials are used as homework in the 情報処理演習 course, <strong>they are NOT required assignments for this course</strong>. I only provide them here so you can use them for extra practice if you want. Please note that bandwidth is limited to run the tutorials, so they may not always be available.</p>
-<p>以下のリンクは元々は<a href="https://joelnitta.github.io/joho-shori/">「情報処理演習」</a>のために作成された、webブラウザの中で実行できるRコードのチュートリアルです。</p>
-<p>注意：以下のチュートリアルは「情報処理演習」の宿題に使われていますが、<strong>本授業の宿題ではありません。</strong> 復習のためだけに掲載されています。</p>
-<p>なお、使用量に限りがありますので、同時に数人以上使われている場合は接続できない可能性があります。</p>
-<ol type="1">
-<li><a href="https://joelnitta.shinyapps.io/00-learnr/">チュートリアルについて</a></li>
-<li><a href="https://joelnitta.shinyapps.io/01-intro/">R入門</a></li>
-<li><a href="https://joelnitta.shinyapps.io/02-vectors">ベクトルについて</a></li>
-<li><a href="https://joelnitta.shinyapps.io/03-load/">データをファイルから読み込む</a></li>
-<li><a href="https://joelnitta.shinyapps.io/04-tidy-1/">データの整理（1）</a></li>
-<li><a href="https://joelnitta.shinyapps.io/05-tidy-2/">データの整理（2）</a></li>
-<li><a href="https://joelnitta.shinyapps.io/06-plot-1/">データの可視化（1）</a></li>
-<li><a href="https://joelnitta.shinyapps.io/07-plot-2/">データの可視化（2）</a></li>
-</ol>
-</section>
-<section id="office-hours" class="level2">
-<h2 class="anchored" data-anchor-id="office-hours">Office Hours</h2>
-<p>By appointment, please send an email to <a href="mailto:joelnitta@chiba-u.jp" class="email">joelnitta@chiba-u.jp</a></p>
-</section>
-<section id="syllabus" class="level2">
-<h2 class="anchored" data-anchor-id="syllabus">Syllabus</h2>
-<p><a href="https://syllabus.gs.chiba-u.jp/2025/101101101076000/Z011531301/en_US">Syllabus in English</a></p>
+<section id="start-exploring-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="start-exploring-the-data">Start exploring the data!</h2>
+<p>For example, let’s count the names of the mountain peaks included in the <code>peaks_tidy</code> data:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>peaks_tidy <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(PKNAME)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 480 × 2
+   PKNAME                 n
+   &lt;chr&gt;              &lt;int&gt;
+ 1 Aichyn                 1
+ 2 Ama Dablam             1
+ 3 Amotsang               1
+ 4 Amphu Gyabjen          1
+ 5 Amphu I                1
+ 6 Amphu Middle           1
+ 7 Anidesh Chuli          1
+ 8 Annapurna I            1
+ 9 Annapurna I East       1
+10 Annapurna I Middle     1
+# ℹ 470 more rows</code></pre>
+</div>
+</div>
+<p>Once you get a feel for the columns in the dataset, try <a href="../day6/index.html">making some plots</a>.</p>
+<p>Your goal is to create a plot that tells the story hidden in the data. Good luck!</p>
 
 
 </section>
