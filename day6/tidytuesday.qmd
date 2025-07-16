@@ -29,7 +29,7 @@ This will take us to the README file (a file that explains basic info about a pi
 
 The [first few paragraphs](https://github.com/rfordatascience/tidytuesday/blob/main/data/2025/2025-01-21/readme.md#the-history-of-himalayan-mountaineering-expeditions) give you an overview of the dataset.
 
-![README file of the Himalayan Mountaineering Expeditions dataset](../images/tidytues-datasets-himalaya.png)
+![README file of the Himalayan Mountaineering Expeditions dataset](../images/tidytues-himalaya-top.png)
 
 ## Load the data
 
