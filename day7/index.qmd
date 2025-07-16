@@ -15,6 +15,40 @@ execute:
 old <- options(pillar.print_min = 6)
 ```
 
+## Review
+
+- Do NOT write `install.packages()` in your code
+  - When I run it, it will install software on **my** computer. No thank you!
+
+## Review
+
+- Use `read_csv()`, not `read.csv()`.
+  - The way they load data is slightly different. `read.csv()` is not *worse* necessarily, but it may result in unexpected things happening since I expect you to use `read_csv()`.
+
+## Review
+
+- Always put `library(tidyverse)` (or other packages) at the very top of your code, *before* `read_csv()` etc.
+  - You need to load the package before you can use its functions.
+
+```{r}
+#| error: true
+gapminder <- read_csv("data_raw/gapminder.csv")
+```
+
+```{r}
+#| echo: false
+#| message: false
+library(tidyverse)
+gapminder <- read_csv(here::here("data_raw/gapminder.csv"))
+```
+
+```{r}
+#| eval: false
+#| message: false
+library(tidyverse)
+gapminder <- read_csv("data_raw/gapminder.csv")
+```
+
 ## What is Quarto?
 
 ::: {.incremental}
