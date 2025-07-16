@@ -365,3 +365,9 @@ gapminder <- read_csv("data_raw/gapminder.csv")
 - Please try to use Quarto for your class reports!
 
 :::
+
+## About the final report
+
+- Please read the PDF with instructions posted to Moodle
+
+- Please submit your choice of dataset if you haven't already
