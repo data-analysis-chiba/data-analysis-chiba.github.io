@@ -209,32 +209,98 @@
 <ul>
 <li>The report (<code>report.qmd</code>) is due <strong>2025-07-30 11:59PM</strong>
 <ul>
-<li>Push your final commit on GitHub by the deadline</li>
-<li>Submit <strong>the Word document</strong> on Moodle</li>
+<li>Push your final commit to GitHub by the deadline</li>
 </ul></li>
-<li>The <strong>evaluation form</strong> is due <strong>2025-08-01 11:59PM</strong>
+<li>The <strong>evaluation form</strong> is due <strong>2025-08-06 11:59PM</strong>
 <ul>
-<li>Submit Excel sheet on Moodle</li>
+<li>Submit via Moodle</li>
 </ul></li>
 </ul>
 </section>
 <section id="grading" class="slide level2">
 <h2>Grading</h2>
 <ul>
-<li><p>Please see the <strong>rubric</strong> in the final report instructions to understand how the paper will be graded</p></li>
+<li><p>Please see the <strong>rubric</strong> in the <a href="https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1423683">final report instructions</a> to understand how the paper will be graded</p></li>
 <li><p>You will also <strong>evaluate</strong> each other’s final report using the rubric</p>
 <ul>
-<li>Download the Excel file from Moodle, fill it out, and submit it on Moodle</li>
-<li>I will post anonymized versions of each report and code to Moodle for you to evaluate</li>
+<li>I will post an anonymized version of each repository for you to evaluate and make an announcement on Moodle</li>
 </ul></li>
 </ul>
 </section>
-<section id="how-to-fill-out-the-evaluation-form" class="slide level2">
-<h2>How to fill out the evaluation form</h2>
+<section id="how-to-evaluate-the-report" class="slide level2">
+<h2>How to evaluate the report</h2>
 <ul>
-<li><p>Read each report</p></li>
-<li><p>Assign a score according to the rubric (1 - 4 points per category)</p></li>
-<li><p>Submit the evaluation form (Excel sheet) via Moodle</p></li>
+<li>Clone the repo as a new project and (try to) reproduce it by pressing the “render” button in RStudio
+<ul>
+<li>I will demonstrate with the example report (<a href="https://github.com/data-analysis-chiba/gapminder-report" class="uri">https://github.com/data-analysis-chiba/gapminder-report</a>)</li>
+</ul></li>
+<li>You may need to edit the code to get it to render. Please try to do so.</li>
+</ul>
+</section>
+<section id="how-to-evaluate-the-report-1" class="slide level2">
+<h2>How to evaluate the report</h2>
+<ul>
+<li>Once you’ve reproduced the report, fill out the <a href="https://moodle.gs.chiba-u.jp/moodle/mod/quiz/view.php?id=1422866">Final Report Evaluation</a> form on Moodle</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>Example Question: “Were you able to reproduce the code?”
+<ul>
+<li>4: Yes, the code ran without any errors</li>
+<li>3: Yes, but only after making a very minor change myself, such as putting a file in a different folder</li>
+<li>2: Yes, but only after making several changes to the code</li>
+<li>1: No, even after trying to change it myself</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li><p>Example Question: “Which of the following best describes the introduction?””</p>
+<ul>
+<li>4: The dataset is described succinctly and clearly, including where it comes from.</li>
+<li>3: The overall purpose of the dataset is clear, but some details are lacking.</li>
+<li>2: Only the title of the dataset is given; no information about where the data come from.</li>
+<li>1: Introduction missing or no useful information provided</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="about-.gitignore" class="title-slide slide level1 center">
+<h1>About <code>.gitignore</code></h1>
+
+</section>
+<section id="tell-git-to-ignore-output" class="slide level2">
+<h2>Tell git to ignore output</h2>
+<ul>
+<li>You should not commit the <strong>output</strong> of code
+<ul>
+<li>It clutters your git history, and is not necessary since you can always obtain the output by running the code</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-.gitignore-file" class="slide level2">
+<h2>The <code>.gitignore</code> file</h2>
+<ul>
+<li><p>If there are any files you don’t want git to track, you can ignore them by listing them in a special file called <code>.gitignore</code>.</p></li>
+<li><p>It is usually a good idea to ignore <strong>output files</strong>. We only want to track code (in other words, the analysis itself)</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li>You can tell git to <strong>ignore</strong> files by adding them to <code>.gitignore</code>:
+<ul>
+<li><code>gapminder-report.docx</code></li>
+<li><code>gapminder-report.html</code></li>
+<li><code>gapminder-report_files</code> (files needed for HTML output)</li>
+</ul></li>
+<li>If you know you want to ignore <strong>all</strong> docx files, you could instead write this:
+<ul>
+<li><code>*.docx</code></li>
+</ul></li>
 </ul>
 </section></section>
 <section>
