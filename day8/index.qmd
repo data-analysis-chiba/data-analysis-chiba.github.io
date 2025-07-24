@@ -19,27 +19,68 @@ execute:
 ## Due dates
 
 - The report (`report.qmd`) is due **2025-07-30 11:59PM**
-  - Push your final commit on GitHub by the deadline
-  - Submit **the Word document** on Moodle
+  - Push your final commit to GitHub by the deadline
 
-- The **evaluation form** is due **2025-08-01 11:59PM**
-  - Submit Excel sheet on Moodle
+- The **evaluation form** is due **2025-08-06 11:59PM**
+  - Submit via Moodle
 
 ## Grading
 
-- Please see the **rubric** in the final report instructions to understand how the paper will be graded
+- Please see the **rubric** in the [final report instructions](https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1423683) to understand how the paper will be graded
 
 - You will also **evaluate** each other's final report using the rubric
-  - Download the Excel file from Moodle, fill it out, and submit it on Moodle
-  - I will post anonymized versions of each report and code to Moodle for you to evaluate
+  - I will post an anonymized version of each repository for you to evaluate and make an announcement on Moodle
 
-## How to fill out the evaluation form
+## How to evaluate the report
 
-- Read each report
+- Clone the repo as a new project and (try to) reproduce it by pressing the "render" button in RStudio
+  - I will demonstrate with the example report (<https://github.com/data-analysis-chiba/gapminder-report>)
 
-- Assign a score according to the rubric (1 - 4 points per category)
+- You may need to edit the code to get it to render. Please try to do so.
 
-- Submit the evaluation form (Excel sheet) via Moodle
+## How to evaluate the report
+
+- Once you've reproduced the report, fill out the [Final Report Evaluation](https://moodle.gs.chiba-u.jp/moodle/mod/quiz/view.php?id=1422866) form on Moodle
+
+---
+
+- Example Question: "Were you able to reproduce the code?"
+  - 4: Yes, the code ran without any errors
+  - 3: Yes, but only after making a very minor change myself, such as putting a file in a different folder
+  - 2: Yes, but only after making several changes to the code
+  - 1: No, even after trying to change it myself
+
+---
+
+- Example Question: "Which of the following best describes the introduction?""
+
+  - 4: The dataset is described succinctly and clearly, including where it comes from.
+  - 3: The overall purpose of the dataset is clear, but some details are lacking.
+  - 2: Only the title of the dataset is given; no information about where the data come from.
+  - 1: Introduction missing or no useful information provided
+
+# About `.gitignore`
+
+## Tell git to ignore output
+
+- You should not commit the **output** of code
+  - It clutters your git history, and is not necessary since you can always obtain the output by running the code
+
+## The `.gitignore` file
+
+- If there are any files you don't want git to track, you can ignore them by listing them in a special file called `.gitignore`.
+
+- It is usually a good idea to ignore **output files**. We only want to track code (in other words, the analysis itself)
+
+---
+
+- You can tell git to **ignore** files by adding them to `.gitignore`:
+  - `gapminder-report.docx`
+  - `gapminder-report.html`
+  - `gapminder-report_files` (files needed for HTML output)
+
+- If you know you want to ignore **all** docx files, you could instead write this:
+  - `*.docx`
 
 # Some tips for your report
 
