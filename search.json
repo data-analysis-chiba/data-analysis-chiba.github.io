@@ -39,7 +39,7 @@
     "href": "day6/day06_ggplot2.html#getting-started",
     "title": "Reproducible Data Analysis Day 6: Data visualization with ggplot2",
     "section": "Getting started",
-    "text": "Getting started\nToday we will continue using the local project that you created before, gapminder-analysis, located in the data-analysis-course folder on your Desktop. Open it by clicking on the gapminder-analysis.Rproj file.\nSince ggplot2 is included in tidyverse, we will first load the tidyverse set of packages. Also load the scales package, which is used for labeling plots.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(scales)\n\n\nAttaching package: 'scales'\n\nThe following object is masked from 'package:purrr':\n\n    discard\n\nThe following object is masked from 'package:readr':\n\n    col_factor\n\n\nNext, load the data as before.\n\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")\n\n\n\nRows: 1704 Columns: 6\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): country, continent\ndbl (4): year, lifeExp, pop, gdpPercap\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nWe are now ready to plot the data."
+    "text": "Getting started\nToday we will continue using the local project that you created before, gapminder-analysis, located in the data-analysis-course folder on your Desktop. Open it by clicking on the gapminder-analysis.Rproj file.\nSince ggplot2 is included in tidyverse, we will first load the tidyverse set of packages. Also load the scales package, which is used for labeling plots.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.3     ✔ tibble    3.3.1\n✔ lubridate 1.9.5     ✔ tidyr     1.3.2\n✔ purrr     1.2.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(scales)\n\n\nAttaching package: 'scales'\n\nThe following object is masked from 'package:purrr':\n\n    discard\n\nThe following object is masked from 'package:readr':\n\n    col_factor\n\n\nNext, load the data as before.\n\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")\n\n\n\nRows: 1704 Columns: 6\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): country, continent\ndbl (4): year, lifeExp, pop, gdpPercap\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nWe are now ready to plot the data."
   },
   {
     "objectID": "day6/day06_ggplot2.html#first-plot",
@@ -151,28 +151,28 @@
     "href": "day7/index.html#review-2",
     "title": "Reproducible data analysis",
     "section": "Review",
-    "text": "Review\n\nAlways put library(tidyverse) (or other packages) at the very top of your code, before read_csv() etc.\n\nYou need to load the package before you can use its functions.\n\n\n\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")\n\nError in read_csv(\"data_raw/gapminder.csv\"): could not find function \"read_csv\"\n\n\n\nlibrary(tidyverse)\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")"
+    "text": "Review\n\nAlways put library(tidyverse) (or other packages) at the very top of your code, before read_csv() etc.\n\nYou need to load the package before you can use its functions.\n\n\n\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")\n\nError in `read_csv()`:\n! could not find function \"read_csv\"\n\n\n\nlibrary(tidyverse)\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")"
   },
   {
     "objectID": "day7/index.html#what-is-quarto",
     "href": "day7/index.html#what-is-quarto",
     "title": "Reproducible data analysis",
     "section": "What is Quarto?",
-    "text": "What is Quarto?\n\n\nQuarto is a computer program that allows you to generate documents in various formats with code\nWe will use it to generate MS Word documents with R\nIt can also generate PDF, HTML, and other output\nIt can also use other programming languages like Python"
+    "text": "What is Quarto?\n\nQuarto is a computer program that allows you to generate documents in various formats with code\nWe will use it to generate MS Word documents with R\nIt can also generate PDF, HTML, and other output\nIt can also use other programming languages like Python"
   },
   {
     "objectID": "day7/index.html#why-use-quarto",
     "href": "day7/index.html#why-use-quarto",
     "title": "Reproducible data analysis",
     "section": "Why use Quarto?",
-    "text": "Why use Quarto?\n\n\n\n\nPart of data analysis is communicating your results to an audience\nFor example, writing a final report for a class, or giving a presentation at work"
+    "text": "Why use Quarto?\n\n\n\nPart of data analysis is communicating your results to an audience\nFor example, writing a final report for a class, or giving a presentation at work"
   },
   {
     "objectID": "day7/index.html#why-use-quarto-1",
     "href": "day7/index.html#why-use-quarto-1",
     "title": "Reproducible data analysis",
     "section": "Why use Quarto?",
-    "text": "Why use Quarto?\n\n\nGenerating a report with code…\n\nhelps you avoid copy-and-paste errors\nensures that your results are a direct result of the data\nhelps you save time by re-using the code later"
+    "text": "Why use Quarto?\n\nGenerating a report with code…\n\nhelps you avoid copy-and-paste errors\nensures that your results are a direct result of the data\nhelps you save time by re-using the code later"
   },
   {
     "objectID": "day7/index.html#installing-quarto",
@@ -200,35 +200,35 @@
     "href": "day7/index.html#how-a-quarto-file-is-set-up",
     "title": "Reproducible data analysis",
     "section": "How a Quarto file is set up",
-    "text": "How a Quarto file is set up\n\n\nLook at your new Quarto file. What do you notice that is different from the .R files we have been using so far?\nThere is normal text like “Quarto enables you to weave together content…” that does not appear in a comment\nThere are lines starting with two hashes (##)\nThere are lines like ```{r}\nWhat is going on here?"
+    "text": "How a Quarto file is set up\n\nLook at your new Quarto file. What do you notice that is different from the .R files we have been using so far?\nThere is normal text like “Quarto enables you to weave together content…” that does not appear in a comment\nThere are lines starting with two hashes (##)\nThere are lines like ```{r}\nWhat is going on here?"
   },
   {
     "objectID": "day7/index.html#how-a-quarto-file-is-set-up-1",
     "href": "day7/index.html#how-a-quarto-file-is-set-up-1",
     "title": "Reproducible data analysis",
     "section": "How a Quarto file is set up",
-    "text": "How a Quarto file is set up\n\n\nA Quarto (.qmd) file is set up opposite to an R script\nNormal lines of text are not code (so they don’t need a # like a comment)\nR code is contained within lines starting with ```{r} and ending with ``` (called a “code chunk”)"
+    "text": "How a Quarto file is set up\n\nA Quarto (.qmd) file is set up opposite to an R script\nNormal lines of text are not code (so they don’t need a # like a comment)\nR code is contained within lines starting with ```{r} and ending with ``` (called a “code chunk”)"
   },
   {
     "objectID": "day7/index.html#rendering",
     "href": "day7/index.html#rendering",
     "title": "Reproducible data analysis",
     "section": "Rendering",
-    "text": "Rendering\n\n\nAnother important difference between normal .R files and .qmd files is that the latter produce documents\nThis is called “rendering”\nLet’s try that now: press the “Render” button in RStudio"
+    "text": "Rendering\n\nAnother important difference between normal .R files and .qmd files is that the latter produce documents\nThis is called “rendering”\nLet’s try that now: press the “Render” button in RStudio"
   },
   {
     "objectID": "day7/index.html#rendering-1",
     "href": "day7/index.html#rendering-1",
     "title": "Reproducible data analysis",
     "section": "Rendering",
-    "text": "Rendering\n\n\nYou should see the rendered document (a web page, in this case) appear on the right side of RStudio (in the Files and Plots panel)\n\nalso, in the Files tab, notice the gapminder-report.html file\n\nNotice the formatting of the output: lines like ## Quarto appear as headers\nYou can also see the output of the code, like 1 + 1"
+    "text": "Rendering\n\nYou should see the rendered document (a web page, in this case) appear on the right side of RStudio (in the Files and Plots panel)\n\nalso, in the Files tab, notice the gapminder-report.html file\n\nNotice the formatting of the output: lines like ## Quarto appear as headers\nYou can also see the output of the code, like 1 + 1"
   },
   {
     "objectID": "day7/index.html#formatting-with-markdown",
     "href": "day7/index.html#formatting-with-markdown",
     "title": "Reproducible data analysis",
     "section": "Formatting with Markdown",
-    "text": "Formatting with Markdown\n\n\nThe .qmd file is written in plain text (without formatting, similar to an .R file)\nWe can specify formatting in the output using Markdown syntax\n\nMarkdown is a very simple version of HTML"
+    "text": "Formatting with Markdown\n\nThe .qmd file is written in plain text (without formatting, similar to an .R file)\nWe can specify formatting in the output using Markdown syntax\n\nMarkdown is a very simple version of HTML"
   },
   {
     "objectID": "day7/index.html#formatting-with-markdown-1",
@@ -242,28 +242,28 @@
     "href": "day7/index.html#formatting-with-markdown-2",
     "title": "Reproducible data analysis",
     "section": "Formatting with Markdown",
-    "text": "Formatting with Markdown\n\n\n.qmd files are known as “Quarto Markdown” because they add Quarto’s features (the ability to include code chunks) to Markdown\nYou may have heard of “R Markdown,” which is the precursor to Quarto Markdown\n\nThere is generally no reason to use R Markdown instead of Quarto Markdown\nThey are very similar, so most things you read about R Markdown will apply to Quarto Markdown"
+    "text": "Formatting with Markdown\n\n.qmd files are known as “Quarto Markdown” because they add Quarto’s features (the ability to include code chunks) to Markdown\nYou may have heard of “R Markdown,” which is the precursor to Quarto Markdown\n\nThere is generally no reason to use R Markdown instead of Quarto Markdown\nThey are very similar, so most things you read about R Markdown will apply to Quarto Markdown"
   },
   {
     "objectID": "day7/index.html#formatting-with-markdown-3",
     "href": "day7/index.html#formatting-with-markdown-3",
     "title": "Reproducible data analysis",
     "section": "Formatting with Markdown",
-    "text": "Formatting with Markdown\n\n\nRStudio has a handy way for you to preview what the rendered text will look like\nRight now we are in “Source” mode, which means we are editing the plain text\nClick on the “Visual” mode button to switch to “Visual” mode\nNow it looks much more like the output on the right\n\nBut notice that we don’t see the results of running the code chunks"
+    "text": "Formatting with Markdown\n\nRStudio has a handy way for you to preview what the rendered text will look like\nRight now we are in “Source” mode, which means we are editing the plain text\nClick on the “Visual” mode button to switch to “Visual” mode\nNow it looks much more like the output on the right\n\nBut notice that we don’t see the results of running the code chunks"
   },
   {
     "objectID": "day7/index.html#formatting-with-markdown-4",
     "href": "day7/index.html#formatting-with-markdown-4",
     "title": "Reproducible data analysis",
     "section": "Formatting with Markdown",
-    "text": "Formatting with Markdown\n\n\nI much prefer working with plain text, so we will switch back to “Source” mode\nBut it is a good idea to use “Visual” mode to check what your markdown formatting will look like\nThere are many guides online to learn more about writing Markdown"
+    "text": "Formatting with Markdown\n\nI much prefer working with plain text, so we will switch back to “Source” mode\nBut it is a good idea to use “Visual” mode to check what your markdown formatting will look like\nThere are many guides online to learn more about writing Markdown"
   },
   {
     "objectID": "day7/index.html#about-the-code-chunks",
     "href": "day7/index.html#about-the-code-chunks",
     "title": "Reproducible data analysis",
     "section": "About the code chunks",
-    "text": "About the code chunks\n\n\nWithin the code chunks, anything you type is treated just like an R script\n\nNormal text must be R code\nComments can be written with #\n\nThe idea is to conduct analysis in the code chunks, and directly show the output in the rendered document"
+    "text": "About the code chunks\n\nWithin the code chunks, anything you type is treated just like an R script\n\nNormal text must be R code\nComments can be written with #\n\nThe idea is to conduct analysis in the code chunks, and directly show the output in the rendered document"
   },
   {
     "objectID": "day7/index.html#challenge",
@@ -277,28 +277,28 @@
     "href": "day7/index.html#about-the-code-chunks-1",
     "title": "Reproducible data analysis",
     "section": "About the code chunks",
-    "text": "About the code chunks\n\n\nNotice that when we render the document, the gapminder dataset is not loaded into our current R session\nThat is because rending takes place in a separate instance of R\nTo run the R code in a chunk in your current R session, press the green “play” button at the right-hand side of the chunk"
+    "text": "About the code chunks\n\nNotice that when we render the document, the gapminder dataset is not loaded into our current R session\nThat is because rending takes place in a separate instance of R\nTo run the R code in a chunk in your current R session, press the green “play” button at the right-hand side of the chunk"
   },
   {
     "objectID": "day7/index.html#in-line-code",
     "href": "day7/index.html#in-line-code",
     "title": "Reproducible data analysis",
     "section": "In-line code",
-    "text": "In-line code\n\n\nIn addition to code chunks, you can also mix short bits of R code within normal text by first writing a backtick (`) and the letter r, then the R code, then another backtick\nFor example, we can show the number of rows in the dataset with `r nrow(gapminder)`\nThis is best used for describing facts about the data or results"
+    "text": "In-line code\n\nIn addition to code chunks, you can also mix short bits of R code within normal text by first writing a backtick (`) and the letter r, then the R code, then another backtick\nFor example, we can show the number of rows in the dataset with `r nrow(gapminder)`\nThis is best used for describing facts about the data or results"
   },
   {
     "objectID": "day7/index.html#about-the-yaml-header",
     "href": "day7/index.html#about-the-yaml-header",
     "title": "Reproducible data analysis",
     "section": "About the YAML header",
-    "text": "About the YAML header\n\n\nThe first set of lines at the top of the file are called the “YAML header”\n\nYAML stands for “Yet Another Markup Language”\n\nThe YAML header specifies settings for the document using variables\n\nYou can set the values of the values of the variables with a colon: variable: value, for example author: \"Joel Nitta\"\n\nThere are many other settings, but we won’t cover those today"
+    "text": "About the YAML header\n\nThe first set of lines at the top of the file are called the “YAML header”\n\nYAML stands for “Yet Another Markup Language”\n\nThe YAML header specifies settings for the document using variables\n\nYou can set the values of the values of the variables with a colon: variable: value, for example author: \"Joel Nitta\"\n\nThere are many other settings, but we won’t cover those today"
   },
   {
     "objectID": "day7/index.html#code-chunk-options",
     "href": "day7/index.html#code-chunk-options",
     "title": "Reproducible data analysis",
     "section": "Code chunk options",
-    "text": "Code chunk options\n\n\nSimilar to the YAML header, we can also specify settings for the code chunks\nThis is done by first writing #|, then the setting like you would for the YAML header\nFor example, in a report, you usually only want to show the results of the code, not the code itself\nYou can do this with the following code chunk option: #| echo: false (remember echo echoes the code)"
+    "text": "Code chunk options\n\nSimilar to the YAML header, we can also specify settings for the code chunks\nThis is done by first writing #|, then the setting like you would for the YAML header\nFor example, in a report, you usually only want to show the results of the code, not the code itself\nYou can do this with the following code chunk option: #| echo: false (remember echo echoes the code)"
   },
   {
     "objectID": "day7/index.html#code-chunk-options-1",
@@ -319,7 +319,7 @@
     "href": "day7/index.html#change-the-output-format",
     "title": "Reproducible data analysis",
     "section": "Change the output format",
-    "text": "Change the output format\n\n\nSo far, we have been using HTML output because it is the default and shows up immediately when we press “render”\nBut your report should be submitted in Word (.docx) format.\nChange the output format to docx and render the document again"
+    "text": "Change the output format\n\nSo far, we have been using HTML output because it is the default and shows up immediately when we press “render”\nBut your report should be submitted in Word (.docx) format.\nChange the output format to docx and render the document again"
   },
   {
     "objectID": "day7/index.html#tell-git-to-ignore-output",
@@ -340,7 +340,7 @@
     "href": "day7/index.html#summary",
     "title": "Reproducible data analysis",
     "section": "Summary",
-    "text": "Summary\n\n\nQuarto allows you to insert your analysis results directly into reports\nQuarto can generate multiple output formats\nThe way of writing code and plain text is reversed compared to R scripts\nPlease try to use Quarto for your class reports!"
+    "text": "Summary\n\nQuarto allows you to insert your analysis results directly into reports\nQuarto can generate multiple output formats\nThe way of writing code and plain text is reversed compared to R scripts\nPlease try to use Quarto for your class reports!"
   },
   {
     "objectID": "day7/index.html#about-the-final-report",
@@ -599,7 +599,7 @@
     "href": "day3/index.html#running-code-from-a-file",
     "title": "Reproducible data analysis",
     "section": "Running code from a file",
-    "text": "Running code from a file\n\nType the same code as before in your new file: x &lt;- 2 + 2 and hit the “Enter” key\n\n\n\nNotice that R does not run the code, since this is the file editing pane, not the R console\nWe need to send the code to the console (that is, send it to R)"
+    "text": "Running code from a file\n\nType the same code as before in your new file: x &lt;- 2 + 2 and hit the “Enter” key\n\n\nNotice that R does not run the code, since this is the file editing pane, not the R console\nWe need to send the code to the console (that is, send it to R)"
   },
   {
     "objectID": "day3/index.html#running-code-from-a-file-1",
@@ -627,7 +627,7 @@
     "href": "day3/index.html#functions-and-arguments",
     "title": "Reproducible data analysis",
     "section": "Functions and arguments",
-    "text": "Functions and arguments\n\n\nThe next step in our R journey is to learn about functions\nA function takes input, does something to it, and returns output\nFor example, let’s try using the round function, which rounds numbers"
+    "text": "Functions and arguments\n\nThe next step in our R journey is to learn about functions\nA function takes input, does something to it, and returns output\nFor example, let’s try using the round function, which rounds numbers"
   },
   {
     "objectID": "day3/index.html#functions-and-arguments-1",
@@ -830,7 +830,7 @@
     "href": "day4/day04_tidy.html#installing-and-loading-packages",
     "title": "Reproducible Data Analysis Day 4: Data loading and tidying with tidyverse",
     "section": "Installing and loading packages",
-    "text": "Installing and loading packages\nFor this lesson, we will use functions that are not included in R by default (“Base R”). Packages are collections of code that expand R’s functionality. There are nearly 200,000 packages available on CRAN, the biggest repository of R packages.\nTo install a new package, use the install.packages() function, specifying the name of the package in quotation marks. Here, we will install a package called tidyverse:\n\ninstall.packages(\"tidyverse\")\n\nActually the “tidyverse” is a collection of R packages designed for data science, including readr(for loading data), dplyr (for data manipulation), ggplot (for plotting), and others. These packages are specifically designed to work harmoniously together. Some of these packages will be covered along this course, but you can find more complete information here: https://www.tidyverse.org/.\nYou only have to install the package once, which downloads it to your computer. But each time you want to use the package in an R session, you need to load it with the library() function, like this:\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nNotice that since tidyverse contains multiple packages, it loads each of those and prints a message for each.\nSomewhat confusingly, you don’t need to put the name of the pacakge quotation marks when using library(), but you do when using install.packages(). Also, you can only load one package at a time using library(), so if you needed to load multiple packages, you would need to do it like this (this example shows two packages included in tidyverse):\n\nlibrary(dplyr)\nlibrary(ggplot)"
+    "text": "Installing and loading packages\nFor this lesson, we will use functions that are not included in R by default (“Base R”). Packages are collections of code that expand R’s functionality. There are nearly 200,000 packages available on CRAN, the biggest repository of R packages.\nTo install a new package, use the install.packages() function, specifying the name of the package in quotation marks. Here, we will install a package called tidyverse:\n\ninstall.packages(\"tidyverse\")\n\nActually the “tidyverse” is a collection of R packages designed for data science, including readr(for loading data), dplyr (for data manipulation), ggplot (for plotting), and others. These packages are specifically designed to work harmoniously together. Some of these packages will be covered along this course, but you can find more complete information here: https://www.tidyverse.org/.\nYou only have to install the package once, which downloads it to your computer. But each time you want to use the package in an R session, you need to load it with the library() function, like this:\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.3     ✔ tibble    3.3.1\n✔ lubridate 1.9.5     ✔ tidyr     1.3.2\n✔ purrr     1.2.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nNotice that since tidyverse contains multiple packages, it loads each of those and prints a message for each.\nSomewhat confusingly, you don’t need to put the name of the pacakge quotation marks when using library(), but you do when using install.packages(). Also, you can only load one package at a time using library(), so if you needed to load multiple packages, you would need to do it like this (this example shows two packages included in tidyverse):\n\nlibrary(dplyr)\nlibrary(ggplot)"
   },
   {
     "objectID": "day4/day04_tidy.html#loading-data",
@@ -1691,7 +1691,7 @@
     "href": "index.html#slides",
     "title": "Reproducible Data Analysis",
     "section": "Slides",
-    "text": "Slides\n\nDay 1 (2025-06-12): Introduction: Why code? Why reproducibility?\nDay 2 (2025-06-19): Git and GitHub\nDay 3 (2025-06-26): Basic usage of R and RStudio\nDay 4 (2025-07-03): Data loading and tidying with tidyverse\nDay 5 (Media Day): Joining data\nDay 6 (2025-07-10): Data visualization with ggplot2\nDay 7 (2025-07-17): Writing documents with Quarto\nDay 8 (2025-07-24): Quarto, part II"
+    "text": "Slides\n\nDay 1 (2026-06-11): Introduction: Why code? Why reproducibility?\nDay 2 (2026-06-18): Git and GitHub\nDay 3 (2026-06-25): Basic usage of R and RStudio\nDay 4 (2026-07-02): Data loading and tidying with tidyverse\nDay 5 (Media Day): Joining data\nDay 6 (2026-07-09): Data visualization with ggplot2\nDay 7 (2026-07-16): Writing documents with Quarto\nDay 8 (2026-07-23): Quarto, part II"
   },
   {
     "objectID": "index.html#recordings",
@@ -1712,7 +1712,7 @@
     "href": "index.html#important-deadlines",
     "title": "Reproducible Data Analysis",
     "section": "Important Deadlines",
-    "text": "Important Deadlines\n\n2025-06-25 11:59PM: Day 2 homework due\n2025-07-02 11:59PM: Day 3 homework due\n2025-07-09 11:59PM: Day 4 homework due\n2025-07-16 11:59PM: Day 5 homework due\n2025-07-30 11:59PM: Final paper due"
+    "text": "Important Deadlines\n\n2026-06-24 11:59PM: Day 2 homework due\n2026-07-01 11:59PM: Day 3 homework due\n2026-07-08 11:59PM: Day 4 homework due\n2026-07-15 11:59PM: Day 5 homework due\n2026-07-29 11:59PM: Final paper due"
   },
   {
     "objectID": "index.html#about-homework-sets",
@@ -1754,7 +1754,7 @@
     "href": "day8/index.html#due-dates",
     "title": "Reproducible data analysis",
     "section": "Due dates",
-    "text": "Due dates\n\nThe report (report.qmd) is due 2025-07-30 11:59PM\n\nPush your final commit to GitHub by the deadline\n\nThe evaluation form is due 2025-08-06 11:59PM\n\nSubmit via Moodle"
+    "text": "Due dates\n\nThe report (report.qmd) is due 2026-07-29 11:59PM\n\nPush your final commit to GitHub by the deadline\n\nThe evaluation form is due 2026-08-05 11:59PM\n\nSubmit via Moodle"
   },
   {
     "objectID": "day8/index.html#grading",
@@ -1810,7 +1810,7 @@
     "href": "day8/index.html#change-the-font-size-1",
     "title": "Reproducible data analysis",
     "section": "Change the font size",
-    "text": "Change the font size\n\nYou can adjust the overall font size of the figure like this:\n\n\nggplot(gapminder, aes(x = pop, y = lifeExp)) +\n  geom_point() +\n  theme_gray(base_size = 16)\n\n\n\nThere are other themes available too, but theme_gray() should be fine for the final paper"
+    "text": "Change the font size\n\nYou can adjust the overall font size of the figure like this:\n\n\nggplot(gapminder, aes(x = pop, y = lifeExp)) +\n  geom_point() +\n  theme_gray(base_size = 16)\n\n\nThere are other themes available too, but theme_gray() should be fine for the final paper"
   },
   {
     "objectID": "day8/index.html#add-a-pagebreak",
@@ -1838,14 +1838,14 @@
     "href": "day6/index.html#what-is-eda",
     "title": "Reproducible data analysis",
     "section": "What is EDA?",
-    "text": "What is EDA?\n\n\nEDA stands for Exploratory Data Analysis\nEDA is the step of “getting to know” your data\nYou have already been doing some EDA by sorting the data and understanding what is in each column"
+    "text": "What is EDA?\n\nEDA stands for Exploratory Data Analysis\nEDA is the step of “getting to know” your data\nYou have already been doing some EDA by sorting the data and understanding what is in each column"
   },
   {
     "objectID": "day6/index.html#what-is-eda-1",
     "href": "day6/index.html#what-is-eda-1",
     "title": "Reproducible data analysis",
     "section": "What is EDA?",
-    "text": "What is EDA?\n\n\nAnother very useful tool for EDA is data visualization\nToday we will learn how to visualize data using ggplot2\n\nggplot2 is included in the tidyverse set of packages\nThere are other ways to do this such as using plot(). But ggplot2 has more consistent syntax."
+    "text": "What is EDA?\n\nAnother very useful tool for EDA is data visualization\nToday we will learn how to visualize data using ggplot2\n\nggplot2 is included in the tidyverse set of packages\nThere are other ways to do this such as using plot(). But ggplot2 has more consistent syntax."
   },
   {
     "objectID": "day6/index.html#what-makes-a-good-plot",
@@ -1859,7 +1859,7 @@
     "href": "day6/index.html#problems-with-this-plot",
     "title": "Reproducible data analysis",
     "section": "Problems with this plot",
-    "text": "Problems with this plot\n\n\n\n\nColors don’t correspond to contents (meat is green?)\n3D doesn’t have any meaning, only makes plot more complicated\nHard for humans to visually compare area"
+    "text": "Problems with this plot\n\n\n\nColors don’t correspond to contents (meat is green?)\n3D doesn’t have any meaning, only makes plot more complicated\nHard for humans to visually compare area"
   },
   {
     "objectID": "day6/index.html#what-makes-a-good-plot-1",
@@ -1880,7 +1880,7 @@
     "href": "day6/index.html#ggplot2-approach-to-plotting",
     "title": "Reproducible data analysis",
     "section": "ggplot2 approach to plotting",
-    "text": "ggplot2 approach to plotting\n\n\nGrammar of Graphics: all plots share a common “grammar”\n\nInput data\nAesthetic mapping: How to represent the data visually\n\n\naesthetic = 美的, mapping = 相当する. どんな美的な要素に相当するのかの指定\n\n\nGeometry: What shape to use for the plot\n\nRecommended Reading: ggplot2: Elegant Graphics for Data Analysis"
+    "text": "ggplot2 approach to plotting\n\nGrammar of Graphics: all plots share a common “grammar”\n\nInput data\nAesthetic mapping: How to represent the data visually\n\n\naesthetic = 美的, mapping = 相当する. どんな美的な要素に相当するのかの指定\n\n\nGeometry: What shape to use for the plot\n\nRecommended Reading: ggplot2: Elegant Graphics for Data Analysis"
   },
   {
     "objectID": "day6/index.html#aesthetic-mappings",
@@ -1936,7 +1936,7 @@
     "href": "day6/index.html#first-plot-2",
     "title": "Reproducible data analysis",
     "section": "First plot",
-    "text": "First plot\n\n\nggplot(\n  data = gapminder,\n  mapping = aes(\n    x = gdpPercap,\n    y = lifeExp\n  )\n) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\nWhat does this plot tell us?"
+    "text": "First plot\n\n\nggplot(\n  data = gapminder,\n  mapping = aes(\n    x = gdpPercap,\n    y = lifeExp\n  )\n) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\nWhat does this plot tell us?"
   },
   {
     "objectID": "day6/index.html#challenge",
@@ -1950,7 +1950,7 @@
     "href": "day6/index.html#add-color",
     "title": "Reproducible data analysis",
     "section": "Add color",
-    "text": "Add color\n\n\nIn the last challenge, we saw a general trend, but there could be more detail within certain groups, like continent or country\nLet’s use color to show the continent\nWhat is color in ggplot2?\n\nColor is an aesthetic mapping"
+    "text": "Add color\n\nIn the last challenge, we saw a general trend, but there could be more detail within certain groups, like continent or country\nLet’s use color to show the continent\nWhat is color in ggplot2?\n\nColor is an aesthetic mapping"
   },
   {
     "objectID": "day6/index.html#original-plot",
@@ -1992,7 +1992,7 @@
     "href": "day6/index.html#plotting-lines",
     "title": "Reproducible data analysis",
     "section": "Plotting lines",
-    "text": "Plotting lines\n\n\nLet’s try representing the data with a different geometry (shape)\nThis time we will use lines (geom_line())"
+    "text": "Plotting lines\n\nLet’s try representing the data with a different geometry (shape)\nThis time we will use lines (geom_line())"
   },
   {
     "objectID": "day6/index.html#plotting-lines-1",
@@ -2006,7 +2006,7 @@
     "href": "day6/index.html#plotting-lines-2",
     "title": "Reproducible data analysis",
     "section": "Plotting lines",
-    "text": "Plotting lines\n\n\nLines connect points along the x-axis\nBut we only want to connect points within each country\nWe need to add another aesthic mapping for that, the group"
+    "text": "Plotting lines\n\nLines connect points along the x-axis\nBut we only want to connect points within each country\nWe need to add another aesthic mapping for that, the group"
   },
   {
     "objectID": "day6/index.html#plotting-lines-3",
@@ -2034,7 +2034,7 @@
     "href": "day6/index.html#adding-layers-with",
     "title": "Reproducible data analysis",
     "section": "Adding layers with +",
-    "text": "Adding layers with +\n\n\nWe can add additional plot layers using the + sign\nFor example, lets add points on top of the lines"
+    "text": "Adding layers with +\n\nWe can add additional plot layers using the + sign\nFor example, lets add points on top of the lines"
   },
   {
     "objectID": "day6/index.html#adding-layers-with-1",
@@ -2069,14 +2069,14 @@
     "href": "day6/index.html#summary-adding-layers-with",
     "title": "Reproducible data analysis",
     "section": "Summary: Adding layers with +",
-    "text": "Summary: Adding layers with +\n\n\n\n\nEach layer modifies the plot, so you can build it gradually\nOther things layers can do:\n\nSet the plot theme\nChange the axes\nAdd labels\nand more!\n\n\n\n\n\n\n\n\n\nhttps://r.qcbs.ca/workshop03/book-en/"
+    "text": "Summary: Adding layers with +\n\n\n\nEach layer modifies the plot, so you can build it gradually\nOther things layers can do:\n\nSet the plot theme\nChange the axes\nAdd labels\nand more!\n\n\n\n\n\n\n\n\nhttps://r.qcbs.ca/workshop03/book-en/"
   },
   {
     "objectID": "day6/index.html#modify-an-aesthetic",
     "href": "day6/index.html#modify-an-aesthetic",
     "title": "Reproducible data analysis",
     "section": "Modify an aesthetic",
-    "text": "Modify an aesthetic\n\n\nSo far, we have been mapping aesthetics to variables in the data\nBut you can also simply assign the same value to a particular aesthetic (such as color)\nDo this by setting its value outside of mapping = aes()"
+    "text": "Modify an aesthetic\n\nSo far, we have been mapping aesthetics to variables in the data\nBut you can also simply assign the same value to a particular aesthetic (such as color)\nDo this by setting its value outside of mapping = aes()"
   },
   {
     "objectID": "day6/index.html#modify-an-aesthetic-1",
@@ -2118,7 +2118,7 @@
     "href": "day6/index.html#transformations-2",
     "title": "Reproducible data analysis",
     "section": "Transformations",
-    "text": "Transformations\n\n\n\nNearly all the points are crowded to the left, with only a few outliers on the right\n\n\n\nWe can make this easier to read by using a log-transformation"
+    "text": "Transformations\n\n\n\nNearly all the points are crowded to the left, with only a few outliers on the right\n\n\nWe can make this easier to read by using a log-transformation"
   },
   {
     "objectID": "day6/index.html#transformations-3",
@@ -2153,7 +2153,7 @@
     "href": "day6/index.html#multi-panel-plots",
     "title": "Reproducible data analysis",
     "section": "Multi-panel plots",
-    "text": "Multi-panel plots\n\n\nggplot2 can make multiple plots at once using facetting\nEach facet is a mini-plot of some portion of the dataset\n\nDefine the facet group with vars()\n\nLet’s try this for some countries in Asia"
+    "text": "Multi-panel plots\n\nggplot2 can make multiple plots at once using facetting\nEach facet is a mini-plot of some portion of the dataset\n\nDefine the facet group with vars()\n\nLet’s try this for some countries in Asia"
   },
   {
     "objectID": "day6/index.html#multi-panel-plots-1",
@@ -2188,7 +2188,7 @@
     "href": "day6/index.html#adjusting-labels",
     "title": "Reproducible data analysis",
     "section": "Adjusting labels",
-    "text": "Adjusting labels\n\n\nWhen you “publish” your plot (this could be including it in a report for a class), it needs to be clearly labeled\n\nWhoever is reading your report won’t know what “lifeExp” means"
+    "text": "Adjusting labels\n\nWhen you “publish” your plot (this could be including it in a report for a class), it needs to be clearly labeled\n\nWhoever is reading your report won’t know what “lifeExp” means"
   },
   {
     "objectID": "day6/index.html#adjusting-labels-1",
@@ -2216,7 +2216,7 @@
     "href": "day6/index.html#saving-your-plot",
     "title": "Reproducible data analysis",
     "section": "Saving your plot",
-    "text": "Saving your plot\n\n\nIf you need to you can save your plot in R, and write it out as an image file\nUse the ggsave() function"
+    "text": "Saving your plot\n\nIf you need to you can save your plot in R, and write it out as an image file\nUse the ggsave() function"
   },
   {
     "objectID": "day6/index.html#saving-your-plot-1",
@@ -2237,7 +2237,7 @@
     "href": "day6/index.html#summary",
     "title": "Reproducible data analysis",
     "section": "Summary",
-    "text": "Summary\n\n\nThink about what you want your graph to show\nAesthetic mapping: How to represent the data visually\nGeometry: What shape to use for the plot\nBuild your plot using layers\nBasic recipe: ggplot(INPUT-DATA, aes(MAPPING)) + GEOMETRY"
+    "text": "Summary\n\nThink about what you want your graph to show\nAesthetic mapping: How to represent the data visually\nGeometry: What shape to use for the plot\nBuild your plot using layers\nBasic recipe: ggplot(INPUT-DATA, aes(MAPPING)) + GEOMETRY"
   },
   {
     "objectID": "day6/index.html#project-description",
@@ -2272,7 +2272,7 @@
     "href": "day6/index.html#due-dates",
     "title": "Reproducible data analysis",
     "section": "Due dates",
-    "text": "Due dates\n\nYour own report is due 2025-07-30 11:59PM\nYour evaluation of another other report is due 2025-08-06 11:59PM\n\nAssignment of other reports and the evaluation sheet will be posted on Moodle"
+    "text": "Due dates\n\nYour own report is due 2026-07-29 11:59PM\nYour evaluation of another other report is due 2026-08-05 11:59PM\n\nAssignment of other reports and the evaluation sheet will be posted on Moodle"
   },
   {
     "objectID": "day1/index.html#instructor-joel-nitta",
@@ -2370,21 +2370,21 @@
     "href": "day1/index.html#final-project",
     "title": "Reproducible data analysis",
     "section": "Final project",
-    "text": "Final project\n\nYou will need to analyze a dataset of your own choosing for your final project, due 2025-07-30 11:59 PM\nThe last homework assignment is due 2025-07-16 11:59 PM, so you have 2 weeks to work on the final project"
+    "text": "Final project\n\nYou will need to analyze a dataset of your own choosing for your final project, due 2026-07-29 11:59 PM\nThe last homework assignment is due 2026-07-15 11:59 PM, so you have 2 weeks to work on the final project"
   },
   {
     "objectID": "day1/index.html#schedule",
     "href": "day1/index.html#schedule",
     "title": "Reproducible data analysis",
     "section": "Schedule",
-    "text": "Schedule\n\nDay 1 (2025-06-12): Introduction: Why code? Why reproducibility?\nDay 2 (2025-06-19): Git and GitHub\nDay 3 (2025-06-26): Basic usage of R and RStudio\nDay 4 (2025-07-03): Data loading and tidying with tidyverse"
+    "text": "Schedule\n\nDay 1 (2026-06-11): Introduction: Why code? Why reproducibility?\nDay 2 (2026-06-18): Git and GitHub\nDay 3 (2026-06-25): Basic usage of R and RStudio\nDay 4 (2026-07-02): Data loading and tidying with tidyverse"
   },
   {
     "objectID": "day1/index.html#schedule-contd",
     "href": "day1/index.html#schedule-contd",
     "title": "Reproducible data analysis",
     "section": "Schedule (cont’d)",
-    "text": "Schedule (cont’d)\n\nDay 5 (Media Day): Joining data\nDay 6 (2025-07-10): Data visualization with ggplot2\nDay 7 (2025-07-17): Writing documents with Quarto\nDay 8 (2025-07-24): Quarto, part II"
+    "text": "Schedule (cont’d)\n\nDay 5 (Media Day): Joining data\nDay 6 (2026-07-09): Data visualization with ggplot2\nDay 7 (2026-07-16): Writing documents with Quarto\nDay 8 (2026-07-23): Quarto, part II"
   },
   {
     "objectID": "day1/index.html#grades",

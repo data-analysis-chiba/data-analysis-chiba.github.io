@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.39">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>Reproducible data analysis – index</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -28,8 +31,9 @@
       vertical-align: middle;
     }
     /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -40,7 +44,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -93,7 +97,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-674b99eb578b41bad0653c6fe7ec7994.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-6514eb36f2f00c45600f64190c4f880f.css">
   <link rel="stylesheet" href="../styles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -231,17 +235,14 @@
 <img data-src="../images/project-selected-circled.png" class="r-stretch"></section>
 <section id="what-is-eda" class="slide level2">
 <h2>What is EDA?</h2>
-<div>
 <ul>
 <li class="fragment"><p>EDA stands for <strong>E</strong>xploratory <strong>D</strong>ata <strong>A</strong>nalysis</p></li>
 <li class="fragment"><p>EDA is the step of “getting to know” your data</p></li>
 <li class="fragment"><p>You have already been doing some EDA by sorting the data and understanding what is in each column</p></li>
 </ul>
-</div>
 </section>
 <section id="what-is-eda-1" class="slide level2">
 <h2>What is EDA?</h2>
-<div>
 <ul>
 <li class="fragment"><p>Another very useful tool for EDA is <strong>data visualization</strong></p></li>
 <li class="fragment"><p>Today we will learn how to visualize data using <code>ggplot2</code></p>
@@ -250,7 +251,6 @@
 <li class="fragment">There are other ways to do this such as using <code>plot()</code>. But <code>ggplot2</code> has more consistent syntax.</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section class="slide level2">
 
@@ -267,13 +267,11 @@
 <h2>Problems with this plot</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div>
 <ul>
 <li class="fragment"><p>Colors <strong>don’t correspond</strong> to contents (meat is green?)</p></li>
 <li class="fragment"><p>3D doesn’t have any meaning, only makes plot <strong>more complicated</strong></p></li>
 <li class="fragment"><p>Hard for humans to visually compare <strong>area</strong></p></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="../images/piechart3d.png"></p>
 </div></div>
@@ -305,7 +303,6 @@
 </div></aside></section>
 <section id="ggplot2-approach-to-plotting" class="slide level2">
 <h2><code>ggplot2</code> approach to plotting</h2>
-<div>
 <ul>
 <li class="fragment"><strong><em>G</em></strong>rammar of <strong><em>G</em></strong>raphics: all plots share a common “grammar”
 <ol type="1">
@@ -320,7 +317,6 @@
 </ol></li>
 <li class="fragment">Recommended Reading: <a href="https://ggplot2-book.org/">ggplot2: Elegant Graphics for Data Analysis</a></li>
 </ul>
-</div>
 </section>
 <section id="aesthetic-mappings" class="slide level2">
 <h2>Aesthetic mappings</h2>
@@ -341,11 +337,8 @@
 </div></div>
 <ul>
 <li><p>How is population represented (“<strong>mapped</strong>”) in each plot?</p></li>
-<li><p>What is the shape (“<strong>geometry</strong>”) of each plot?</p></li>
+<li><h2 id="what-is-the-shape-geometry-of-each-plot">What is the shape (“<strong>geometry</strong>”) of each plot?</h2></li>
 </ul>
-</section>
-<section class="slide level2">
-
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Pie chart <br><br> <img src="https://clauswilke.com/dataviz/proportional_ink_files/figure-html/RI-pop-pie-1.png" alt="drawing" height="220"></p>
@@ -380,8 +373,8 @@
 </ul></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(scales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a></a><span class="fu">library</span>(scales)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="load-data" class="slide level2">
@@ -390,7 +383,7 @@
 <li>Use the <code>read_csv()</code> function to load a spreadsheet as a dataframe</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data_raw/gapminder.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>gapminder <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data_raw/gapminder.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="gapminder" class="slide level2">
@@ -409,7 +402,7 @@
 <h2>First plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -424,13 +417,13 @@
 <h2>First plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb4-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb4-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb4-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
 <span id="cb4-5"><a></a>    <span class="at">y =</span> lifeExp</span>
 <span id="cb4-6"><a></a>  )</span>
-<span id="cb4-7"><a></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -445,14 +438,14 @@
 <h2>First plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb5-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb5-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb5-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
 <span id="cb5-5"><a></a>    <span class="at">y =</span> lifeExp</span>
 <span id="cb5-6"><a></a>  )</span>
 <span id="cb5-7"><a></a>) <span class="sc">+</span></span>
-<span id="cb5-8"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-8"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -462,11 +455,9 @@
 </div>
 </div>
 </div></div>
-<div>
 <ul>
 <li class="fragment">What does this plot tell us?</li>
 </ul>
-</div>
 </section>
 <section id="challenge" class="slide level2">
 <h2>Challenge</h2>
@@ -476,7 +467,6 @@
 </section>
 <section id="add-color" class="slide level2">
 <h2>Add color</h2>
-<div>
 <ul>
 <li class="fragment"><p>In the last challenge, we saw a general trend, but there could be <strong>more detail within certain groups</strong>, like continent or country</p></li>
 <li class="fragment"><p>Let’s use <strong>color</strong> to show the <strong>continent</strong></p></li>
@@ -485,20 +475,19 @@
 <li class="fragment">Color is an <strong>aesthetic mapping</strong></li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="original-plot" class="slide level2">
 <h2>Original plot</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb6-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb6-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb6-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb6-5"><a></a>    <span class="at">y =</span> lifeExp</span>
 <span id="cb6-6"><a></a>  )</span>
 <span id="cb6-7"><a></a>) <span class="sc">+</span></span>
-<span id="cb6-8"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-8"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -513,7 +502,7 @@
 <h2>Add color</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb7-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb7-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb7-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -521,7 +510,7 @@
 <span id="cb7-6"><a></a>    <span class="at">color =</span> continent</span>
 <span id="cb7-7"><a></a>  )</span>
 <span id="cb7-8"><a></a>) <span class="sc">+</span></span>
-<span id="cb7-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-9"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -536,7 +525,7 @@
 <h2>Add color</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb8-2"><a></a>  <span class="at">data =</span> gapminder,</span>
 <span id="cb8-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(</span>
 <span id="cb8-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -544,7 +533,7 @@
 <span id="cb8-6"><a></a>    <span class="at">color =</span> continent</span>
 <span id="cb8-7"><a></a>  )</span>
 <span id="cb8-8"><a></a>) <span class="sc">+</span></span>
-<span id="cb8-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-9"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -575,7 +564,7 @@
 
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb11-2"><a></a>  gapminder, <span class="co"># DATA</span></span>
 <span id="cb11-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb11-4"><a></a>    <span class="co"># MAPPING</span></span>
@@ -584,7 +573,7 @@
 <span id="cb11-7"><a></a>    <span class="at">color =</span> continent</span>
 <span id="cb11-8"><a></a>  )</span>
 <span id="cb11-9"><a></a>) <span class="sc">+</span></span>
-<span id="cb11-10"><a></a>  <span class="fu">geom_point</span>() <span class="co"># GEOMETRY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-10"><a></a>  <span class="fu">geom_point</span>() <span class="co"># GEOMETRY</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -597,18 +586,16 @@
 </section>
 <section id="plotting-lines" class="slide level2">
 <h2>Plotting lines</h2>
-<div>
 <ul>
 <li class="fragment"><p>Let’s try representing the data with a different <strong>geometry</strong> (shape)</p></li>
 <li class="fragment"><p>This time we will use lines (<code>geom_line()</code>)</p></li>
 </ul>
-</div>
 </section>
 <section id="plotting-lines-1" class="slide level2">
 <h2>Plotting lines</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb12-2"><a></a>  gapminder, <span class="co"># DATA</span></span>
 <span id="cb12-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb12-4"><a></a>    <span class="co"># MAPPING</span></span>
@@ -617,7 +604,7 @@
 <span id="cb12-7"><a></a>    <span class="at">color =</span> continent</span>
 <span id="cb12-8"><a></a>  )</span>
 <span id="cb12-9"><a></a>) <span class="sc">+</span></span>
-<span id="cb12-10"><a></a>  <span class="fu">geom_line</span>() <span class="co"># GEOMETRY</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-10"><a></a>  <span class="fu">geom_line</span>() <span class="co"># GEOMETRY</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -633,19 +620,17 @@
 </section>
 <section id="plotting-lines-2" class="slide level2">
 <h2>Plotting lines</h2>
-<div>
 <ul>
 <li class="fragment"><p>Lines connect points along the x-axis</p></li>
 <li class="fragment"><p>But we only want to connect points <strong>within each country</strong></p></li>
 <li class="fragment"><p>We need to add another <strong>aesthic mapping</strong> for that, the <code>group</code></p></li>
 </ul>
-</div>
 </section>
 <section id="plotting-lines-3" class="slide level2">
 <h2>Plotting lines</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb13-2"><a></a>  gapminder,</span>
 <span id="cb13-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb13-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -653,7 +638,7 @@
 <span id="cb13-6"><a></a>    <span class="at">color =</span> continent</span>
 <span id="cb13-7"><a></a>  )</span>
 <span id="cb13-8"><a></a>) <span class="sc">+</span></span>
-<span id="cb13-9"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-9"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -668,7 +653,7 @@
 <h2>Plotting lines</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb14-2"><a></a>  gapminder,</span>
 <span id="cb14-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb14-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -677,7 +662,7 @@
 <span id="cb14-7"><a></a>    <span class="at">group =</span> country</span>
 <span id="cb14-8"><a></a>  )</span>
 <span id="cb14-9"><a></a>) <span class="sc">+</span></span>
-<span id="cb14-10"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-10"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -692,7 +677,7 @@
 <h2>Plotting lines</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb15-2"><a></a>  gapminder,</span>
 <span id="cb15-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb15-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -701,7 +686,7 @@
 <span id="cb15-7"><a></a>    <span class="at">group =</span> country</span>
 <span id="cb15-8"><a></a>  )</span>
 <span id="cb15-9"><a></a>) <span class="sc">+</span></span>
-<span id="cb15-10"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-10"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -714,18 +699,16 @@
 </section>
 <section id="adding-layers-with" class="slide level2">
 <h2>Adding layers with <code>+</code></h2>
-<div>
 <ul>
 <li class="fragment"><p>We can add additional plot layers using the <code>+</code> sign</p></li>
 <li class="fragment"><p>For example, lets add <strong>points</strong> on top of the <strong>lines</strong></p></li>
 </ul>
-</div>
 </section>
 <section id="adding-layers-with-1" class="slide level2">
 <h2>Adding layers with <code>+</code></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb16-2"><a></a>  gapminder,</span>
 <span id="cb16-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb16-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -734,7 +717,7 @@
 <span id="cb16-7"><a></a>    <span class="at">group =</span> country</span>
 <span id="cb16-8"><a></a>  )</span>
 <span id="cb16-9"><a></a>) <span class="sc">+</span></span>
-<span id="cb16-10"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-10"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -749,7 +732,7 @@
 <h2>Adding layers with <code>+</code></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb17-2"><a></a>  gapminder,</span>
 <span id="cb17-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb17-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -759,7 +742,7 @@
 <span id="cb17-8"><a></a>  )</span>
 <span id="cb17-9"><a></a>) <span class="sc">+</span></span>
 <span id="cb17-10"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb17-11"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-11"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -774,7 +757,7 @@
 <h2>Adding layers with <code>+</code></h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb18-2"><a></a>  gapminder,</span>
 <span id="cb18-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb18-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -784,7 +767,7 @@
 <span id="cb18-8"><a></a>  )</span>
 <span id="cb18-9"><a></a>) <span class="sc">+</span></span>
 <span id="cb18-10"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb18-11"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb18-11"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -803,7 +786,6 @@
 <h2>Summary: Adding layers with <code>+</code></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div>
 <ul>
 <li class="fragment"><p>Each layer <strong>modifies</strong> the plot, so you can build it gradually</p></li>
 <li class="fragment"><p>Other things layers can do:</p>
@@ -814,7 +796,6 @@
 <li class="fragment">and more!</li>
 </ul></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
 <p><img data-src="../images/gglayers_edit.png"></p>
 </div></div>
@@ -826,19 +807,17 @@
 </div></aside></section>
 <section id="modify-an-aesthetic" class="slide level2">
 <h2>Modify an aesthetic</h2>
-<div>
 <ul>
 <li class="fragment"><p>So far, we have been <strong>mapping</strong> aesthetics to variables in the data</p></li>
 <li class="fragment"><p>But you can also simply <strong>assign</strong> the same value to a particular aesthetic (such as color)</p></li>
 <li class="fragment"><p>Do this by setting its value <strong>outside</strong> of <code>mapping = aes()</code></p></li>
 </ul>
-</div>
 </section>
 <section id="modify-an-aesthetic-1" class="slide level2">
 <h2>Modify an aesthetic</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb19-2"><a></a>  gapminder,</span>
 <span id="cb19-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb19-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -846,7 +825,7 @@
 <span id="cb19-6"><a></a>    <span class="at">color =</span> continent,</span>
 <span id="cb19-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
 <span id="cb19-8"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb19-9"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-9"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -861,7 +840,7 @@
 <h2>Modify an aesthetic</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb20-2"><a></a>  gapminder,</span>
 <span id="cb20-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb20-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -869,7 +848,7 @@
 <span id="cb20-6"><a></a>    <span class="at">color =</span> continent,</span>
 <span id="cb20-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
 <span id="cb20-8"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb20-9"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb20-9"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"black"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -884,7 +863,7 @@
 <h2>Modify an aesthetic</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" data-code-line-numbers="9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb21-2"><a></a>  gapminder,</span>
 <span id="cb21-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb21-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -892,7 +871,7 @@
 <span id="cb21-6"><a></a>    <span class="at">color =</span> continent,</span>
 <span id="cb21-7"><a></a>    <span class="at">group =</span> country)) <span class="sc">+</span></span>
 <span id="cb21-8"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb21-9"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-9"><a></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"black"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -948,11 +927,9 @@
 <ul>
 <li>Nearly <strong>all the points are crowded to the left</strong>, with only a few outliers on the right</li>
 </ul>
-<div>
 <ul>
 <li class="fragment">We can make this easier to read by using a <strong>log-transformation</strong></li>
 </ul>
-</div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
@@ -969,12 +946,12 @@
 <h2>Transformations</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb22-2"><a></a>  gapminder,</span>
 <span id="cb22-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb22-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
 <span id="cb22-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb22-6"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb22-6"><a></a>  <span class="fu">geom_point</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -989,13 +966,13 @@
 <h2>Transformations</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb23-2"><a></a>  gapminder,</span>
 <span id="cb23-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb23-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
 <span id="cb23-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
 <span id="cb23-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb23-7"><a></a>  <span class="fu">scale_x_log10</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-7"><a></a>  <span class="fu">scale_x_log10</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1010,13 +987,13 @@
 <h2>Transformations</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb24-2"><a></a>  gapminder,</span>
 <span id="cb24-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb24-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
 <span id="cb24-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
 <span id="cb24-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb24-7"><a></a>  <span class="fu">scale_x_log10</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-7"><a></a>  <span class="fu">scale_x_log10</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1031,7 +1008,7 @@
 <h2>Transformations</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="7-10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25" data-code-line-numbers="7-10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb25-2"><a></a>  gapminder,</span>
 <span id="cb25-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb25-4"><a></a>    <span class="at">x =</span> gdpPercap,</span>
@@ -1039,7 +1016,7 @@
 <span id="cb25-6"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb25-7"><a></a>  <span class="fu">scale_x_log10</span>(</span>
 <span id="cb25-8"><a></a>    <span class="at">labels =</span> <span class="fu">label_comma</span>()</span>
-<span id="cb25-9"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-9"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1052,7 +1029,6 @@
 </section>
 <section id="multi-panel-plots" class="slide level2">
 <h2>Multi-panel plots</h2>
-<div>
 <ul>
 <li class="fragment"><p><code>ggplot2</code> can make <strong>multiple plots at once</strong> using <strong>facetting</strong></p></li>
 <li class="fragment"><p>Each <strong>facet</strong> is a mini-plot of some portion of the dataset</p>
@@ -1061,7 +1037,6 @@
 </ul></li>
 <li class="fragment"><p>Let’s try this for some countries in Asia</p></li>
 </ul>
-</div>
 </section>
 <section id="multi-panel-plots-1" class="slide level2">
 <h2>Multi-panel plots</h2>
@@ -1069,21 +1044,21 @@
 <li>First, subset the data just to some countries in Asia (for this example)</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>gapminder_asia <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>gapminder_asia <span class="ot">&lt;-</span> <span class="fu">filter</span>(</span>
 <span id="cb26-2"><a></a>  gapminder,</span>
-<span id="cb26-3"><a></a>  country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Japan"</span>, <span class="st">"China"</span>, <span class="st">"Korea, Rep."</span>, <span class="st">"Taiwan"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-3"><a></a>  country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Japan"</span>, <span class="st">"China"</span>, <span class="st">"Korea, Rep."</span>, <span class="st">"Taiwan"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="multi-panel-plots-2" class="slide level2">
 <h2>Multi-panel plots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb27-2"><a></a>  gapminder_asia,</span>
 <span id="cb27-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb27-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb27-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb27-6"><a></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-6"><a></a>  <span class="fu">geom_line</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1098,13 +1073,13 @@
 <h2>Multi-panel plots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb28-2"><a></a>  gapminder_asia,</span>
 <span id="cb28-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb28-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb28-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
 <span id="cb28-6"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb28-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb28-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1119,13 +1094,13 @@
 <h2>Multi-panel plots</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb29-2"><a></a>  gapminder_asia,</span>
 <span id="cb29-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb29-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb29-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
 <span id="cb29-6"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb29-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb29-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1138,26 +1113,24 @@
 </section>
 <section id="adjusting-labels" class="slide level2">
 <h2>Adjusting labels</h2>
-<div>
 <ul>
 <li class="fragment">When you “publish” your plot (this could be including it in a report for a class), it needs to be <strong>clearly labeled</strong>
 <ul>
 <li class="fragment">Whoever is reading your report won’t know what “lifeExp” means</li>
 </ul></li>
 </ul>
-</div>
 </section>
 <section id="adjusting-labels-1" class="slide level2">
 <h2>Adjusting labels</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb30-2"><a></a>  gapminder_asia,</span>
 <span id="cb30-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb30-4"><a></a>    <span class="at">x =</span> year,</span>
 <span id="cb30-5"><a></a>    <span class="at">y =</span> lifeExp)) <span class="sc">+</span></span>
 <span id="cb30-6"><a></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb30-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb30-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="fu">vars</span>(country))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1172,7 +1145,7 @@
 <h2>Adjusting labels</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb31-2"><a></a>  gapminder_asia,</span>
 <span id="cb31-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb31-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -1183,7 +1156,7 @@
 <span id="cb31-9"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
 <span id="cb31-10"><a></a>    <span class="at">y =</span> <span class="st">"Life Expectancy (years)"</span>,</span>
 <span id="cb31-11"><a></a>    <span class="at">title =</span> <span class="st">"Figure 1"</span></span>
-<span id="cb31-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb31-12"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1198,7 +1171,7 @@
 <h2>Adjusting labels</h2>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="9-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32" data-code-line-numbers="9-13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(</span>
 <span id="cb32-2"><a></a>  gapminder_asia,</span>
 <span id="cb32-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb32-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -1209,7 +1182,7 @@
 <span id="cb32-9"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
 <span id="cb32-10"><a></a>    <span class="at">y =</span> <span class="st">"Life Expectancy (years)"</span>,</span>
 <span id="cb32-11"><a></a>    <span class="at">title =</span> <span class="st">"Figure 1"</span></span>
-<span id="cb32-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb32-12"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div>
@@ -1222,17 +1195,15 @@
 </section>
 <section id="saving-your-plot" class="slide level2">
 <h2>Saving your plot</h2>
-<div>
 <ul>
 <li class="fragment"><p>If you need to you can save your plot in R, and write it out as an image file</p></li>
 <li class="fragment"><p>Use the <code>ggsave()</code> function</p></li>
 </ul>
-</div>
 </section>
 <section id="saving-your-plot-1" class="slide level2">
 <h2>Saving your plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>gapminder_asia_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>gapminder_asia_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(</span>
 <span id="cb33-2"><a></a>  gapminder_asia,</span>
 <span id="cb33-3"><a></a>  <span class="fu">aes</span>(</span>
 <span id="cb33-4"><a></a>    <span class="at">x =</span> year,</span>
@@ -1243,13 +1214,13 @@
 <span id="cb33-9"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
 <span id="cb33-10"><a></a>    <span class="at">y =</span> <span class="st">"Life Expectancy (years)"</span>,</span>
 <span id="cb33-11"><a></a>    <span class="at">title =</span> <span class="st">"Figure 1"</span></span>
-<span id="cb33-12"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb33-12"><a></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="saving-your-plot-2" class="slide level2">
 <h2>Saving your plot</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">ggsave</span>(<span class="at">plot =</span> gapminder_asia_plot, <span class="at">file =</span> <span class="st">"gapminder_asia.pdf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">ggsave</span>(<span class="at">plot =</span> gapminder_asia_plot, <span class="at">file =</span> <span class="st">"gapminder_asia.pdf"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>You can also save <code>.jpg</code>, <code>.png</code>, etc.</li>
@@ -1257,7 +1228,6 @@
 </section>
 <section id="summary" class="slide level2">
 <h2>Summary</h2>
-<div>
 <ul>
 <li class="fragment">Think about <strong>what you want your graph to show</strong></li>
 <li class="fragment"><strong>Aesthetic mapping</strong>: How to represent the data visually</li>
@@ -1265,7 +1235,6 @@
 <li class="fragment">Build your plot using <strong>layers</strong></li>
 <li class="fragment">Basic recipe: <code>ggplot(INPUT-DATA, aes(MAPPING)) + GEOMETRY</code></li>
 </ul>
-</div>
 </section></section>
 <section>
 <section id="final-project" class="title-slide slide level1 center">
@@ -1313,8 +1282,8 @@
 <section id="due-dates" class="slide level2">
 <h2>Due dates</h2>
 <ul>
-<li>Your own report is due <strong>2025-07-30 11:59PM</strong></li>
-<li>Your evaluation of another other report is due <strong>2025-08-06 11:59PM</strong>
+<li>Your own report is due <strong>2026-07-29 11:59PM</strong></li>
+<li>Your evaluation of another other report is due <strong>2026-08-05 11:59PM</strong>
 <ul>
 <li>Assignment of other reports and the evaluation sheet will be posted on Moodle</li>
 </ul></li>
@@ -1511,7 +1480,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -1576,190 +1545,173 @@
     </script>
 
     <script id="quarto-html-after-body" type="application/javascript">
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-      const toggleBodyColorMode = (bsSheetEl) => {
-        const mode = bsSheetEl.getAttribute("data-mode");
-        const bodyEl = window.document.querySelector("body");
-        if (mode === "dark") {
-          bodyEl.classList.add("quarto-dark");
-          bodyEl.classList.remove("quarto-light");
-        } else {
-          bodyEl.classList.add("quarto-light");
-          bodyEl.classList.remove("quarto-dark");
-        }
-      }
-      const toggleBodyColorPrimary = () => {
-        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-        if (bsSheetEl) {
-          toggleBodyColorMode(bsSheetEl);
-        }
-      }
-      toggleBodyColorPrimary();  
-      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
-      tabsets.forEach(function(tabset) {
-        const tabby = new Tabby('#' + tabset.id);
-      });
-      const isCodeAnnotation = (el) => {
-        for (const clz of el.classList) {
-          if (clz.startsWith('code-annotation-')) {                     
-            return true;
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
           }
+          return false;
         }
-        return false;
-      }
-      const onCopySuccess = function(e) {
-        // button target
-        const button = e.trigger;
-        // don't keep focus
-        button.blur();
-        // flash "checked"
-        button.classList.add('code-copy-button-checked');
-        var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
-        setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
           }
-          button.setAttribute("title", currentTitle);
-          button.classList.remove('code-copy-button-checked');
-        }, 1000);
-        // clear code selection
-        e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
           for (const childEl of codeEl.children) {
             if (isCodeAnnotation(childEl)) {
               childEl.remove();
             }
           }
           return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
-      });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/data-analysis-chiba\.github\.io\/");
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/data-analysis-chiba\.github\.io\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
             }
           }
-        }
-      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-        const config = {
-          allowHTML: true,
-          maxWidth: 500,
-          delay: 100,
-          arrow: false,
-          appendTo: function(el) {
-              return el.closest('section.slide') || el.parentElement;
-          },
-          interactive: true,
-          interactiveBorder: 10,
-          theme: 'light-border',
-          placement: 'bottom-start',
-        };
-        if (contentFn) {
-          config.content = contentFn;
-        }
-        if (onTriggerFn) {
-          config.onTrigger = onTriggerFn;
-        }
-        if (onUntriggerFn) {
-          config.onUntrigger = onUntriggerFn;
-        }
-          config['offset'] = [0,0];
-          config['maxWidth'] = 700;
-        window.tippy(el, config); 
-      }
-      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-      for (var i=0; i<noterefs.length; i++) {
-        const ref = noterefs[i];
-        tippyHover(ref, function() {
-          // use id or data attribute instead here
-          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-          try { href = new URL(href).hash; } catch {}
-          const id = href.replace(/^#\/?/, "");
-          const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
           }
-        });
-      }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
           }
-        } else {
-          return undefined;
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
         }
-      };
-      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-      for (var i=0; i<bibliorefs.length; i++) {
-        const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
           });
         }
-      }
-    });
-    </script>
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
     
 
 </body></html>
