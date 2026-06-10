@@ -21,21 +21,21 @@ By the end of the course, students should be able to:
 
 ## Slides
 
-- [Day 1 (2025-06-12): Introduction: Why code? Why reproducibility?](day1/index.qmd)
+- [Day 1 (2026-06-11): Introduction: Why code? Why reproducibility?](day1/index.qmd)
 
-- [Day 2 (2025-06-19): Git and GitHub](day2/index.qmd)
+- [Day 2 (2026-06-18): Git and GitHub](day2/index.qmd)
 
-- [Day 3 (2025-06-26): Basic usage of R and RStudio](day3/index.qmd)
+- [Day 3 (2026-06-25): Basic usage of R and RStudio](day3/index.qmd)
 
-- [Day 4 (2025-07-03): Data loading and tidying with tidyverse](day4/index.qmd)
+- [Day 4 (2026-07-02): Data loading and tidying with tidyverse](day4/index.qmd)
 
 - [Day 5 (Media Day): Joining data](day5/index.qmd)
 
-- [Day 6 (2025-07-10): Data visualization with ggplot2](day6/index.qmd)
+- [Day 6 (2026-07-09): Data visualization with ggplot2](day6/index.qmd)
 
-- [Day 7 (2025-07-17): Writing documents with Quarto](day7/index.qmd)
+- [Day 7 (2026-07-16): Writing documents with Quarto](day7/index.qmd)
 
-- [Day 8 (2025-07-24): Quarto, part II](day8/index.qmd)
+- [Day 8 (2026-07-23): Quarto, part II](day8/index.qmd)
 
 ## Recordings
 
@@ -63,15 +63,15 @@ For other lecture recordings, see Moodle.
 
 ## Important Deadlines
 
-- 2025-06-25 11:59PM: [Day 2 homework](https://github.com/data-analysis-chiba/day02-git/blob/main/git_facts.md) due
+- 2026-06-24 11:59PM: [Day 2 homework](https://github.com/data-analysis-chiba/day02-git/blob/main/git_facts.md) due
 
-- 2025-07-02 11:59PM: [Day 3 homework](https://github.com/data-analysis-chiba/day03-r/blob/main/day03_homework.R) due
+- 2026-07-01 11:59PM: [Day 3 homework](https://github.com/data-analysis-chiba/day03-r/blob/main/day03_homework.R) due
 
-- 2025-07-09 11:59PM: [Day 4 homework](https://github.com/data-analysis-chiba/day04-tidy/blob/main/day04_homework.R) due
+- 2026-07-08 11:59PM: [Day 4 homework](https://github.com/data-analysis-chiba/day04-tidy/blob/main/day04_homework.R) due
 
-- 2025-07-16 11:59PM: [Day 5 homework](https://github.com/data-analysis-chiba/day05-join/blob/main/day05_homework.R) due
+- 2026-07-15 11:59PM: [Day 5 homework](https://github.com/data-analysis-chiba/day05-join/blob/main/day05_homework.R) due
 
-- 2025-07-30 11:59PM: Final paper due
+- 2026-07-29 11:59PM: Final paper due
 
 ## About homework sets
 
@@ -111,4 +111,4 @@ By appointment, please send an email to <joelnitta@chiba-u.jp>
 
 ## Syllabus
 
-[Syllabus in English](https://syllabus.gs.chiba-u.jp/2025/101101101076000/Z011531301/en_US)
+[Syllabus in English](https://syllabus.gs.chiba-u.jp/2026/101101101076000/Z011531301/en_US)

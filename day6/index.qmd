@@ -943,6 +943,6 @@ ggsave(plot = gapminder_asia_plot, file = "gapminder_asia.pdf")
 
 ## Due dates
 
-- Your own report is due **2025-07-30 11:59PM**
-- Your evaluation of another other report is due **2025-08-06 11:59PM**
+- Your own report is due **2026-07-29 11:59PM**
+- Your evaluation of another other report is due **2026-08-05 11:59PM**
   - Assignment of other reports and the evaluation sheet will be posted on Moodle

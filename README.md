@@ -14,7 +14,7 @@ Instructor: Assoc. Prof. [Joel H. Nitta](https://www.joelnitta.com)
 
 ## Syllabus
 
-<https://syllabus.gs.chiba-u.jp/2025/101101101076000/Z011531301/en_US>
+<https://syllabus.gs.chiba-u.jp/2026/101101101076000/Z011531301/en_US>
 
 ## Publishing
 

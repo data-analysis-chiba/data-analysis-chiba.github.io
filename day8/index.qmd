@@ -18,10 +18,10 @@ execute:
 
 ## Due dates
 
-- The report (`report.qmd`) is due **2025-07-30 11:59PM**
+- The report (`report.qmd`) is due **2026-07-29 11:59PM**
   - Push your final commit to GitHub by the deadline
 
-- The **evaluation form** is due **2025-08-06 11:59PM**
+- The **evaluation form** is due **2026-08-05 11:59PM**
   - Submit via Moodle
 
 ## Grading
