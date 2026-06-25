@@ -63,13 +63,13 @@ For other lecture recordings, see Moodle.
 
 ## Important Deadlines
 
-- 2026-06-24 11:59PM: [Day 2 homework](https://github.com/data-analysis-chiba/day02-git/blob/main/git_facts.md) due
+- 2026-06-25 12:50PM: [Day 2 homework](https://github.com/data-analysis-chiba/day02-git/blob/main/git_facts.md) due
 
-- 2026-07-01 11:59PM: [Day 3 homework](https://github.com/data-analysis-chiba/day03-r/blob/main/day03_homework.R) due
+- 2026-07-02 12:50PM: [Day 3 homework](https://github.com/data-analysis-chiba/day03-r/blob/main/day03_homework.R) due
 
-- 2026-07-08 11:59PM: [Day 4 homework](https://github.com/data-analysis-chiba/day04-tidy/blob/main/day04_homework.R) due
+- 2026-07-09 12:50PM: [Day 4 homework](https://github.com/data-analysis-chiba/day04-tidy/blob/main/day04_homework.R) due
 
-- 2026-07-15 11:59PM: [Day 5 homework](https://github.com/data-analysis-chiba/day05-join/blob/main/day05_homework.R) due
+- 2026-07-16 12:50PM: [Day 5 homework](https://github.com/data-analysis-chiba/day05-join/blob/main/day05_homework.R) due
 
 - 2026-07-29 11:59PM: Final paper due
 
