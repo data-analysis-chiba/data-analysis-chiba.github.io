@@ -201,29 +201,6 @@
 <h1>Day 3: Basic usage of R and RStudio</h1>
 
 </section>
-<section id="recordings" class="slide level2">
-<h2>Recordings</h2>
-<ul>
-<li><p>I will record lectures starting from today and post them on Moodle</p></li>
-<li><p>This does not mean you can skip class. <strong>The best way to learn is to come to class and ask questions!</strong></p></li>
-</ul>
-</section>
-<section id="what-to-do-if-the-git-pane-doesnt-work" class="slide level2">
-<h2>What to do if the Git pane doesn’t work</h2>
-
-<img data-src="../images/git_empty.png" class="r-stretch"></section>
-<section id="what-to-do-if-the-git-pane-doesnt-work-1" class="slide level2">
-<h2>What to do if the Git pane doesn’t work</h2>
-<ul>
-<li><p>Finish editing the homework assignment</p></li>
-<li><p>In the terminal, do the following commands:</p>
-<ul>
-<li><code>git add FILENAME</code> (for example, <code>git add day03_homework.R</code>)</li>
-<li><code>git commit -m "Finish homework"</code></li>
-<li><code>git push</code></li>
-</ul></li>
-</ul>
-</section>
 <section id="why-use-a-programming-language" class="slide level2">
 <h2>Why use a programming language?</h2>
 <ul>
@@ -604,7 +581,7 @@
 </div>
 </div>
 <ul>
-<li>But you need to remember the order yourself! If you aren’t sure, it’s always better to be explicit and include the argument name</li>
+<li>But you need to remember the order yourself! If you aren’t sure, it’s always better to be explicit and include the argument name if it’s not obvious</li>
 </ul>
 </section>
 <section id="getting-help" class="slide level2">
@@ -770,7 +747,7 @@
 <span id="cb53-2"><a></a>ages <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">21</span>, <span class="dv">8</span>, <span class="dv">40</span>)</span>
 <span id="cb53-3"><a></a></span>
 <span id="cb53-4"><a></a><span class="co"># Which of these people are adults?</span></span>
-<span id="cb53-5"><a></a>ages <span class="sc">&gt;</span> <span class="dv">20</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb53-5"><a></a>ages <span class="sc">&gt;=</span> <span class="dv">18</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  TRUE FALSE  TRUE</code></pre>
 </div>
@@ -827,7 +804,7 @@
 <li><p>For example, let’s subset to only ages of adults. Recall how we set up that comparison:</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>ages <span class="sc">&gt;</span> <span class="dv">20</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>ages <span class="sc">&gt;=</span> <span class="dv">18</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  TRUE FALSE  TRUE</code></pre>
 </div>
@@ -839,7 +816,7 @@
 <li>Now, use that code to subset the values:</li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a>ages[ages <span class="sc">&gt;</span> <span class="dv">20</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a>ages[ages <span class="sc">&gt;=</span> <span class="dv">18</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 21 40</code></pre>
 </div>
@@ -869,6 +846,28 @@
 
 
 <img data-src="../images/moodle-hw-submit.png" class="r-stretch"></section>
+<section id="your-hw-code-must-run-without-errors" class="slide level2">
+<h2>Your HW code must run without errors</h2>
+<ul>
+<li><p>How to check: restart RStudio by closing and opening it</p>
+<ul>
+<li>then, open the R script</li>
+<li>press the “Source” button</li>
+</ul></li>
+<li><p>Any expected objects such as <code>answer_1</code>, etc. <strong>should show up in the environment panel</strong></p></li>
+<li><p>If you see an error, <strong>fix it!</strong></p></li>
+</ul>
+</section>
+<section id="hw-demo" class="slide level2">
+<h2>HW Demo</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a><span class="co"># 0. This demonstrates how to save your answers.</span></span>
+<span id="cb65-2"><a></a><span class="co">#</span></span>
+<span id="cb65-3"><a></a><span class="co"># For example:</span></span>
+<span id="cb65-4"><a></a><span class="co"># Calculate the product of 365 and 5.</span></span>
+<span id="cb65-5"><a></a><span class="co"># Save your answer to an object called answer_0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
 <section id="homework-and-chatgpt" class="slide level2">
 <h2>Homework and ChatGPT</h2>
 <ul>
