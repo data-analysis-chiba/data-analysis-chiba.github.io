@@ -14,11 +14,6 @@ execute:
 old <- options(pillar.print_min = 6)
 ```
 
-## Announcements: About the website
-
-- I updated the [website](https://data-analysis-chiba.github.io/)
-  - [Materials (readings)](https://data-analysis-chiba.github.io/#materials) are now easier to access
-  - [Extra practice](https://data-analysis-chiba.github.io/#extra-practice) has been added
 
 ## Announcements: About homework
 
