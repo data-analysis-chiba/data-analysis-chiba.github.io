@@ -14,13 +14,6 @@ execute:
 old <- options(pillar.print_min = 6)
 ```
 
-
-## Announcements: About homework
-
-- I will demonstrate one more time how to access and submit the homework assignment
-
-- You can find the detailed explanation in the [Day 2 materials](../day2/day02_intro_to_git.qmd#part-3-create-clone-stage-commit-push-pull)
-
 ## Refresher: vectors
 
 - Recall that a **vector** is a **series of values** that are all the same **type**
@@ -38,8 +31,7 @@ c(TRUE, FALSE, TRUE)
 
 ## About dataframes
 
-- A **dataframe** is a **collection of vectors**
-  - basically like a **spreadsheet** in Excel
+- A **dataframe** is a **collection of vectors** (like a **spreadsheet** )
 
 ![](../images/dataframe.png){fig-alt="Image of a data frame" height="320"}
 
@@ -59,12 +51,11 @@ c(TRUE, FALSE, TRUE)
 
 ---
 
-![Image by Allison Horst](https://datasciencecampus.github.io/DSCA_data_wrangling_with_r/slides/images/data_cowboy.png){fig-alt="data wrangling monsters"}
+![Image by Allison Horst](../images/horst_wrangling.png){fig-alt="data wrangling monsters"}
 
 ## Set up project
 
 - Create a new project called `gapminder-analysis` in the `data-analysis-course` folder on your Desktop
-  - We will use the "gapminder" dataset for the rest of the course
 
 - Inside that project, create a folder called `data_raw` to store raw data
   - You should **never edit raw data directly** (treat it as read-only)
@@ -74,7 +65,6 @@ c(TRUE, FALSE, TRUE)
 ## Set up project
 
 - Download the `gapminder.csv` file from Moodle and put it in `data_raw`
-  - It is also available from [here](https://www.dropbox.com/s/fdirlsnxlzy53qq/gapminder.csv?dl=0)
 
 ## About R Packages
 
@@ -121,7 +111,7 @@ library(tidyverse)
 
 ## Load data
 
-- Use the `read_csv()` function to load a spreadsheet as a dataframe
+- Use `read_csv()` (**not** `read.csv()`) to load a spreadsheet as a dataframe
   - There are other functions for other file formats like `.xls`, `.xlsx`, `.tsv`, etc.
 
 ```{r}
@@ -145,7 +135,7 @@ gapminder
 ## Print out the data
 
 - Notice that R tells us the number of **rows** and **columns**, as well as the **data type** of each column
-  - The tidyverse package refers to dataframes as "tibbles"
+  - The tidyverse package refers to dataframes as **"tibbles"**
 
 ## What is this dataset about?
 
