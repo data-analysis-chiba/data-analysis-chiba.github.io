@@ -931,13 +931,6 @@
     "text": "Attributions\nThese materials were modified by Joel H. Nitta from those posted at https://swcarpentry.github.io/r-novice-gapminder/ and https://datacarpentry.org/R-ecology-lesson under the Creative Commons Attribution (CC BY 4.0) license."
   },
   {
-    "objectID": "day4/index.html#announcements-about-homework",
-    "href": "day4/index.html#announcements-about-homework",
-    "title": "Reproducible data analysis",
-    "section": "Announcements: About homework",
-    "text": "Announcements: About homework\n\nI will demonstrate one more time how to access and submit the homework assignment\nYou can find the detailed explanation in the Day 2 materials"
-  },
-  {
     "objectID": "day4/index.html#refresher-vectors",
     "href": "day4/index.html#refresher-vectors",
     "title": "Reproducible data analysis",
@@ -949,7 +942,7 @@
     "href": "day4/index.html#about-dataframes",
     "title": "Reproducible data analysis",
     "section": "About dataframes",
-    "text": "About dataframes\n\nA dataframe is a collection of vectors\n\nbasically like a spreadsheet in Excel\n\n\n\n\n\nToday we will learn to load and tidy (or “wrangle”) dataframes"
+    "text": "About dataframes\n\nA dataframe is a collection of vectors (like a spreadsheet )\n\n\n\n\nToday we will learn to load and tidy (or “wrangle”) dataframes"
   },
   {
     "objectID": "day4/index.html#about-data-tidying-wrangling",
@@ -963,14 +956,14 @@
     "href": "day4/index.html#set-up-project",
     "title": "Reproducible data analysis",
     "section": "Set up project",
-    "text": "Set up project\n\nCreate a new project called gapminder-analysis in the data-analysis-course folder on your Desktop\n\nWe will use the “gapminder” dataset for the rest of the course\n\nInside that project, create a folder called data_raw to store raw data\n\nYou should never edit raw data directly (treat it as read-only)\n\nAlso create a file to write today’s code. You could call it data-tidying-practice.R"
+    "text": "Set up project\n\nCreate a new project called gapminder-analysis in the data-analysis-course folder on your Desktop\nInside that project, create a folder called data_raw to store raw data\n\nYou should never edit raw data directly (treat it as read-only)\n\nAlso create a file to write today’s code. You could call it data-tidying-practice.R"
   },
   {
     "objectID": "day4/index.html#set-up-project-1",
     "href": "day4/index.html#set-up-project-1",
     "title": "Reproducible data analysis",
     "section": "Set up project",
-    "text": "Set up project\n\nDownload the gapminder.csv file from Moodle and put it in data_raw\n\nIt is also available from here"
+    "text": "Set up project\n\nDownload the gapminder.csv file from Moodle and put it in data_raw"
   },
   {
     "objectID": "day4/index.html#about-r-packages",
@@ -1012,7 +1005,7 @@
     "href": "day4/index.html#load-data",
     "title": "Reproducible data analysis",
     "section": "Load data",
-    "text": "Load data\n\nUse the read_csv() function to load a spreadsheet as a dataframe\n\nThere are other functions for other file formats like .xls, .xlsx, .tsv, etc.\n\n\n\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")"
+    "text": "Load data\n\nUse read_csv() (not read.csv()) to load a spreadsheet as a dataframe\n\nThere are other functions for other file formats like .xls, .xlsx, .tsv, etc.\n\n\n\ngapminder &lt;- read_csv(\"data_raw/gapminder.csv\")"
   },
   {
     "objectID": "day4/index.html#print-out-the-data",

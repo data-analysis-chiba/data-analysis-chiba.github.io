@@ -201,13 +201,6 @@
 <h1>Day 4: Data loading and tidying with tidyverse</h1>
 
 </section>
-<section id="announcements-about-homework" class="slide level2">
-<h2>Announcements: About homework</h2>
-<ul>
-<li><p>I will demonstrate one more time how to access and submit the homework assignment</p></li>
-<li><p>You can find the detailed explanation in the <a href="../day2/day02_intro_to_git.html#part-3-create-clone-stage-commit-push-pull">Day 2 materials</a></p></li>
-</ul>
-</section>
 <section id="refresher-vectors" class="slide level2">
 <h2>Refresher: vectors</h2>
 <ul>
@@ -234,10 +227,7 @@
 <section id="about-dataframes" class="slide level2">
 <h2>About dataframes</h2>
 <ul>
-<li>A <strong>dataframe</strong> is a <strong>collection of vectors</strong>
-<ul>
-<li>basically like a <strong>spreadsheet</strong> in Excel</li>
-</ul></li>
+<li>A <strong>dataframe</strong> is a <strong>collection of vectors</strong> (like a <strong>spreadsheet</strong> )</li>
 </ul>
 <p><img data-src="../images/dataframe.png" alt="Image of a data frame" height="320"></p>
 <div class="fragment">
@@ -260,28 +250,22 @@
 <section class="slide level2">
 
 
-<img data-src="https://datasciencecampus.github.io/DSCA_data_wrangling_with_r/slides/images/data_cowboy.png" alt="data wrangling monsters" class="r-stretch quarto-figure-center"><p class="caption">Image by Allison Horst</p></section>
+<img data-src="../images/horst_wrangling.png" alt="data wrangling monsters" class="r-stretch quarto-figure-center"><p class="caption">Image by Allison Horst</p></section>
 <section id="set-up-project" class="slide level2">
 <h2>Set up project</h2>
 <ul>
-<li>Create a new project called <code>gapminder-analysis</code> in the <code>data-analysis-course</code> folder on your Desktop
-<ul>
-<li>We will use the “gapminder” dataset for the rest of the course</li>
-</ul></li>
-<li>Inside that project, create a folder called <code>data_raw</code> to store raw data
+<li><p>Create a new project called <code>gapminder-analysis</code> in the <code>data-analysis-course</code> folder on your Desktop</p></li>
+<li><p>Inside that project, create a folder called <code>data_raw</code> to store raw data</p>
 <ul>
 <li>You should <strong>never edit raw data directly</strong> (treat it as read-only)</li>
 </ul></li>
-<li>Also create a file to write today’s code. You could call it <code>data-tidying-practice.R</code></li>
+<li><p>Also create a file to write today’s code. You could call it <code>data-tidying-practice.R</code></p></li>
 </ul>
 </section>
 <section id="set-up-project-1" class="slide level2">
 <h2>Set up project</h2>
 <ul>
-<li>Download the <code>gapminder.csv</code> file from Moodle and put it in <code>data_raw</code>
-<ul>
-<li>It is also available from <a href="https://www.dropbox.com/s/fdirlsnxlzy53qq/gapminder.csv?dl=0">here</a></li>
-</ul></li>
+<li>Download the <code>gapminder.csv</code> file from Moodle and put it in <code>data_raw</code></li>
 </ul>
 </section>
 <section id="about-r-packages" class="slide level2">
@@ -340,7 +324,7 @@
 <section id="load-data" class="slide level2">
 <h2>Load data</h2>
 <ul>
-<li>Use the <code>read_csv()</code> function to load a spreadsheet as a dataframe
+<li>Use <code>read_csv()</code> (<strong>not</strong> <code>read.csv()</code>) to load a spreadsheet as a dataframe
 <ul>
 <li>There are other functions for other file formats like <code>.xls</code>, <code>.xlsx</code>, <code>.tsv</code>, etc.</li>
 </ul></li>
@@ -375,7 +359,7 @@
 <ul>
 <li>Notice that R tells us the number of <strong>rows</strong> and <strong>columns</strong>, as well as the <strong>data type</strong> of each column
 <ul>
-<li>The tidyverse package refers to dataframes as “tibbles”</li>
+<li>The tidyverse package refers to dataframes as <strong>“tibbles”</strong></li>
 </ul></li>
 </ul>
 </section>
