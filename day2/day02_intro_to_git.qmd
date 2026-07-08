@@ -137,7 +137,7 @@ command line interfaces) way to use Git.
 Before we can start using Git, your computer must be equipped with the
 appropriate software. In this section, we will walk you through: 1.
 Installing Git, 2. Registering for a GitHub account, 3. Setting up an
-SSH key, 4. Talking to Git via RStudio.
+PAT, 4. Talking to Git via RStudio.
 
 ### 1. Install Git (contains excerpts from [Ch. 6 of Happy Git and GitHub for the useR](http://happygitwithr.com/install-git.html))
 
@@ -306,7 +306,7 @@ git config --global --list
 substituting your github username and the email associated with your
 GitHub account.
 
-### 4. Authenticate with SSH (contains excerpts from [Ch 10](https://happygitwithr.com/ssh-keys.html) of [Happy Git and GitHub for the useR](http://happygitwithr.com/))
+### 4. Authenticate with HTTPS (contains excerpts from [Ch 10](https://happygitwithr.com/ssh-keys.html) of [Happy Git and GitHub for the useR](http://happygitwithr.com/))
 
 When we interact with a remote Git server, such as GitHub, we have to
 include credentials in the request. This proves we are a specific GitHub
