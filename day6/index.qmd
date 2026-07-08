@@ -15,33 +15,6 @@ execute:
 old <- options(pillar.print_min = 6)
 ```
 
-## Reminder: How to check your project
-
-- By now, you have created many R projects (one per homework, at least)
-
-- Git works **inside a project**
-  - So if you aren't in the right project, you won't be able to commit, push, etc.
-
-- If you are unable to commit and push the homework, **check your project**
-
----
-
-- This is what RStudio looks like with no project selected
-
-![](../images/project-none.png)
-
------
-
-- To choose another project, you can either double click the `.Rproj` file, **or**, you can use the project select menu (on the right side of RStudio)
-
-![](../images/project-select.png)
-
----
-
-- Once you have successfully chosen your project, you will see the project name at the top of the window (and the project selection menu)
-
-![](../images/project-selected-circled.png)
-
 ## What is EDA?
 
 ::: {.incremental}
@@ -175,6 +148,7 @@ Bar graph
 - How is population represented ("**mapped**") in each plot?
 
 - What is the shape ("**geometry**") of each plot?
+
 ---
 
 :::: {.columns}
@@ -587,7 +561,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line() +
   geom_point()
 ```
@@ -602,7 +578,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line() +
   geom_point(color = "black")
 ```
@@ -618,7 +596,9 @@ ggplot(
     x = year,
     y = lifeExp,
     color = continent,
-    group = country)) +
+    group = country
+  )
+) +
   geom_line() +
   geom_point(color = "black")
 ```
@@ -694,7 +674,9 @@ ggplot(
   gapminder,
   aes(
     x = gdpPercap,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_point()
 ```
 
@@ -706,7 +688,9 @@ ggplot(
   gapminder,
   aes(
     x = gdpPercap,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_point() +
   scale_x_log10()
 ```
@@ -720,7 +704,9 @@ ggplot(
   gapminder,
   aes(
     x = gdpPercap,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_point() +
   scale_x_log10()
 ```
@@ -734,7 +720,9 @@ ggplot(
   gapminder,
   aes(
     x = gdpPercap,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_point() +
   scale_x_log10(
     labels = label_comma()
@@ -761,7 +749,8 @@ ggplot(
 ```{r}
 gapminder_asia <- filter(
   gapminder,
-  country %in% c("Japan", "China", "Korea, Rep.", "Taiwan"))
+  country %in% c("Japan", "China", "Korea, Rep.", "Taiwan")
+)
 ```
 
 ## Multi-panel plots
@@ -772,7 +761,9 @@ ggplot(
   gapminder_asia,
   aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_line()
 ```
 
@@ -784,7 +775,9 @@ ggplot(
   gapminder_asia,
   aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_line() +
   facet_wrap(vars(country))
 ```
@@ -798,7 +791,9 @@ ggplot(
   gapminder_asia,
   aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_line() +
   facet_wrap(vars(country))
 ```
@@ -821,7 +816,9 @@ ggplot(
   gapminder_asia,
   aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_line() +
   facet_wrap(vars(country))
 ```
@@ -834,7 +831,9 @@ ggplot(
   gapminder_asia,
   aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_line() +
   facet_wrap(vars(country)) +
   labs(
@@ -853,7 +852,9 @@ ggplot(
   gapminder_asia,
   aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_line() +
   facet_wrap(vars(country)) +
   labs(
@@ -880,7 +881,9 @@ gapminder_asia_plot <- ggplot(
   gapminder_asia,
   aes(
     x = year,
-    y = lifeExp)) +
+    y = lifeExp
+  )
+) +
   geom_line() +
   facet_wrap(vars(country)) +
   labs(

@@ -549,6 +549,31 @@ ages[ages >= 18]
 # Save your answer to an object called answer_0
 ```
 
+## How to check your project
+
+- Git works **inside a project**
+  - So if you aren't in the right project, you won't be able to commit, push, etc.
+
+- If you are unable to commit and push the homework, **check your project**
+
+---
+
+- This is what RStudio looks like with no project selected
+
+![](../images/project-none.png)
+
+-----
+
+- To choose another project, you can either double click the `.Rproj` file, **or**, you can use the project select menu (on the right side of RStudio)
+
+![](../images/project-select.png)
+
+---
+
+- Once you have successfully chosen your project, you will see the project name at the top of the window (and the project selection menu)
+
+![](../images/project-selected-circled.png)
+
 ## Homework and ChatGPT
 
 - I provide homework to give you a chance to **think** and **learn**
