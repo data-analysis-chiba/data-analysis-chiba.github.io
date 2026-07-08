@@ -375,7 +375,7 @@
     "href": "day2/day02_intro_to_git.html#part-2-set-up-your-environment",
     "title": "Reproducible Data Analysis Day 2: Introduction to Git/GitHub",
     "section": "Part 2: Set up your environment",
-    "text": "Part 2: Set up your environment\nBefore we can start using Git, your computer must be equipped with the appropriate software. In this section, we will walk you through: 1. Installing Git, 2. Registering for a GitHub account, 3. Setting up an SSH key, 4. Talking to Git via RStudio.\n\n1. Install Git (contains excerpts from Ch. 6 of Happy Git and GitHub for the useR)\nYou need Git, so you can use it at the command line and so RStudio can call it. If there’s any chance it’s installed already, verify that, rejoice, and skip this step. Otherwise, find installation instructions below for your operating system.\n\nIs Git already installed?\nOpen the shell (terminal / command line). Type in git --version, no quotation, press enter.\ngit --version\n## git version 2.39.2\nIf you see something like git: command not found, proceed to the instructions for installation based on your operating system.\nIf you see a printout of the version number as shown above, this means you have Git already. Great! But wait. Is the version number &lt; 2.28? If so, I recommend that you update it (follow the install instructions based on your operating system below). The reason you should update if you have an older version of Git is that newer versions allow us to configure the default branch name. There is a movement in the Git community to rename the default branch of repositories from ‘master’ in favor of the neutral and inclusive term ‘main’, as ‘master’ has offensive connotations. GitHub has made the change to default new branch names as main. With older versions of git, the default branch will always be ‘master’, so each time you create a new repo you’ll have to rename the local default branch to avoid conflicts with the GitHub default. With a newer version (2.28 and later) you can set it once and you’re good to go for all new repos.\nOtherwise, if you have a current version of Git installed, you can skip the next step!\n\n\nInstall Git for Windows people\nInstall Git for Windows, previously known as msysgit or “Git Bash”, to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing. You may accept all the default settings during installation.\n\nThis approach leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the Bash shell will be useful as you venture outside of R/RStudio.\nThis also leaves you with a Git client, though not a very good one.\nRStudio for windows likes for git to be in the Files(x86) folder. If not in this location, RStudio may not detect it, and may cause headaches for you later.\n\n\n\nInstall Git for Mac people\nFirst install the Xcode command line tools (not all of Xcode), which includes Git by opening a terminal and typing in the following and press enter. Follow prompts.\nxcode-select --install\nVerify that Xcode command line tools has been installed by typing the following into the terminal and press enter.\nxcode-select --version\n## xcode-select version 2384.\nEnter one of these commands to elicit an offer to install developer command line tools:\ngit --version\ngit config\nAccept the offer! Click on “Install”.\nIf the Xcode method isn’t successful for you, you can install git from here: http://git-scm.com/downloads. Or you can try this command if you use Homebrew:\nbrew install git\nVerify that you’re ready to go by running the git --version command once again.\nAdditionally if you’ve updated your git version, save yourself some potential headache and make sure that RStudio is pointing to the correct version of git.\n\n\nInstall Git for Linux people\nInstall Git via your distro’s package manager.\nUbuntu or Debian Linux:\nsudo apt-get install git\nFedora or RedHat Linux:\nsudo yum install git\nA comprehensive list for various Linux and Unix package managers.\n\n\n\n2. Register for a GitHub account (contains excerpts from Ch. 6 of Happy Git and GitHub for the useR)\nIf you don’t have a GitHub account already, register for one at GitHub. It’s free!\nA few tips on selecting a username, which sadly tend to contradict each other:\n\nIncorporate your actual name! People like to know who they’re dealing with. Also makes your username easier for people to guess or remember.\nReuse your username from other contexts, e.g., Twitter or Slack if it’s available.\nPick a username you will be comfortable revealing to your future boss.\nShorter is better than longer.\nBe as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.\nMake it timeless. Don’t highlight your current university, employer, or place of residence.\nAvoid words laden with special meaning in programming. In my first inept efforts to script around the GitHub API, I assigned lots of issues to the guy with username NA because my vector of GitHub usernames contained missing values. A variant of Little Bobby Tables.\n\nYou can change your username later, but better to get this right the first time.\n\nChanging your GitHub username\nWhat happens when I change my username?\n\n\n\n3. Introduce yourself to Git (contains excerpts from Ch 7 of Happy Git and GitHub for the useR)\nFirst, you want to introduce yourself to Git. The information you enter here will constitute the user stamp for each commit you make. That way, Git can trace back code changes to their authors. This only needs to be done once.\nIn the shell/terminal:\ngit config --global user.name 'your_github_username'\ngit config --global user.email 'your_email_adress'\ngit config --global --list\nsubstituting your github username and the email associated with your GitHub account.\n\n\n4. Authenticate with SSH (contains excerpts from Ch 10 of Happy Git and GitHub for the useR)\nWhen we interact with a remote Git server, such as GitHub, we have to include credentials in the request. This proves we are a specific GitHub user, who’s allowed to do whatever we’re asking to do.\nGit can communicate with a remote server using one of two protocols, HTTPS or SSH, and the different protocols use different credentials.\nHere we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH (if so, head to Ch 10 of Happy Git and GitHub for the useR). With HTTPS, we will use a personal access token (PAT).\nLet it be known that the password that you use to login to GitHub’s website is NOT an acceptable credential when talking to GitHub as a Git server. This was possible in the past (and may yet be true for other Git servers), but those days are over at GitHub. You can learn more in their blog post Token authentication requirements for Git operations.\nHere’s the error you’ll see if you try to do that now:\nremote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.\nremote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.\nfatal: Authentication failed for 'https://github.com/OWNER/REPO.git/'\nThis is a very minimal account of getting and storing a PAT. This might be all you need when you’re first getting yourself set up. If you run into trouble, ask the instructor, and refer to the detailed description in Ch 9 of Happy Git and GitHub for the useR.\nGo to https://github.com/settings/tokens and click “Generate token” (or use usethis::create_github_token() from R).\nLook over the scopes; I highly recommend selecting “repo”, “user”, and “workflow”.\nClick “Generate token”.\nCopy the generated PAT to your clipboard. Leave that browser window open and available for a little while, so you can come back to copy the PAT. Once you close the window, you won’t be able to see the PAT (but you can generate a new one). You’ll want to store the PAT securely, like in a password manager (NOT in a repo that gets pushed to GitHub!!) so you can reuse it until it expires.\nNext, you need to save your PAT to a secure place on your computer and configure git to use this for authentication. We will do this in R.\nFirst, install the “gitcreds” R package with install.packages(\"gitcreds\"). Next, run gitcreds::gitcreds_set() and enter your PAT when prompted. That’s it - now you should be able to communicate with GitHub without providing your password (or token) every time.\n\nSet the default branch name to main\nFinally, we’ll set the global option for all new repositories to use a default branch name of main.\ngit config --global init.defaultBranch main\nIf this command is successful, great! Move on to Part 3.\nNote that this command will only work for Git versions 2.28 and higher, so if your version is older, you’ll have to rename the default branch each time you create a new repo. Here’s how to do that.\nOption 1: You can do this on the command line (from within the new repo):\ngit branch -M main\nOption 2: In an RStudio project for the new repo, run the following line of R code, which uses the usethis package:\n# install usethis first if it's not already installed\ninstall.packages(\"usethis\")\n# rename default branch from master to main \nusethis::git_default_branch_rename(to = \"main\")"
+    "text": "Part 2: Set up your environment\nBefore we can start using Git, your computer must be equipped with the appropriate software. In this section, we will walk you through: 1. Installing Git, 2. Registering for a GitHub account, 3. Setting up an PAT, 4. Talking to Git via RStudio.\n\n1. Install Git (contains excerpts from Ch. 6 of Happy Git and GitHub for the useR)\nYou need Git, so you can use it at the command line and so RStudio can call it. If there’s any chance it’s installed already, verify that, rejoice, and skip this step. Otherwise, find installation instructions below for your operating system.\n\nIs Git already installed?\nOpen the shell (terminal / command line). Type in git --version, no quotation, press enter.\ngit --version\n## git version 2.39.2\nIf you see something like git: command not found, proceed to the instructions for installation based on your operating system.\nIf you see a printout of the version number as shown above, this means you have Git already. Great! But wait. Is the version number &lt; 2.28? If so, I recommend that you update it (follow the install instructions based on your operating system below). The reason you should update if you have an older version of Git is that newer versions allow us to configure the default branch name. There is a movement in the Git community to rename the default branch of repositories from ‘master’ in favor of the neutral and inclusive term ‘main’, as ‘master’ has offensive connotations. GitHub has made the change to default new branch names as main. With older versions of git, the default branch will always be ‘master’, so each time you create a new repo you’ll have to rename the local default branch to avoid conflicts with the GitHub default. With a newer version (2.28 and later) you can set it once and you’re good to go for all new repos.\nOtherwise, if you have a current version of Git installed, you can skip the next step!\n\n\nInstall Git for Windows people\nInstall Git for Windows, previously known as msysgit or “Git Bash”, to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing. You may accept all the default settings during installation.\n\nThis approach leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the Bash shell will be useful as you venture outside of R/RStudio.\nThis also leaves you with a Git client, though not a very good one.\nRStudio for windows likes for git to be in the Files(x86) folder. If not in this location, RStudio may not detect it, and may cause headaches for you later.\n\n\n\nInstall Git for Mac people\nFirst install the Xcode command line tools (not all of Xcode), which includes Git by opening a terminal and typing in the following and press enter. Follow prompts.\nxcode-select --install\nVerify that Xcode command line tools has been installed by typing the following into the terminal and press enter.\nxcode-select --version\n## xcode-select version 2384.\nEnter one of these commands to elicit an offer to install developer command line tools:\ngit --version\ngit config\nAccept the offer! Click on “Install”.\nIf the Xcode method isn’t successful for you, you can install git from here: http://git-scm.com/downloads. Or you can try this command if you use Homebrew:\nbrew install git\nVerify that you’re ready to go by running the git --version command once again.\nAdditionally if you’ve updated your git version, save yourself some potential headache and make sure that RStudio is pointing to the correct version of git.\n\n\nInstall Git for Linux people\nInstall Git via your distro’s package manager.\nUbuntu or Debian Linux:\nsudo apt-get install git\nFedora or RedHat Linux:\nsudo yum install git\nA comprehensive list for various Linux and Unix package managers.\n\n\n\n2. Register for a GitHub account (contains excerpts from Ch. 6 of Happy Git and GitHub for the useR)\nIf you don’t have a GitHub account already, register for one at GitHub. It’s free!\nA few tips on selecting a username, which sadly tend to contradict each other:\n\nIncorporate your actual name! People like to know who they’re dealing with. Also makes your username easier for people to guess or remember.\nReuse your username from other contexts, e.g., Twitter or Slack if it’s available.\nPick a username you will be comfortable revealing to your future boss.\nShorter is better than longer.\nBe as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.\nMake it timeless. Don’t highlight your current university, employer, or place of residence.\nAvoid words laden with special meaning in programming. In my first inept efforts to script around the GitHub API, I assigned lots of issues to the guy with username NA because my vector of GitHub usernames contained missing values. A variant of Little Bobby Tables.\n\nYou can change your username later, but better to get this right the first time.\n\nChanging your GitHub username\nWhat happens when I change my username?\n\n\n\n3. Introduce yourself to Git (contains excerpts from Ch 7 of Happy Git and GitHub for the useR)\nFirst, you want to introduce yourself to Git. The information you enter here will constitute the user stamp for each commit you make. That way, Git can trace back code changes to their authors. This only needs to be done once.\nIn the shell/terminal:\ngit config --global user.name 'your_github_username'\ngit config --global user.email 'your_email_adress'\ngit config --global --list\nsubstituting your github username and the email associated with your GitHub account.\n\n\n4. Authenticate with HTTPS (contains excerpts from Ch 10 of Happy Git and GitHub for the useR)\nWhen we interact with a remote Git server, such as GitHub, we have to include credentials in the request. This proves we are a specific GitHub user, who’s allowed to do whatever we’re asking to do.\nGit can communicate with a remote server using one of two protocols, HTTPS or SSH, and the different protocols use different credentials.\nHere we describe the credential setup for the HTTPS protocol, which is what we recommend if you have no burning reason to pick SSH (if so, head to Ch 10 of Happy Git and GitHub for the useR). With HTTPS, we will use a personal access token (PAT).\nLet it be known that the password that you use to login to GitHub’s website is NOT an acceptable credential when talking to GitHub as a Git server. This was possible in the past (and may yet be true for other Git servers), but those days are over at GitHub. You can learn more in their blog post Token authentication requirements for Git operations.\nHere’s the error you’ll see if you try to do that now:\nremote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.\nremote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.\nfatal: Authentication failed for 'https://github.com/OWNER/REPO.git/'\nThis is a very minimal account of getting and storing a PAT. This might be all you need when you’re first getting yourself set up. If you run into trouble, ask the instructor, and refer to the detailed description in Ch 9 of Happy Git and GitHub for the useR.\nGo to https://github.com/settings/tokens and click “Generate token” (or use usethis::create_github_token() from R).\nLook over the scopes; I highly recommend selecting “repo”, “user”, and “workflow”.\nClick “Generate token”.\nCopy the generated PAT to your clipboard. Leave that browser window open and available for a little while, so you can come back to copy the PAT. Once you close the window, you won’t be able to see the PAT (but you can generate a new one). You’ll want to store the PAT securely, like in a password manager (NOT in a repo that gets pushed to GitHub!!) so you can reuse it until it expires.\nNext, you need to save your PAT to a secure place on your computer and configure git to use this for authentication. We will do this in R.\nFirst, install the “gitcreds” R package with install.packages(\"gitcreds\"). Next, run gitcreds::gitcreds_set() and enter your PAT when prompted. That’s it - now you should be able to communicate with GitHub without providing your password (or token) every time.\n\nSet the default branch name to main\nFinally, we’ll set the global option for all new repositories to use a default branch name of main.\ngit config --global init.defaultBranch main\nIf this command is successful, great! Move on to Part 3.\nNote that this command will only work for Git versions 2.28 and higher, so if your version is older, you’ll have to rename the default branch each time you create a new repo. Here’s how to do that.\nOption 1: You can do this on the command line (from within the new repo):\ngit branch -M main\nOption 2: In an RStudio project for the new repo, run the following line of R code, which uses the usethis package:\n# install usethis first if it's not already installed\ninstall.packages(\"usethis\")\n# rename default branch from master to main \nusethis::git_default_branch_rename(to = \"main\")"
   },
   {
     "objectID": "day2/day02_intro_to_git.html#part-3-create-clone-stage-commit-push-pull",
@@ -782,6 +782,13 @@
     "title": "Reproducible data analysis",
     "section": "HW Demo",
     "text": "HW Demo\n\n# 0. This demonstrates how to save your answers.\n#\n# For example:\n# Calculate the product of 365 and 5.\n# Save your answer to an object called answer_0"
+  },
+  {
+    "objectID": "day3/index.html#how-to-check-your-project",
+    "href": "day3/index.html#how-to-check-your-project",
+    "title": "Reproducible data analysis",
+    "section": "How to check your project",
+    "text": "How to check your project\n\nGit works inside a project\n\nSo if you aren’t in the right project, you won’t be able to commit, push, etc.\n\nIf you are unable to commit and push the homework, check your project"
   },
   {
     "objectID": "day3/index.html#homework-and-chatgpt",
@@ -1827,13 +1834,6 @@
     "text": "Final report\n\nThe rest of the class time is to work on your final report. I will answer any questions you may have about the report."
   },
   {
-    "objectID": "day6/index.html#reminder-how-to-check-your-project",
-    "href": "day6/index.html#reminder-how-to-check-your-project",
-    "title": "Reproducible data analysis",
-    "section": "Reminder: How to check your project",
-    "text": "Reminder: How to check your project\n\nBy now, you have created many R projects (one per homework, at least)\nGit works inside a project\n\nSo if you aren’t in the right project, you won’t be able to commit, push, etc.\n\nIf you are unable to commit and push the homework, check your project"
-  },
-  {
     "objectID": "day6/index.html#what-is-eda",
     "href": "day6/index.html#what-is-eda",
     "title": "Reproducible data analysis",
@@ -2083,21 +2083,21 @@
     "href": "day6/index.html#modify-an-aesthetic-1",
     "title": "Reproducible data analysis",
     "section": "Modify an aesthetic",
-    "text": "Modify an aesthetic\n\n\nggplot(\n  gapminder,\n  aes(\n    x = year,\n    y = lifeExp,\n    color = continent,\n    group = country)) +\n  geom_line() +\n  geom_point()"
+    "text": "Modify an aesthetic\n\n\nggplot(\n  gapminder,\n  aes(\n    x = year,\n    y = lifeExp,\n    color = continent,\n    group = country\n  )\n) +\n  geom_line() +\n  geom_point()"
   },
   {
     "objectID": "day6/index.html#modify-an-aesthetic-2",
     "href": "day6/index.html#modify-an-aesthetic-2",
     "title": "Reproducible data analysis",
     "section": "Modify an aesthetic",
-    "text": "Modify an aesthetic\n\n\nggplot(\n  gapminder,\n  aes(\n    x = year,\n    y = lifeExp,\n    color = continent,\n    group = country)) +\n  geom_line() +\n  geom_point(color = \"black\")"
+    "text": "Modify an aesthetic\n\n\nggplot(\n  gapminder,\n  aes(\n    x = year,\n    y = lifeExp,\n    color = continent,\n    group = country\n  )\n) +\n  geom_line() +\n  geom_point(color = \"black\")"
   },
   {
     "objectID": "day6/index.html#modify-an-aesthetic-3",
     "href": "day6/index.html#modify-an-aesthetic-3",
     "title": "Reproducible data analysis",
     "section": "Modify an aesthetic",
-    "text": "Modify an aesthetic\n\n\nggplot(\n  gapminder,\n  aes(\n    x = year,\n    y = lifeExp,\n    color = continent,\n    group = country)) +\n  geom_line() +\n  geom_point(color = \"black\")"
+    "text": "Modify an aesthetic\n\n\nggplot(\n  gapminder,\n  aes(\n    x = year,\n    y = lifeExp,\n    color = continent,\n    group = country\n  )\n) +\n  geom_line() +\n  geom_point(color = \"black\")"
   },
   {
     "objectID": "day6/index.html#transformations",
@@ -2125,28 +2125,28 @@
     "href": "day6/index.html#transformations-3",
     "title": "Reproducible data analysis",
     "section": "Transformations",
-    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp)) +\n  geom_point()"
+    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp\n  )\n) +\n  geom_point()"
   },
   {
     "objectID": "day6/index.html#transformations-4",
     "href": "day6/index.html#transformations-4",
     "title": "Reproducible data analysis",
     "section": "Transformations",
-    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp)) +\n  geom_point() +\n  scale_x_log10()"
+    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp\n  )\n) +\n  geom_point() +\n  scale_x_log10()"
   },
   {
     "objectID": "day6/index.html#transformations-5",
     "href": "day6/index.html#transformations-5",
     "title": "Reproducible data analysis",
     "section": "Transformations",
-    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp)) +\n  geom_point() +\n  scale_x_log10()"
+    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp\n  )\n) +\n  geom_point() +\n  scale_x_log10()"
   },
   {
     "objectID": "day6/index.html#transformations-6",
     "href": "day6/index.html#transformations-6",
     "title": "Reproducible data analysis",
     "section": "Transformations",
-    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp)) +\n  geom_point() +\n  scale_x_log10(\n    labels = label_comma()\n  )"
+    "text": "Transformations\n\n\nggplot(\n  gapminder,\n  aes(\n    x = gdpPercap,\n    y = lifeExp\n  )\n) +\n  geom_point() +\n  scale_x_log10(\n    labels = label_comma()\n  )"
   },
   {
     "objectID": "day6/index.html#multi-panel-plots",
@@ -2160,28 +2160,28 @@
     "href": "day6/index.html#multi-panel-plots-1",
     "title": "Reproducible data analysis",
     "section": "Multi-panel plots",
-    "text": "Multi-panel plots\n\nFirst, subset the data just to some countries in Asia (for this example)\n\n\ngapminder_asia &lt;- filter(\n  gapminder,\n  country %in% c(\"Japan\", \"China\", \"Korea, Rep.\", \"Taiwan\"))"
+    "text": "Multi-panel plots\n\nFirst, subset the data just to some countries in Asia (for this example)\n\n\ngapminder_asia &lt;- filter(\n  gapminder,\n  country %in% c(\"Japan\", \"China\", \"Korea, Rep.\", \"Taiwan\")\n)"
   },
   {
     "objectID": "day6/index.html#multi-panel-plots-2",
     "href": "day6/index.html#multi-panel-plots-2",
     "title": "Reproducible data analysis",
     "section": "Multi-panel plots",
-    "text": "Multi-panel plots\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp)) +\n  geom_line()"
+    "text": "Multi-panel plots\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp\n  )\n) +\n  geom_line()"
   },
   {
     "objectID": "day6/index.html#multi-panel-plots-3",
     "href": "day6/index.html#multi-panel-plots-3",
     "title": "Reproducible data analysis",
     "section": "Multi-panel plots",
-    "text": "Multi-panel plots\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp)) +\n  geom_line() +\n  facet_wrap(vars(country))"
+    "text": "Multi-panel plots\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp\n  )\n) +\n  geom_line() +\n  facet_wrap(vars(country))"
   },
   {
     "objectID": "day6/index.html#multi-panel-plots-4",
     "href": "day6/index.html#multi-panel-plots-4",
     "title": "Reproducible data analysis",
     "section": "Multi-panel plots",
-    "text": "Multi-panel plots\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp)) +\n  geom_line() +\n  facet_wrap(vars(country))"
+    "text": "Multi-panel plots\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp\n  )\n) +\n  geom_line() +\n  facet_wrap(vars(country))"
   },
   {
     "objectID": "day6/index.html#adjusting-labels",
@@ -2195,21 +2195,21 @@
     "href": "day6/index.html#adjusting-labels-1",
     "title": "Reproducible data analysis",
     "section": "Adjusting labels",
-    "text": "Adjusting labels\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp)) +\n  geom_line() +\n  facet_wrap(vars(country))"
+    "text": "Adjusting labels\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp\n  )\n) +\n  geom_line() +\n  facet_wrap(vars(country))"
   },
   {
     "objectID": "day6/index.html#adjusting-labels-2",
     "href": "day6/index.html#adjusting-labels-2",
     "title": "Reproducible data analysis",
     "section": "Adjusting labels",
-    "text": "Adjusting labels\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp)) +\n  geom_line() +\n  facet_wrap(vars(country)) +\n  labs(\n    x = \"Year\",\n    y = \"Life Expectancy (years)\",\n    title = \"Figure 1\"\n  )"
+    "text": "Adjusting labels\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp\n  )\n) +\n  geom_line() +\n  facet_wrap(vars(country)) +\n  labs(\n    x = \"Year\",\n    y = \"Life Expectancy (years)\",\n    title = \"Figure 1\"\n  )"
   },
   {
     "objectID": "day6/index.html#adjusting-labels-3",
     "href": "day6/index.html#adjusting-labels-3",
     "title": "Reproducible data analysis",
     "section": "Adjusting labels",
-    "text": "Adjusting labels\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp)) +\n  geom_line() +\n  facet_wrap(vars(country)) +\n  labs(\n    x = \"Year\",\n    y = \"Life Expectancy (years)\",\n    title = \"Figure 1\"\n  )"
+    "text": "Adjusting labels\n\n\nggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp\n  )\n) +\n  geom_line() +\n  facet_wrap(vars(country)) +\n  labs(\n    x = \"Year\",\n    y = \"Life Expectancy (years)\",\n    title = \"Figure 1\"\n  )"
   },
   {
     "objectID": "day6/index.html#saving-your-plot",
@@ -2223,7 +2223,7 @@
     "href": "day6/index.html#saving-your-plot-1",
     "title": "Reproducible data analysis",
     "section": "Saving your plot",
-    "text": "Saving your plot\n\ngapminder_asia_plot &lt;- ggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp)) +\n  geom_line() +\n  facet_wrap(vars(country)) +\n  labs(\n    x = \"Year\",\n    y = \"Life Expectancy (years)\",\n    title = \"Figure 1\"\n  )"
+    "text": "Saving your plot\n\ngapminder_asia_plot &lt;- ggplot(\n  gapminder_asia,\n  aes(\n    x = year,\n    y = lifeExp\n  )\n) +\n  geom_line() +\n  facet_wrap(vars(country)) +\n  labs(\n    x = \"Year\",\n    y = \"Life Expectancy (years)\",\n    title = \"Figure 1\"\n  )"
   },
   {
     "objectID": "day6/index.html#saving-your-plot-2",
