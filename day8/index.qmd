@@ -18,15 +18,15 @@ execute:
 
 ## Due dates
 
-- The report (`report.qmd`) is due **2026-07-29 11:59PM**
+- The report (`report.qmd`) is due **2026-07-31 11:59PM**
   - Push your final commit to GitHub by the deadline
 
-- The **evaluation form** is due **2026-08-05 11:59PM**
+- The **evaluation form** is due **2026-08-07 11:59PM**
   - Submit via Moodle
 
 ## Grading
 
-- Please see the **rubric** in the [final report instructions](https://moodle.gs.chiba-u.jp/moodle/mod/resource/view.php?id=1423683) to understand how the paper will be graded
+- Please see the **rubric** in the final report instructions on Moodle to understand how the paper will be graded
 
 - You will also **evaluate** each other's final report using the rubric
   - I will post an anonymized version of each repository for you to evaluate and make an announcement on Moodle
@@ -40,7 +40,7 @@ execute:
 
 ## How to evaluate the report
 
-- Once you've reproduced the report, fill out the [Final Report Evaluation](https://moodle.gs.chiba-u.jp/moodle/mod/quiz/view.php?id=1422866) form on Moodle
+- Once you've reproduced the report, fill out the Final Report Evaluation form on Moodle
 
 ---
 
